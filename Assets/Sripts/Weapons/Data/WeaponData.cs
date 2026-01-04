@@ -1,10 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponData : MonoBehaviour
+[CreateAssetMenu(menuName = "Weapons/Weapon Data")]
+public class WeaponData : ScriptableObject
 {
- #region Properties
+    #region Properties
+    public string weaponName;
+
+    [Header("Combat")]
+    public int damage;
+    public float attackRate;
+    public float range;
+
+    [Header("Projectile")]
+    public bool usesProjectile;
+    public GameObject projectilePrefab;
+    public float projectileSpeed;
+
+    [Header("Scaling")]
+    public float damageMultiplierPerLevel = 1.2f;
     #endregion
 
     #region Fields
@@ -18,5 +31,5 @@ public class WeaponData : MonoBehaviour
 
     #region Private Methods
     #endregion
-  
+
 }
