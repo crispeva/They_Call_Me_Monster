@@ -39,7 +39,7 @@ public class InputController : MonoBehaviour
     void Update()
     {
         PlayerMovement();
-        HandleInput();
+        AIMInput();
     }
     #endregion
     #region Private Methods
@@ -52,7 +52,7 @@ public class InputController : MonoBehaviour
         player.linearVelocity = new Vector2(moveX * speed, moveY * speed);
 
     }
-    void HandleInput()
+    void AIMInput()
     {
         // Update FirePressed based on input
         FirePressed = Input.GetButtonDown("Fire1");

@@ -19,7 +19,6 @@ public class WeaponData : ScriptableObject
     [Header("Scaling")]
     public float damageMultiplierPerLevel = 1.2f;
     #endregion
-
     #region Fields
     #endregion
 

@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: 3ba5f903e92ecd8409ec8fba667855f9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7840841193072871017
+    second: EnemiesDummy_0
+  - first:
+      213: -8525253718835781862
+    second: EnemiesDummy_1
+  - first:
+      213: 400431357244113383
+    second: EnemiesDummy_2
+  - first:
+      213: 6671771781773062921
+    second: EnemiesDummy_3
+  - first:
+      213: 2713852531550020259
+    second: EnemiesDummy_4
+  - first:
+      213: -6068779229146127843
+    second: EnemiesDummy_5
+  - first:
+      213: -1854813756784794847
+    second: EnemiesDummy_6
+  - first:
+      213: 8773683339899016145
+    second: EnemiesDummy_7
+  - first:
+      213: 3434594280517328774
+    second: EnemiesDummy_8
+  - first:
+      213: -2458763448655770778
+    second: EnemiesDummy_9
+  - first:
+      213: 8202530765751287267
+    second: EnemiesDummy_10
+  - first:
+      213: -1005719810508356668
+    second: EnemiesDummy_11
+  - first:
+      213: -7729398463448918604
+    second: EnemiesDummy_12
+  - first:
+      213: 5087949821656889645
+    second: EnemiesDummy_13
+  - first:
+      213: 3888574086046186887
+    second: EnemiesDummy_14
+  - first:
+      213: -6910890581995519326
+    second: EnemiesDummy_15
+  - first:
+      213: 6289076868613854409
+    second: EnemiesDummy_16
+  - first:
+      213: 8593877006991358305
+    second: EnemiesDummy_17
+  - first:
+      213: -3638530304122625271
+    second: EnemiesDummy_18
+  - first:
+      213: 3747682678182760124
+    second: EnemiesDummy_19
+  - first:
+      213: 7607740741967274887
+    second: EnemiesDummy_20
+  - first:
+      213: -1614023724768489856
+    second: EnemiesDummy_21
+  - first:
+      213: 4296863422613364987
+    second: EnemiesDummy_22
+  - first:
+      213: -4183442823280983893
+    second: EnemiesDummy_23
+  - first:
+      213: -1609269700872078280
+    second: EnemiesDummy_24
+  - first:
+      213: 7523742186304327446
+    second: EnemiesDummy_25
+  - first:
+      213: 5254718558845866633
+    second: EnemiesDummy_26
+  - first:
+      213: 3686939270839649424
+    second: EnemiesDummy_27
+  - first:
+      213: 8449082329425519500
+    second: EnemiesDummy_28
+  - first:
+      213: 84602173466956554
+    second: EnemiesDummy_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EnemiesDummy_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 508
+        width: 114
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79934aa3a7cbf2390800000000000000
+      internalID: -7840841193072871017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 507
+        width: 113
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1f17b459e630b980800000000000000
+      internalID: -8525253718835781862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_2
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 508
+        width: 113
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e18675a23e9e8500800000000000000
+      internalID: 400431357244113383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_3
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 508
+        width: 114
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 903fe034615e69c50800000000000000
+      internalID: 6671771781773062921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_4
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 508
+        width: 107
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a265d3bf7a89a520800000000000000
+      internalID: 2713852531550020259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_5
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 508
+        width: 107
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d12e972e17d57cba0800000000000000
+      internalID: -6068779229146127843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_6
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 507
+        width: 106
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 123a55627b06246e0800000000000000
+      internalID: -1854813756784794847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_7
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 508
+        width: 107
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d3917e338262c970800000000000000
+      internalID: 8773683339899016145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_8
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 507
+        width: 118
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68fd2d50d412aaf20800000000000000
+      internalID: 3434594280517328774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_9
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 507
+        width: 117
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66b8828aba7b0edd0800000000000000
+      internalID: -2458763448655770778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_10
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 508
+        width: 117
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed71d7c54e35d170800000000000000
+      internalID: 8202530765751287267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_11
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 507
+        width: 117
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c3831f2927fa02f0800000000000000
+      internalID: -1005719810508356668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 251
+        width: 112
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b55da2bc09abb490800000000000000
+      internalID: -7729398463448918604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_13
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 251
+        width: 110
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d29fedad7670c9640800000000000000
+      internalID: 5087949821656889645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_14
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 251
+        width: 108
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d7299578df6f530800000000000000
+      internalID: 3888574086046186887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_15
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 251
+        width: 110
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a2809291a59710a0800000000000000
+      internalID: -6910890581995519326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_16
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 251
+        width: 107
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c4dade471a474750800000000000000
+      internalID: 6289076868613854409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_17
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 251
+        width: 107
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 169fd150b95934770800000000000000
+      internalID: 8593877006991358305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_18
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 251
+        width: 107
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 903e64657f7518dc0800000000000000
+      internalID: -3638530304122625271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_19
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 251
+        width: 106
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbec7fb2a81720430800000000000000
+      internalID: 3747682678182760124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_20
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 251
+        width: 116
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 783e934b5ef149960800000000000000
+      internalID: 7607740741967274887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_21
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 251
+        width: 113
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08e0f1a49f5d999e0800000000000000
+      internalID: -1614023724768489856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_22
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 251
+        width: 114
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf02d31648681ab30800000000000000
+      internalID: 4296863422613364987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_23
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 251
+        width: 116
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba00e24caec61f5c0800000000000000
+      internalID: -4183442823280983893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_24
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 0
+        width: 160
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83c78bbbbb9baa9e0800000000000000
+      internalID: -1609269700872078280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_25
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 0
+        width: 162
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61f4a4ce7a3b96860800000000000000
+      internalID: 7523742186304327446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_26
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 0
+        width: 186
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98219a640b28ce840800000000000000
+      internalID: 5254718558845866633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_27
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 0
+        width: 186
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 094c5da8bb3aa2330800000000000000
+      internalID: 3686939270839649424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_28
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 0
+        width: 187
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c83207b0d9b214570800000000000000
+      internalID: 8449082329425519500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemiesDummy_29
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 0
+        width: 181
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0359b08a319c2100800000000000000
+      internalID: 84602173466956554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      EnemiesDummy_0: -7840841193072871017
+      EnemiesDummy_1: -8525253718835781862
+      EnemiesDummy_10: 8202530765751287267
+      EnemiesDummy_11: -1005719810508356668
+      EnemiesDummy_12: -7729398463448918604
+      EnemiesDummy_13: 5087949821656889645
+      EnemiesDummy_14: 3888574086046186887
+      EnemiesDummy_15: -6910890581995519326
+      EnemiesDummy_16: 6289076868613854409
+      EnemiesDummy_17: 8593877006991358305
+      EnemiesDummy_18: -3638530304122625271
+      EnemiesDummy_19: 3747682678182760124
+      EnemiesDummy_2: 400431357244113383
+      EnemiesDummy_20: 7607740741967274887
+      EnemiesDummy_21: -1614023724768489856
+      EnemiesDummy_22: 4296863422613364987
+      EnemiesDummy_23: -4183442823280983893
+      EnemiesDummy_24: -1609269700872078280
+      EnemiesDummy_25: 7523742186304327446
+      EnemiesDummy_26: 5254718558845866633
+      EnemiesDummy_27: 3686939270839649424
+      EnemiesDummy_28: 8449082329425519500
+      EnemiesDummy_29: 84602173466956554
+      EnemiesDummy_3: 6671771781773062921
+      EnemiesDummy_4: 2713852531550020259
+      EnemiesDummy_5: -6068779229146127843
+      EnemiesDummy_6: -1854813756784794847
+      EnemiesDummy_7: 8773683339899016145
+      EnemiesDummy_8: 3434594280517328774
+      EnemiesDummy_9: -2458763448655770778
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
