@@ -8,8 +8,8 @@ public class DaggerProjectile : MonoBehaviour
     #endregion
 
     #region Fields
-    [SerializeField] float speed = 10f;
-    [SerializeField] int damage = 10;
+    public float speed = 10f;
+    public int damage = 10;
     Vector2 direction;
     GameObject owner;
     #endregion
