@@ -11,10 +11,9 @@ public class WeaponController : MonoBehaviour
 
     #region Fields
     //Refact porque tiene caracteristicas solo de disparo de la daga
+    public WeaponData startingWeapon;
     InputController input;
-    [SerializeField] GameObject daggerPrefab;
-    [SerializeField] float fireRate = 3f;
-    [SerializeField] int rotationOffset = -90;
+    WeaponRuntime currentWeapon;
     #endregion
 
     #region Unity Callbacks
@@ -25,35 +24,19 @@ public class WeaponController : MonoBehaviour
     void Awake()
     {
         input = GetComponent<InputController>();
+        currentWeapon = new WeaponRuntime(startingWeapon);
     }
 
     void Update()
     {
         if (!input.FirePressed) return;
-        if (!CanShoot()) return;
 
-        Shoot(input.AimPosition);
+        currentWeapon.Fire(transform, input.AimPosition);
     }
 
-    bool CanShoot()
+    public void EquipWeapon(WeaponData newWeapon)
     {
-        return Time.time >= lastFireTime + (1f / fireRate);
-    }
-
-    void Shoot(Vector2 aimPosition)
-    {
-        lastFireTime = Time.time;
-
-        Vector2 dir = (aimPosition - (Vector2)transform.position).normalized;
-        float baseAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        float angle = baseAngle + rotationOffset;// Si la punta de la sprite apunta hacia arriba, probar -90 o +90
-        GameObject dagger = Instantiate(
-            daggerPrefab,
-            transform.position,
-            Quaternion.Euler(0f, 0f, angle)
-        );
-
-        dagger.GetComponent<DaggerProjectile>().Init(gameObject, dir);
+        currentWeapon = new WeaponRuntime(newWeapon);
     }
     #endregion
 

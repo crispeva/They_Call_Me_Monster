@@ -13,16 +13,6 @@ public class WeaponRuntime : MonoBehaviour
     #endregion
 
     #region Unity Callbacks
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     #endregion
 
     #region Public Methods
@@ -50,9 +40,9 @@ public class WeaponRuntime : MonoBehaviour
                 FireDagger(owner, aimPosition);
                 break;
 
-                // luego:
-                // case WeaponType.Bow:
-                // case WeaponType.Staff:
+            case WeaponType.Axe:
+                FireAxe(owner);
+                break;
         }
     }
 
@@ -61,7 +51,7 @@ public class WeaponRuntime : MonoBehaviour
         Vector2 dir = (aimPosition - (Vector2)owner.position).normalized;
 
         GameObject proj = Object.Instantiate(
-            data.projectilePrefab,
+            data.weaponPrefab,
             owner.position,
             Quaternion.identity
         );
@@ -70,6 +60,34 @@ public class WeaponRuntime : MonoBehaviour
         dagger.speed = data.projectileSpeed;
         dagger.damage = data.damage;
         dagger.Init(owner.gameObject, dir);
+    }
+
+    // --- AXE (nueva arma) ---
+    void FireAxe(Transform owner)
+    {
+        //Collider2D[] hits = Physics2D.OverlapCircleAll(
+        //    owner.position,
+        //    data.meleeRadius
+        //);
+
+        //foreach (var hit in hits)
+        //{
+        //    if (hit.CompareTag("Player")) continue;
+
+        //    IDamageable dmg = hit.GetComponent<IDamageable>();
+        //    if (dmg != null)
+        //    {
+        //        dmg.TakeDamage(data.damage);
+        //    }
+        //}
+        GameObject axeObj = Object.Instantiate(
+            data.weaponPrefab,
+            owner.position,
+            Quaternion.identity
+        );
+
+        var axe = axeObj.GetComponent<AxeSwing>();
+        axe.Init(owner, data.damage, data.meleeRadius);
     }
     #endregion
 
