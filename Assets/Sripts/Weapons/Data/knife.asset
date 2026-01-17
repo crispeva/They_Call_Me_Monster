@@ -17,9 +17,9 @@ MonoBehaviour:
   weaponPrefab: {fileID: 325900172340433371, guid: b84bb9132c46ea0499f2d44dcb3f63a2,
     type: 3}
   damage: 10
-  fireRate: 0
+  fireRate: 2
   range: 3
   usesProjectile: 1
-  projectileSpeed: 0
-  meleeRadius: 1.5
+  projectileSpeed: 5
+  meleeRadius: 0
   damageMultiplierPerLevel: 1.2

@@ -3783,7 +3783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7474b3079b3d1ec4cade5771df406778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShoot
-  startingWeapon: {fileID: 11400000, guid: 11d8ecbc67504934ba5722d81cddca94, type: 2}
+  startingWeapon: {fileID: 11400000, guid: 367429a795c62204791d0e699467daa0, type: 2}
 --- !u!1 &1572980855
 GameObject:
   m_ObjectHideFlags: 0

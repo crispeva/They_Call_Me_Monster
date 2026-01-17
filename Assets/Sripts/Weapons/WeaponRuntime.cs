@@ -7,6 +7,7 @@ public class WeaponRuntime : MonoBehaviour
     #region Properties
     WeaponData data;
     float lastFireTime;
+    [SerializeField] int rotationOffset = -90;
     #endregion
 
     #region Fields
@@ -22,6 +23,7 @@ public class WeaponRuntime : MonoBehaviour
     }
     public bool CanFire()
     {
+        Debug.Log("CanFire check for weapon: " + data.weaponType);
         return Time.time >= lastFireTime + (1f / data.fireRate);
     }
     #endregion
@@ -33,7 +35,7 @@ public class WeaponRuntime : MonoBehaviour
         if (!CanFire()) return;
 
         lastFireTime = Time.time;
-
+        Debug.Log("Firing weapon: " + data.weaponType);
         switch (data.weaponType)
         {
             case WeaponType.Dagger:
@@ -41,7 +43,7 @@ public class WeaponRuntime : MonoBehaviour
                 break;
 
             case WeaponType.Axe:
-                FireAxe(owner);
+                FireAxe(owner, aimPosition);
                 break;
         }
     }
@@ -49,11 +51,12 @@ public class WeaponRuntime : MonoBehaviour
     void FireDagger(Transform owner, Vector2 aimPosition)
     {
         Vector2 dir = (aimPosition - (Vector2)owner.position).normalized;
-
+        float baseAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        float angle = baseAngle + rotationOffset;
         GameObject proj = Object.Instantiate(
             data.weaponPrefab,
             owner.position,
-            Quaternion.identity
+            Quaternion.Euler(0f,0f,angle)
         );
 
         var dagger = proj.GetComponent<DaggerProjectile>();
@@ -63,23 +66,9 @@ public class WeaponRuntime : MonoBehaviour
     }
 
     // --- AXE (nueva arma) ---
-    void FireAxe(Transform owner)
+    void FireAxe(Transform owner, Vector2 aimPosition)
     {
-        //Collider2D[] hits = Physics2D.OverlapCircleAll(
-        //    owner.position,
-        //    data.meleeRadius
-        //);
 
-        //foreach (var hit in hits)
-        //{
-        //    if (hit.CompareTag("Player")) continue;
-
-        //    IDamageable dmg = hit.GetComponent<IDamageable>();
-        //    if (dmg != null)
-        //    {
-        //        dmg.TakeDamage(data.damage);
-        //    }
-        //}
         GameObject axeObj = Object.Instantiate(
             data.weaponPrefab,
             owner.position,
@@ -87,7 +76,7 @@ public class WeaponRuntime : MonoBehaviour
         );
 
         var axe = axeObj.GetComponent<AxeSwing>();
-        axe.Init(owner, data.damage, data.meleeRadius);
+        axe.Init(owner, data.damage, data.meleeRadius, aimPosition);
     }
     #endregion
 

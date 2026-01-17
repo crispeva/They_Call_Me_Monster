@@ -105,9 +105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1febf91ffcb502b4b901d510e6d1a8ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AxeSwing
-  duration: 0.2
-  radius: 1.5
-  damage: 0
+  duration: 2
+  radius: 10
+  drawRuntimeRadius: 1
+  sweep: 180
+  hitRadius: 0.25
 --- !u!50 &97350685896407646
 Rigidbody2D:
   serializedVersion: 5

@@ -19,7 +19,6 @@ public class WeaponController : MonoBehaviour
     #region Unity Callbacks
 
     // Update is called once per frame
-    float lastFireTime;
 
     void Awake()
     {
