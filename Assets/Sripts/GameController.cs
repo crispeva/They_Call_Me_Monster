@@ -1,5 +1,8 @@
  using UnityEngine;
- #region Properties
+public class GameController : MonoBehaviour
+{
+    #region Properties
+
     #endregion
 
     #region Fields
@@ -13,3 +16,4 @@
 
     #region Private Methods
     #endregion
+}

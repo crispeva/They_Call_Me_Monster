@@ -17,6 +17,10 @@ public class WeaponData : ScriptableObject
     public float fireRate;
     public float range;
 
+    [Header("Audio")]
+    public AudioClip attackSFX;
+    [Range(0f, 0.5f)] public float pitchVariation = 0.1f;
+
     [Header("Projectile (solo si aplica)")]
     public bool usesProjectile;
     public float projectileSpeed;

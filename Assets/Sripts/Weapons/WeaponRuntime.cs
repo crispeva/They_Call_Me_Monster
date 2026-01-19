@@ -58,7 +58,7 @@ public class WeaponRuntime : MonoBehaviour
             owner.position,
             Quaternion.Euler(0f,0f,angle)
         );
-
+        PlayAttackSFX();
         var dagger = proj.GetComponent<DaggerProjectile>();
         dagger.speed = data.projectileSpeed;
         dagger.damage = data.damage;
@@ -74,9 +74,16 @@ public class WeaponRuntime : MonoBehaviour
             owner.position,
             Quaternion.identity
         );
-
+        PlayAttackSFX();
         var axe = axeObj.GetComponent<AxeSwing>();
         axe.Init(owner, data.damage, data.meleeRadius, aimPosition);
+    }
+    void PlayAttackSFX()
+    {
+        AudioManager.Instance?.PlaySFX(
+            data.attackSFX,
+           data.pitchVariation
+        );
     }
     #endregion
 

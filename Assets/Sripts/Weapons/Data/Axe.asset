@@ -19,6 +19,8 @@ MonoBehaviour:
   damage: 5
   fireRate: 2
   range: 1
+  attackSFX: {fileID: 8300000, guid: 5c9b0dae799ff334a9521f835ce532ab, type: 3}
+  pitchVariation: 0.1
   usesProjectile: 0
   projectileSpeed: 1.5
   meleeRadius: 1.5
