@@ -53,11 +53,11 @@ public class WeaponRuntime : MonoBehaviour
         Vector2 dir = (aimPosition - (Vector2)owner.position).normalized;
         float baseAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         float angle = baseAngle + rotationOffset;
-        GameObject proj = Object.Instantiate(
-            data.weaponPrefab,
-            owner.position,
-            Quaternion.Euler(0f,0f,angle)
-        );
+        // usar pool en lugar de Instantiate
+        GameObject proj = PoolManager.Instance != null
+            ? PoolManager.Instance.SpawnFromPool(data.weaponPrefab, owner.position, Quaternion.Euler(0f, 0f, angle))
+            : Object.Instantiate(data.weaponPrefab, owner.position, Quaternion.Euler(0f, 0f, angle));
+
         PlayAttackSFX();
         var dagger = proj.GetComponent<DaggerProjectile>();
         dagger.speed = data.projectileSpeed;

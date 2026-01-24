@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5683153625969959288}
+  - component: {fileID: 6570814770502053081}
+  - component: {fileID: -1838271275159082210}
   - component: {fileID: 2154292905284490837}
   - component: {fileID: 8913782560734872172}
   - component: {fileID: 3483400100276240206}
-  - component: {fileID: 6570814770502053081}
   m_Layer: 0
   m_Name: DaggerProjectile
   m_TagString: Untagged
@@ -35,6 +36,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -0.67, y: -0.012, z: -88.952}
+--- !u!114 &6570814770502053081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325900172340433371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd338b26b7693e47be0dcd43330a65f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DaggerProyectile
+  speed: 10
+  damage: 10
+  originPrefab: {fileID: 325900172340433371}
+--- !u!114 &-1838271275159082210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325900172340433371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3367c011482e1244b762dba1ea462fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PooledObject
 --- !u!212 &2154292905284490837
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -157,17 +185,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.7500001, y: 2.1249998}
   m_Direction: 0
---- !u!114 &6570814770502053081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325900172340433371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cd338b26b7693e47be0dcd43330a65f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DaggerProyectile
-  speed: 10
-  damage: 10

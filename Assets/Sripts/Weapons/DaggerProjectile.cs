@@ -12,9 +12,15 @@ public class DaggerProjectile : MonoBehaviour
     public int damage = 10;
     Vector2 direction;
     GameObject owner;
+   GameObject originPrefab;
     #endregion
 
     #region Unity Callbacks
+    void Awake()
+    {
+        // Obtener el prefab original desde PooledObject (asignado por PoolManager)
+       
+    }
 
     void Update()
     {
@@ -33,14 +39,23 @@ public class DaggerProjectile : MonoBehaviour
         IDamageable damageable = other.GetComponent<IDamageable>();
         if (damageable != null)
         {
+            var pooled = GetComponent<PooledObject>();
+            if (pooled != null)
+            {
+                originPrefab = pooled.Prefab;
+            }
             damageable.TakeDamage(damage);
-            Destroy(gameObject);
+            PoolManager.Instance?.ReturnToPool(originPrefab, gameObject);
         }
     }
     public void Init(GameObject owner, Vector2 dir)
     {
         this.owner = owner;
         direction = dir.normalized;
+    }
+    public void ReturnSelfToPool()
+    {
+        PoolManager.Instance?.ReturnToPool(originPrefab, gameObject);
     }
     #endregion
 

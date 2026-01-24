@@ -11,7 +11,7 @@ public class WeaponController : MonoBehaviour
 
     #region Fields
     //Refact porque tiene caracteristicas solo de disparo de la daga
-    public WeaponData startingWeapon;
+    [SerializeField] private WeaponData startingWeapon;
     InputController input;
     WeaponRuntime currentWeapon;
     #endregion
@@ -24,6 +24,24 @@ public class WeaponController : MonoBehaviour
     {
         input = GetComponent<InputController>();
         currentWeapon = new WeaponRuntime(startingWeapon);
+
+        // precargar pool si el arma usa proyectiles
+        if (startingWeapon != null && startingWeapon.usesProjectile)
+        {
+            // Tamaño por defecto; ajustar según necesidad
+            int warmSize = 10;
+            if (PoolManager.Instance != null)
+            {
+                PoolManager.Instance.WarmPool(startingWeapon.weaponPrefab, warmSize);
+            }
+            else
+            {
+                // crear instancia del PoolManager en escena si no existe
+                var go = new GameObject("PoolManager");
+                go.AddComponent<PoolManager>();
+                PoolManager.Instance.WarmPool(startingWeapon.weaponPrefab, warmSize);
+            }
+        }
     }
 
     void Update()
@@ -31,11 +49,16 @@ public class WeaponController : MonoBehaviour
         if (!input.FirePressed) return;
 
         currentWeapon.Fire(transform, input.AimPosition);
+
     }
 
     public void EquipWeapon(WeaponData newWeapon)
     {
         currentWeapon = new WeaponRuntime(newWeapon);
+        if (newWeapon != null && newWeapon.usesProjectile)
+        {
+            PoolManager.Instance?.WarmPool(newWeapon.weaponPrefab, 10);
+        }
     }
     #endregion
 
