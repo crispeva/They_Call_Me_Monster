@@ -8,23 +8,36 @@ public class DaggerProjectile : MonoBehaviour
     #endregion
 
     #region Fields
+    //Propiedades del proyectil
     public float speed = 10f;
     public int damage = 10;
+    // Dirección del proyectil
     Vector2 direction;
+    // Dueño del proyectil para evitar colisiones consigo mismo
     GameObject owner;
-   GameObject originPrefab;
+    // Prefab original del proyectil
+    GameObject originPrefab;
+
+    PooledObject pooledObject;
+    // Distancia recorrida del proyectil
+    Vector3 startPos;
+    private float Max_distance = 20f;
     #endregion
 
     #region Unity Callbacks
     void Awake()
     {
-        // Obtener el prefab original desde PooledObject (asignado por PoolManager)
-       
+
+        startPos = transform.position;
     }
 
     void Update()
     {
         transform.position += (Vector3)direction * speed * Time.deltaTime;
+        if(Vector3.Distance(startPos, transform.position)> Max_distance)
+        {
+            ReturnSelfToPool();
+        }
     }
     #endregion
 
@@ -39,23 +52,26 @@ public class DaggerProjectile : MonoBehaviour
         IDamageable damageable = other.GetComponent<IDamageable>();
         if (damageable != null)
         {
-            var pooled = GetComponent<PooledObject>();
-            if (pooled != null)
-            {
-                originPrefab = pooled.Prefab;
-            }
+            // Obtener el prefab original desde PooledObject (asignado por PoolManager)
             damageable.TakeDamage(damage);
-            PoolManager.Instance?.ReturnToPool(originPrefab, gameObject);
-        }
+            ReturnSelfToPool();
+        }    
     }
     public void Init(GameObject owner, Vector2 dir)
     {
         this.owner = owner;
         direction = dir.normalized;
     }
+    //Refactorizar para usar PoolManager
     public void ReturnSelfToPool()
     {
-        PoolManager.Instance?.ReturnToPool(originPrefab, gameObject);
+        pooledObject = GetComponent<PooledObject>();
+        if (pooledObject != null)
+        {
+            originPrefab = pooledObject.Prefab;
+            PoolManager.Instance?.ReturnToPool(originPrefab, gameObject);
+        }
+       
     }
     #endregion
 
