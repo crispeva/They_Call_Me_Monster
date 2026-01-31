@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c615afd875fdb5c418930891ce1ebe20, type: 3}
+  m_Name: Paladin
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyData
+  enemyName: Paladin
+  count: 2
+  enemyPrefab: {fileID: 39255810508435946, guid: c28c7d2f5c95f6f48af9943533cbf8b3,
+    type: 3}
+  maxHealth: 10
+  moveSpeed: 2
+  damage: 5
+  attackRate: 1
+  attackRange: 0
+  expReward: 0
+  goldReward: 0
+  hitSFX: {fileID: 0}
+  deathSFX: {fileID: 0}

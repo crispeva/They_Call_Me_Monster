@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,15 +10,14 @@ public class DaggerProjectile : MonoBehaviour
 
     #region Fields
     //Propiedades del proyectil
-    public float speed = 10f;
-    public int damage = 10;
+    [SerializeField] WeaponData weaponData;
     // Dirección del proyectil
     Vector2 direction;
     // Dueño del proyectil para evitar colisiones consigo mismo
     GameObject owner;
     // Prefab original del proyectil
     GameObject originPrefab;
-
+    HealthSystem _damageable;
     PooledObject pooledObject;
     // Distancia recorrida del proyectil
     Vector3 startPos;
@@ -27,13 +27,15 @@ public class DaggerProjectile : MonoBehaviour
     #region Unity Callbacks
     void Awake()
     {
-
         startPos = transform.position;
+    }
+    private void Start()
+    {
     }
 
     void Update()
     {
-        transform.position += (Vector3)direction * speed * Time.deltaTime;
+        transform.position += (Vector3)direction * weaponData.projectileSpeed * Time.deltaTime;
         if(Vector3.Distance(startPos, transform.position)> Max_distance)
         {
             ReturnSelfToPool();
@@ -47,13 +49,18 @@ public class DaggerProjectile : MonoBehaviour
     #region Private Methods
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == owner) return;
+        if (other.gameObject == owner)
+        {
+            Debug.Log("TOCO PLAYER");
+            return;
+        }
+        Debug.Log("enemigo");
 
-        IDamageable damageable = other.GetComponent<IDamageable>();
-        if (damageable != null)
+        _damageable = other.GetComponent<HealthSystem>();
+        if (_damageable != null)
         {
             // Obtener el prefab original desde PooledObject (asignado por PoolManager)
-            damageable.TakeDamage(damage);
+            _damageable.TakeDamage(weaponData.damage);
             ReturnSelfToPool();
         }    
     }

@@ -5,6 +5,7 @@ public class PoolManager : MonoBehaviour
 {
     #region Properties
     public static PoolManager Instance;
+    PooledObject originprefab;
     #endregion
 
     #region Fields
@@ -46,8 +47,8 @@ public class PoolManager : MonoBehaviour
             GameObject obj = Object.Instantiate(prefab, parent.transform);
             obj.SetActive(false);
             // Asegurar que la instancia conoce su prefab original
-            var pooled = obj.GetComponent<PooledObject>() ?? obj.AddComponent<PooledObject>();
-            pooled.SetPrefab(prefab);
+            originprefab = obj.GetComponent<PooledObject>() ?? obj.AddComponent<PooledObject>();
+            originprefab.SetPrefab(prefab);
             //Agregar a la lista el prefab vacio
             pools[prefab].Enqueue(obj);
         }
@@ -76,8 +77,8 @@ public class PoolManager : MonoBehaviour
         {
             obj = Object.Instantiate(prefab, position, rotation);
             // Asegurar que la instancia conoce su prefab original
-            var pooled = obj.GetComponent<PooledObject>() ?? obj.AddComponent<PooledObject>();
-            pooled.SetPrefab(prefab);
+            originprefab = obj.GetComponent<PooledObject>() ?? obj.AddComponent<PooledObject>();
+            originprefab.SetPrefab(prefab);
         }
 
         return obj;

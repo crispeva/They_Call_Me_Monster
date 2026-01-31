@@ -60,8 +60,8 @@ public class WeaponRuntime : MonoBehaviour
 
         PlayAttackSFX();
         var dagger = proj.GetComponent<DaggerProjectile>();
-        dagger.speed = data.projectileSpeed;
-        dagger.damage = data.damage;
+       // dagger.speed = data.projectileSpeed;
+        //dagger.damage = data.damage;
         dagger.Init(owner.gameObject, dir);
     }
 

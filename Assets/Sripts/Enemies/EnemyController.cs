@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyDummy : MonoBehaviour,IDamageable
+public class EnemyController : MonoBehaviour
 {
     #region Properties
-    [SerializeField] int maxHealth = 30;
-    int currentHealth;
+    [SerializeField] private EnemyData data;
+    private HealthSystem _enemyHealth;
+    private Transform target;
+    private float currentHealth;
 
     SpriteRenderer sr;
     Color originalColor;
@@ -18,15 +20,21 @@ public class EnemyDummy : MonoBehaviour,IDamageable
     #region Unity Callbacks
     private void Awake()
     {
-        currentHealth = maxHealth;
+        _enemyHealth.SetHealth(data.maxHealth);
+        target = GameController.Instance.WeaponController.transform;
         sr = GetComponent<SpriteRenderer>();
         originalColor = sr.color;
+    }
+    private void Start()
+    {
+        
     }
     #endregion
 
     #region Public Methods
     public void TakeDamage(int amount)
     {
+        _enemyHealth.TakeDamage(0);
         currentHealth -= amount;
         StartCoroutine(HitFlash());
 
@@ -40,12 +48,19 @@ public class EnemyDummy : MonoBehaviour,IDamageable
     IEnumerator HitFlash()
     {
         sr.color = Color.red;
+        AudioManager.Instance?.PlaySFX(data.hitSFX);
         yield return new WaitForSeconds(0.1f);
         sr.color = originalColor;
     }
-
+    protected void EnemyMovement()
+    {
+        // Implement enemy movement logic here
+        Vector2 dir = (target.position - transform.position).normalized;
+        transform.position += (Vector3)dir * data.moveSpeed * Time.deltaTime;
+    }
     void Die()
     {
+        AudioManager.Instance?.PlaySFX(data.deathSFX);
         Destroy(gameObject);
     }
     #endregion
