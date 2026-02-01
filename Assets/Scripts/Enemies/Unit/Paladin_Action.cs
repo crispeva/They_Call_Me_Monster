@@ -13,7 +13,7 @@ public class Paladin_Action : EnemyController
     #region Unity Callbacks
     void Start()
     {
-        
+        base.Start();
     }
 
     // Update is called once per frame

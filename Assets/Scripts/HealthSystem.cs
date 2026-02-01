@@ -14,18 +14,25 @@ public class HealthSystem : MonoBehaviour,IDamageable
     private bool _isdeath;
     public float CurrentHealth { get; set; }
     [SerializeField] private float delayDeath = 1f;
-
+    //Sprite Renderer for flash effect
+    SpriteRenderer _sprite;
+    Color originalColor;
     private void Awake()
     {
         CurrentHealth = _maxHealth;
         _isdeath = false;
     }
-
+    private void Start()
+    {
+        _sprite = this.GetComponent<SpriteRenderer>();
+        originalColor = _sprite.color;
+    }
     public void TakeDamage(float damage)
     {
         CurrentHealth -= damage;
         OnHealthChanged?.Invoke(CurrentHealth); // Notify listeners about health change
         Debug.Log($"Took {damage} damage, current health: {CurrentHealth}");
+        StartCoroutine(HitFlash());
         if (CurrentHealth <= 0)
         {
             Die();
@@ -45,7 +52,13 @@ public class HealthSystem : MonoBehaviour,IDamageable
         CurrentHealth = Mathf.Min(CurrentHealth, _maxHealth);
         OnHealthChanged?.Invoke(CurrentHealth);
     }
-
+    IEnumerator HitFlash()
+    {
+        _sprite.color = Color.red;
+        //AudioManager.Instance?.PlaySFX(data.hitSFX);
+        yield return new WaitForSeconds(0.1f);
+        _sprite.color = originalColor;
+    }
     private void Die()
     {
 

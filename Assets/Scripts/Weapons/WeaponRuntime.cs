@@ -59,9 +59,7 @@ public class WeaponRuntime : MonoBehaviour
             : Object.Instantiate(data.weaponPrefab, owner.position, Quaternion.Euler(0f, 0f, angle));
 
         PlayAttackSFX();
-        var dagger = proj.GetComponent<DaggerProjectile>();
-       // dagger.speed = data.projectileSpeed;
-        //dagger.damage = data.damage;
+        DaggerProjectile dagger = proj.GetComponent<DaggerProjectile>();
         dagger.Init(owner.gameObject, dir);
     }
 

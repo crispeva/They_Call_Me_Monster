@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7568243085005946373}
-  - component: {fileID: 327594032460690302}
-  - component: {fileID: -1292875808407536488}
-  - component: {fileID: 117742934028578283}
+  - component: {fileID: -5811542978026173599}
+  - component: {fileID: -183988086266698715}
+  - component: {fileID: -7296900415146671499}
   - component: {fileID: 1509328108449820799}
   - component: {fileID: 3323273458176693642}
   - component: {fileID: 5423218813365587929}
@@ -37,7 +37,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &327594032460690302
+--- !u!114 &-5811542978026173599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,9 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745a1c432c2743148a1f9f4ce6c11490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
-  _maxHealth: 5
+  _maxHealth: 100
   delayDeath: 1
---- !u!114 &-1292875808407536488
+--- !u!114 &-183988086266698715
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   data: {fileID: 11400000, guid: 26a70f5c63e5c3c46a2ef19124d5d892, type: 2}
---- !u!114 &117742934028578283
+--- !u!114 &-7296900415146671499
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,7 +182,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39255810508435946}
   m_BodyType: 1
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1

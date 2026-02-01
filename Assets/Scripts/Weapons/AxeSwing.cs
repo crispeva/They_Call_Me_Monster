@@ -65,7 +65,7 @@ public class AxeSwing : MonoBehaviour
         // Orientación visual del sprite: que mire hacia fuera/centro (ajusta si necesitas otra apariencia)
         transform.rotation = Quaternion.Euler(0f, 0f, currentAngle - 90f);
 
-        // Detectar impactos alrededor de la posición del hacha y aplicar daño una vez por target
+        // Detectar impactos alrededor de la posición del hacha y aplicar daño una vez por _target
         ApplyHitsAtPosition(transform.position);
 
         if (normalizedTime >= 1f && !hasFinished)

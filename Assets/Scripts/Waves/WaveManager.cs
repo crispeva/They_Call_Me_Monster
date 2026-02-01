@@ -42,7 +42,7 @@ namespace Waves
                 for (int i = 0; i < entry.count; i++)
                 {
                     Transform point = spawnPoints[Random.Range(0, spawnPoints.Length)];
-                    Instantiate(entry.enemyPrefab, point.position, Quaternion.identity);
+                    GameObject enemyInstance = Instantiate(entry.enemyPrefab, point.position, Quaternion.identity);
                     yield return new WaitForSeconds(wave.timeBetweenSpawns);
                 }
             }

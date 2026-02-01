@@ -23,9 +23,9 @@ public class EnemyData : ScriptableObject
     public int expReward;
     public int goldReward;
 
-    [Header("Audio")]
-    public AudioClip hitSFX;
-    public AudioClip deathSFX;
+   // [Header("Audio")]
+   // public AudioClip hitSFX;
+   // public AudioClip deathSFX;
     #endregion
 
 
