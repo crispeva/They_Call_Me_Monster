@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7568243085005946373}
   - component: {fileID: -5811542978026173599}
-  - component: {fileID: -183988086266698715}
   - component: {fileID: -7296900415146671499}
   - component: {fileID: 1509328108449820799}
   - component: {fileID: 3323273458176693642}
@@ -51,19 +50,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
   _maxHealth: 100
   delayDeath: 1
---- !u!114 &-183988086266698715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39255810508435946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dbf56d433841154b8bf6a78ade401cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  data: {fileID: 11400000, guid: 26a70f5c63e5c3c46a2ef19124d5d892, type: 2}
 --- !u!114 &-7296900415146671499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ba331094c8124439a2c01fc626aa03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Paladin_Action
-  data: {fileID: 11400000, guid: 26a70f5c63e5c3c46a2ef19124d5d892, type: 2}
+  _enemyData: {fileID: 11400000, guid: 26a70f5c63e5c3c46a2ef19124d5d892, type: 2}
 --- !u!212 &1509328108449820799
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -123,7 +109,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -7840841193072871017, guid: 3ba5f903e92ecd8409ec8fba667855f9,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -181,7 +167,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39255810508435946}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -199,4 +185,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7

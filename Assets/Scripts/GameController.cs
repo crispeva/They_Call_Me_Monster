@@ -1,5 +1,8 @@
  using UnityEngine;
-public class GameController : MonoBehaviour
+using Weapons;
+namespace Controllers
+{
+    public class GameController : MonoBehaviour
 {
     #region Properties
     public static GameController Instance { get; private set; }
@@ -27,4 +30,5 @@ public class GameController : MonoBehaviour
 
     #region Private Methods
     #endregion
+}
 }

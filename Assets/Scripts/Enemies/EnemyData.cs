@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(menuName = "Enemies/Enemy Data")]
-public class EnemyData : ScriptableObject
+namespace Enemies
+{
+    [CreateAssetMenu(menuName = "Enemies/Enemy Data")]
+
+    public class EnemyData : ScriptableObject
 {
     #region Properties
     [Header("Identity")]
@@ -29,4 +32,5 @@ public class EnemyData : ScriptableObject
     #endregion
 
 
+}
 }

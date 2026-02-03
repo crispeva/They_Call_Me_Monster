@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class WeaponRuntime : MonoBehaviour
+namespace Weapons
+{
+    public class WeaponRuntime : MonoBehaviour
 {
     #region Properties
     WeaponData data;
@@ -85,4 +86,5 @@ public class WeaponRuntime : MonoBehaviour
     }
     #endregion
 
+}
 }

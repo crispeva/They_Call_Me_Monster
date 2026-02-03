@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Paladin_Action : EnemyController
+namespace Enemies
+{
+    public class Paladin_Action : EnemyController
 {
  #region Properties
     #endregion
@@ -19,9 +20,8 @@ public class Paladin_Action : EnemyController
     // Update is called once per frame
     void Update()
     {
-        EnemyMovement();
-        
-    }
+            base.Update();
+        }
     #endregion
 
     #region Public Methods
@@ -31,4 +31,5 @@ public class Paladin_Action : EnemyController
 
     #endregion
   
+}
 }

@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class DaggerProjectile : MonoBehaviour
+namespace Weapons
+{
+    public class DaggerProjectile : MonoBehaviour
 {
     #region Properties
     #endregion
@@ -49,12 +50,7 @@ public class DaggerProjectile : MonoBehaviour
     #region Private Methods
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == owner)
-        {
-            Debug.Log("TOCO PLAYER");
-            return;
-        }
-        Debug.Log("enemigo");
+            if (other.gameObject == owner) return;
 
         _damageable = other.GetComponent<HealthSystem>();
         if (_damageable != null)
@@ -82,4 +78,5 @@ public class DaggerProjectile : MonoBehaviour
     }
     #endregion
 
+}
 }

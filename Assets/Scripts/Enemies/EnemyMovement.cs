@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Controllers;
 using UnityEngine;
-
-public class EnemyMovement : MonoBehaviour
+namespace Enemies
+{
+    public class EnemyMovement : MonoBehaviour
 {
     #region Properties
     [SerializeField] private EnemyData data;
@@ -36,4 +38,5 @@ public class EnemyMovement : MonoBehaviour
     #region Private Methods
     #endregion
   
+}
 }

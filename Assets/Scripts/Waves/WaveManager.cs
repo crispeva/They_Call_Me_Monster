@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Enemies;
 using UnityEngine;
-using static WaveData;
+using static Enemies.WaveData;
 
 namespace Waves
 {
@@ -12,7 +13,7 @@ namespace Waves
         #endregion
 
         #region Fields
-        [SerializeField] private WaveData[] waves;
+        [SerializeField] private Enemies.WaveData[] waves;
         [SerializeField] private Transform[] spawnPoints;
         private int currentWave = 0;
         #endregion
