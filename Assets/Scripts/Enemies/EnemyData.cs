@@ -21,6 +21,7 @@ namespace Enemies
     [Header("Combat")]
     public float attackRate;
     public float attackRange;
+    public float attackCooldown;
 
     [Header("Rewards")]
     public int expReward;

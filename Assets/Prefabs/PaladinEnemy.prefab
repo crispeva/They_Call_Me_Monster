@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745a1c432c2743148a1f9f4ce6c11490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
-  _maxHealth: 100
-  delayDeath: 1
+  _maxHealth: 20
+  delayDeath: 0
 --- !u!114 &-7296900415146671499
 MonoBehaviour:
   m_ObjectHideFlags: 0

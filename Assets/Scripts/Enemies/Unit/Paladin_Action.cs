@@ -12,16 +12,16 @@ namespace Enemies
     #endregion
 
     #region Unity Callbacks
-    void Start()
+    void Awake()
     {
-        base.Start();
+        base.Awake();
     }
 
     // Update is called once per frame
     void Update()
     {
             base.Update();
-        }
+     }
     #endregion
 
     #region Public Methods
