@@ -21,5 +21,6 @@ MonoBehaviour:
   damage: 5
   attackRate: 1
   attackRange: 1.5
+  attackCooldown: 3
   expReward: 0
   goldReward: 0

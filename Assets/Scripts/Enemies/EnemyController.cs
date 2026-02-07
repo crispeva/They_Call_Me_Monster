@@ -12,10 +12,11 @@ public class EnemyController : MonoBehaviour
     protected HealthSystem _enemyhealth;
     protected Transform _target;
     Vector2 dir;
-    private float _attackCooldown = 0f;
+    private float _attackCooldown = 5f;
         #endregion
 
         #region Fields
+        public HealthSystem HealthSystem => _enemyhealth;
         #endregion
 
         #region Unity Callbacks
@@ -29,7 +30,6 @@ public class EnemyController : MonoBehaviour
         }
     protected void Start()
     {
-       
     }
 
     protected void Update()
@@ -63,9 +63,11 @@ public class EnemyController : MonoBehaviour
 
         protected void UpdateAttackCooldown()
     {
-        if (_attackCooldown > 0)
+            
+            if (_attackCooldown > 0)
         {
-            _attackCooldown -= Time.deltaTime;
+               // Debug.Log("Attack Cooldown: " + _attackCooldown);
+                _attackCooldown -= Time.deltaTime;
         }
     }
 

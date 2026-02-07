@@ -1,34 +1,49 @@
- using UnityEngine;
+using System;
+using Enemies;
+using Unity.VisualScripting;
+using UnityEngine;
 using Weapons;
 namespace Controllers
 {
-    public class GameController : MonoBehaviour
-{
+    public class GameController : Singleton<GameController>
+    {
     #region Properties
-    public static GameController Instance { get; private set; }
     public WeaponController WeaponController => _weaponcontroller;
+    public HealthSystem HealthSystem=> _healthsystem;
+    public EnemyController EnemyController=> _enemyController;
+    public UIGameController UIGameController=> _uiGameController;
+
     #endregion
 
     #region Fields
-    [SerializeField] protected  WeaponController _weaponcontroller;
+    [SerializeField] WeaponController _weaponcontroller;
+    [SerializeField] protected HealthSystem _healthsystem;
+    [SerializeField] protected UIGameController _uiGameController;
+   [SerializeField] protected EnemyController _enemyController;
     #endregion
 
     #region Unity Callbacks
     void Awake()
     {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
     }
-    #endregion
+        private void Start()
+        {
+            //_healthsystem.OnDeath += OnPlayerDeath;
+            //Vida de jugador y enemigo se actualiza en la UI
+            _healthsystem.OnHealthChanged += _uiGameController.UpdatePlayerHealth;
+            _enemyController.HealthSystem.OnHealthChanged += _uiGameController.UpdateEnemyHealth;
+        }
 
-    #region Public Methods
-    #endregion
+        private void OnPlayerDeath()
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
 
-    #region Private Methods
-    #endregion
-}
+        #region Public Methods
+        #endregion
+
+        #region Private Methods
+        #endregion
+    }
 }
