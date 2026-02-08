@@ -13,7 +13,6 @@ public class EnemyController : MonoBehaviour
     protected HealthSystem _enemyhealth;
     protected Slider _enemySlyderHealth;
     protected Transform _target;
-    private Slider _healthSlider;
         Vector2 dir;
     private float _attackCooldown = 5f;
         #endregion
@@ -29,16 +28,19 @@ public class EnemyController : MonoBehaviour
           
 
             _target = GameController.Instance.WeaponController.transform;
+            //Health Systems
             _playerhealth = _target.GetComponent<HealthSystem>();
             _enemyhealth = GetComponent<HealthSystem>();
-            _enemySlyderHealth= GetComponentInChildren<Slider>();
-            GameController.Instance.RegisterEnemy(this);
-            _enemyhealth.OnDestroy += Die;
-
+            //UI
+            _enemySlyderHealth = GetComponentInChildren<Slider>();
         }
     protected void Start()
     {
-    }
+            //Posible cambio: el enemigo podría registrarse en el GameController durante su Start
+            _enemyhealth.OnHealthChanged += UpdateEnemyHealth;
+            _enemyhealth.OnDestroy += Die;
+        }
+
 
     protected void Update()
     {
@@ -85,6 +87,7 @@ public class EnemyController : MonoBehaviour
         dir = (_target.position - transform.position).normalized;
         transform.position += (Vector3)dir * _enemyData.moveSpeed * Time.deltaTime;
     }
+        //Actualiza el slider de salud del enemigo en la UI (POSIBLE CAMBIO)
         internal void UpdateEnemyHealth(float value)
         {
             _enemySlyderHealth.value = value;

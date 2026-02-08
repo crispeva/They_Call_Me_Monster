@@ -35,7 +35,6 @@ namespace Controllers
             //_healthsystem.OnDeath += OnPlayerDeath;
             //Vida de jugador y enemigo se actualiza en la UI
             _healthsystem.OnHealthChanged += _uiGameController.UpdatePlayerHealth;
-            //_enemyController.HealthSystem.OnHealthChanged += _uiGameController.UpdateEnemyHealth;
         }
 
         private void OnPlayerDeath()
@@ -45,12 +44,6 @@ namespace Controllers
         #endregion
 
         #region Public Methods
-        public void RegisterEnemy(EnemyController enemy)
-        {
-            _enemyController = enemy;
-            _enemyController.HealthSystem.OnHealthChanged +=
-                _enemyController.UpdateEnemyHealth;
-        }
         #endregion
 
         #region Private Methods
