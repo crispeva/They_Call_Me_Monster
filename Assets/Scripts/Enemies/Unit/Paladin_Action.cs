@@ -5,14 +5,14 @@ namespace Enemies
 {
     public class Paladin_Action : EnemyController
 {
- #region Properties
-    #endregion
+        #region Properties
+        #endregion
 
-    #region Fields
-    #endregion
+        #region Fields
+        #endregion
 
-    #region Unity Callbacks
-    void Awake()
+        #region Unity Callbacks
+        void Awake()
     {
         base.Awake();
     }

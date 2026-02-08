@@ -9,7 +9,7 @@ public class UIGameController : MonoBehaviour
     #region Properties
     [Header("Live")]
     [SerializeField] private Slider _playerHealth;
-    [SerializeField] private Slider _enemyHealth;
+    private Slider _enemyHealth;
     #endregion
 
     #region Fields
@@ -19,6 +19,7 @@ public class UIGameController : MonoBehaviour
     private void Awake()
     {
         // El slider del enemigo debe estar asignado en el Inspector
+       
     }
     void Start()
     {
@@ -41,10 +42,7 @@ public class UIGameController : MonoBehaviour
     {
         _playerHealth.value = value;
     }
-    internal void UpdateEnemyHealth(float value)
-    {
-        _enemyHealth.value = value;
-    }
+
     #endregion
 
 }

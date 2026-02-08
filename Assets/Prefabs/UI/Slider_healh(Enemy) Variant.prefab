@@ -13,6 +13,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slider_healh(Enemy) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 947170350382114511, guid: 47eb8217a38dd674896ae3fe4bfed8a1,
+        type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3658270915208292091, guid: 47eb8217a38dd674896ae3fe4bfed8a1,
         type: 3}
       propertyPath: m_AnchorMax.x
