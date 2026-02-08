@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Enemies
+{
+
 
     #region Properties
     [CreateAssetMenu(menuName = "Waves/Wave Data")]
@@ -10,6 +13,7 @@ using UnityEngine;
         public EnemyData[] enemies;
         public float timeBetweenSpawns;    
     }
+}
 #endregion
 
 

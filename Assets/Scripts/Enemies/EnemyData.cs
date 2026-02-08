@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(menuName = "Enemies/Enemy Data")]
-public class EnemyData : ScriptableObject
+namespace Enemies
+{
+    [CreateAssetMenu(menuName = "Enemies/Enemy Data")]
+
+    public class EnemyData : ScriptableObject
 {
     #region Properties
     [Header("Identity")]
@@ -18,15 +21,17 @@ public class EnemyData : ScriptableObject
     [Header("Combat")]
     public float attackRate;
     public float attackRange;
+    public float attackCooldown;
 
     [Header("Rewards")]
     public int expReward;
     public int goldReward;
 
-    [Header("Audio")]
-    public AudioClip hitSFX;
-    public AudioClip deathSFX;
+   // [Header("Audio")]
+   // public AudioClip hitSFX;
+   // public AudioClip deathSFX;
     #endregion
 
 
+}
 }

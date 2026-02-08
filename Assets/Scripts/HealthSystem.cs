@@ -14,18 +14,20 @@ public class HealthSystem : MonoBehaviour,IDamageable
     private bool _isdeath;
     public float CurrentHealth { get; set; }
     [SerializeField] private float delayDeath = 1f;
-
     private void Awake()
     {
         CurrentHealth = _maxHealth;
         _isdeath = false;
     }
-
+    private void Start()
+    {
+    }
     public void TakeDamage(float damage)
     {
         CurrentHealth -= damage;
         OnHealthChanged?.Invoke(CurrentHealth); // Notify listeners about health change
         Debug.Log($"Took {damage} damage, current health: {CurrentHealth}");
+       
         if (CurrentHealth <= 0)
         {
             Die();
@@ -48,8 +50,8 @@ public class HealthSystem : MonoBehaviour,IDamageable
 
     private void Die()
     {
-
-            OnDestroy?.Invoke();
+        Debug.Log("Invoke Died");
+        OnDestroy?.Invoke();
             //return;
 
     }

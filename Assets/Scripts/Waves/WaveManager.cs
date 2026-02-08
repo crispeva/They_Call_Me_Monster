@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Enemies;
 using UnityEngine;
-using static WaveData;
+using UnityEngine.UI;
+using static Enemies.WaveData;
 
 namespace Waves
 {
@@ -12,7 +14,7 @@ namespace Waves
         #endregion
 
         #region Fields
-        [SerializeField] private WaveData[] waves;
+        [SerializeField] private Enemies.WaveData[] waves;
         [SerializeField] private Transform[] spawnPoints;
         private int currentWave = 0;
         #endregion
@@ -42,7 +44,7 @@ namespace Waves
                 for (int i = 0; i < entry.count; i++)
                 {
                     Transform point = spawnPoints[Random.Range(0, spawnPoints.Length)];
-                    Instantiate(entry.enemyPrefab, point.position, Quaternion.identity);
+                    GameObject enemyInstance = Instantiate(entry.enemyPrefab, point.position, Quaternion.identity);
                     yield return new WaitForSeconds(wave.timeBetweenSpawns);
                 }
             }

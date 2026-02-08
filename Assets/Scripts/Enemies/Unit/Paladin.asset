@@ -20,8 +20,7 @@ MonoBehaviour:
   moveSpeed: 2
   damage: 5
   attackRate: 1
-  attackRange: 0
+  attackRange: 1.5
+  attackCooldown: 3
   expReward: 0
   goldReward: 0
-  hitSFX: {fileID: 0}
-  deathSFX: {fileID: 0}

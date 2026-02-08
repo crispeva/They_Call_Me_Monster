@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Windows;
+namespace Weapons { 
 [RequireComponent(typeof(InputController))]
 public class WeaponController : MonoBehaviour
 {
@@ -62,4 +63,5 @@ public class WeaponController : MonoBehaviour
     }
     #endregion
 
+}
 }
