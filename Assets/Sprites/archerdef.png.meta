@@ -359,10 +359,10 @@ TextureImporter:
       name: archerdef_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 830
-        width: 170
-        height: 194
+        x: 23
+        y: 853
+        width: 7
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,10 +381,10 @@ TextureImporter:
       name: archerdef_1
       rect:
         serializedVersion: 2
-        x: 170
-        y: 830
-        width: 170
-        height: 194
+        x: 33
+        y: 853
+        width: 23
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,10 +403,10 @@ TextureImporter:
       name: archerdef_2
       rect:
         serializedVersion: 2
-        x: 340
-        y: 830
-        width: 170
-        height: 194
+        x: 59
+        y: 853
+        width: 14
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,10 +425,10 @@ TextureImporter:
       name: archerdef_3
       rect:
         serializedVersion: 2
-        x: 510
-        y: 830
-        width: 170
-        height: 194
+        x: 76
+        y: 853
+        width: 17
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,10 +447,10 @@ TextureImporter:
       name: archerdef_4
       rect:
         serializedVersion: 2
-        x: 680
-        y: 830
-        width: 170
-        height: 194
+        x: 215
+        y: 851
+        width: 108
+        height: 125
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,10 +469,10 @@ TextureImporter:
       name: archerdef_5
       rect:
         serializedVersion: 2
-        x: 850
-        y: 830
-        width: 170
-        height: 194
+        x: 379
+        y: 851
+        width: 108
+        height: 126
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,10 +491,10 @@ TextureImporter:
       name: archerdef_6
       rect:
         serializedVersion: 2
-        x: 1020
-        y: 830
-        width: 170
-        height: 194
+        x: 542
+        y: 850
+        width: 108
+        height: 127
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -513,10 +513,10 @@ TextureImporter:
       name: archerdef_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 636
-        width: 170
-        height: 194
+        x: 706
+        y: 850
+        width: 108
+        height: 127
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -532,35 +532,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: archerdef_8
-      rect:
-        serializedVersion: 2
-        x: 170
-        y: 636
-        width: 170
-        height: 194
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 38c8d3591403d3ae0800000000000000
-      internalID: -1568044037020218237
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: archerdef_9
       rect:
         serializedVersion: 2
-        x: 340
-        y: 636
-        width: 170
-        height: 194
+        x: 870
+        y: 850
+        width: 112
+        height: 126
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -579,10 +557,10 @@ TextureImporter:
       name: archerdef_10
       rect:
         serializedVersion: 2
-        x: 510
-        y: 636
-        width: 170
-        height: 194
+        x: 1032
+        y: 851
+        width: 108
+        height: 126
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,10 +579,10 @@ TextureImporter:
       name: archerdef_11
       rect:
         serializedVersion: 2
-        x: 680
-        y: 636
-        width: 170
-        height: 194
+        x: 23
+        y: 665
+        width: 34
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -623,10 +601,10 @@ TextureImporter:
       name: archerdef_12
       rect:
         serializedVersion: 2
-        x: 850
-        y: 636
-        width: 170
-        height: 194
+        x: 60
+        y: 665
+        width: 23
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -645,10 +623,10 @@ TextureImporter:
       name: archerdef_13
       rect:
         serializedVersion: 2
-        x: 1020
-        y: 636
-        width: 170
-        height: 194
+        x: 85
+        y: 666
+        width: 14
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -667,10 +645,10 @@ TextureImporter:
       name: archerdef_14
       rect:
         serializedVersion: 2
-        x: 1190
-        y: 636
-        width: 170
-        height: 194
+        x: 102
+        y: 665
+        width: 20
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -689,10 +667,10 @@ TextureImporter:
       name: archerdef_15
       rect:
         serializedVersion: 2
-        x: 1360
-        y: 636
-        width: 170
-        height: 194
+        x: 218
+        y: 664
+        width: 106
+        height: 123
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -711,10 +689,10 @@ TextureImporter:
       name: archerdef_16
       rect:
         serializedVersion: 2
-        x: 0
-        y: 442
-        width: 170
-        height: 194
+        x: 382
+        y: 663
+        width: 109
+        height: 124
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -730,35 +708,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: archerdef_17
-      rect:
-        serializedVersion: 2
-        x: 170
-        y: 442
-        width: 170
-        height: 194
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 604e85b381744b780800000000000000
-      internalID: -8668225213380893690
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: archerdef_18
       rect:
         serializedVersion: 2
-        x: 340
-        y: 442
-        width: 170
-        height: 194
+        x: 546
+        y: 664
+        width: 103
+        height: 125
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -774,57 +730,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: archerdef_19
-      rect:
-        serializedVersion: 2
-        x: 510
-        y: 442
-        width: 170
-        height: 194
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2b68417cc3ca6efc0800000000000000
-      internalID: -3465893486176991566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: archerdef_20
-      rect:
-        serializedVersion: 2
-        x: 680
-        y: 442
-        width: 170
-        height: 194
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ff328e20c4a57a750800000000000000
-      internalID: 6316116284923192319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: archerdef_21
       rect:
         serializedVersion: 2
-        x: 850
-        y: 442
-        width: 170
-        height: 194
+        x: 706
+        y: 666
+        width: 108
+        height: 121
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -843,10 +755,10 @@ TextureImporter:
       name: archerdef_22
       rect:
         serializedVersion: 2
-        x: 1020
-        y: 442
-        width: 170
-        height: 194
+        x: 878
+        y: 664
+        width: 108
+        height: 123
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -865,10 +777,10 @@ TextureImporter:
       name: archerdef_23
       rect:
         serializedVersion: 2
-        x: 1190
-        y: 442
-        width: 170
-        height: 194
+        x: 1046
+        y: 664
+        width: 112
+        height: 126
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -887,10 +799,10 @@ TextureImporter:
       name: archerdef_24
       rect:
         serializedVersion: 2
-        x: 1360
-        y: 442
-        width: 170
-        height: 194
+        x: 1210
+        y: 663
+        width: 111
+        height: 127
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -909,10 +821,10 @@ TextureImporter:
       name: archerdef_25
       rect:
         serializedVersion: 2
-        x: 0
-        y: 248
-        width: 170
-        height: 194
+        x: 1362
+        y: 664
+        width: 108
+        height: 125
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -928,79 +840,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: archerdef_26
-      rect:
-        serializedVersion: 2
-        x: 170
-        y: 248
-        width: 170
-        height: 194
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c55a8916595894630800000000000000
-      internalID: 3911804627982001500
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: archerdef_27
-      rect:
-        serializedVersion: 2
-        x: 340
-        y: 248
-        width: 170
-        height: 194
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4c97984da99d2b5a0800000000000000
-      internalID: -6506899252582975036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: archerdef_28
-      rect:
-        serializedVersion: 2
-        x: 510
-        y: 248
-        width: 170
-        height: 194
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 350b928edc3f25810800000000000000
-      internalID: 1752731270689435731
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: archerdef_29
       rect:
         serializedVersion: 2
-        x: 680
-        y: 248
-        width: 170
-        height: 194
+        x: 23
+        y: 466
+        width: 23
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1019,10 +865,10 @@ TextureImporter:
       name: archerdef_30
       rect:
         serializedVersion: 2
-        x: 850
-        y: 248
-        width: 170
-        height: 194
+        x: 48
+        y: 466
+        width: 23
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1041,10 +887,10 @@ TextureImporter:
       name: archerdef_31
       rect:
         serializedVersion: 2
-        x: 1020
-        y: 248
-        width: 170
-        height: 194
+        x: 74
+        y: 466
+        width: 23
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1063,10 +909,10 @@ TextureImporter:
       name: archerdef_32
       rect:
         serializedVersion: 2
-        x: 1190
-        y: 248
-        width: 170
-        height: 194
+        x: 229
+        y: 465
+        width: 109
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1085,10 +931,10 @@ TextureImporter:
       name: archerdef_33
       rect:
         serializedVersion: 2
-        x: 1360
-        y: 248
-        width: 170
-        height: 194
+        x: 394
+        y: 464
+        width: 110
+        height: 121
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1107,10 +953,10 @@ TextureImporter:
       name: archerdef_34
       rect:
         serializedVersion: 2
-        x: 0
-        y: 54
-        width: 170
-        height: 194
+        x: 559
+        y: 466
+        width: 109
+        height: 119
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1129,10 +975,10 @@ TextureImporter:
       name: archerdef_35
       rect:
         serializedVersion: 2
-        x: 170
-        y: 54
-        width: 170
-        height: 194
+        x: 724
+        y: 465
+        width: 110
+        height: 121
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1151,10 +997,10 @@ TextureImporter:
       name: archerdef_36
       rect:
         serializedVersion: 2
-        x: 340
-        y: 54
-        width: 170
-        height: 194
+        x: 886
+        y: 465
+        width: 110
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1173,10 +1019,10 @@ TextureImporter:
       name: archerdef_37
       rect:
         serializedVersion: 2
-        x: 510
-        y: 54
-        width: 170
-        height: 194
+        x: 1049
+        y: 467
+        width: 110
+        height: 119
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1195,10 +1041,10 @@ TextureImporter:
       name: archerdef_38
       rect:
         serializedVersion: 2
-        x: 680
-        y: 54
-        width: 170
-        height: 194
+        x: 1212
+        y: 468
+        width: 111
+        height: 118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1217,10 +1063,10 @@ TextureImporter:
       name: archerdef_39
       rect:
         serializedVersion: 2
-        x: 850
-        y: 54
-        width: 170
-        height: 194
+        x: 1374
+        y: 466
+        width: 111
+        height: 121
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1239,10 +1085,10 @@ TextureImporter:
       name: archerdef_40
       rect:
         serializedVersion: 2
-        x: 1020
-        y: 54
-        width: 170
-        height: 194
+        x: 24
+        y: 280
+        width: 11
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1261,10 +1107,10 @@ TextureImporter:
       name: archerdef_41
       rect:
         serializedVersion: 2
-        x: 1190
-        y: 54
-        width: 170
-        height: 194
+        x: 39
+        y: 284
+        width: 23
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1283,10 +1129,10 @@ TextureImporter:
       name: archerdef_42
       rect:
         serializedVersion: 2
-        x: 1360
-        y: 54
-        width: 170
-        height: 194
+        x: 64
+        y: 283
+        width: 34
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1297,6 +1143,534 @@ TextureImporter:
       bones: []
       spriteID: 3ee99bbdfb759eb70800000000000000
       internalID: 8928764217775464163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_43
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 284
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06660f6b828be414a847cceb7c3579bf
+      internalID: 1402731569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_44
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 278
+        width: 110
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d692b1976eb9eec41b011c9c92d4df5f
+      internalID: -56209469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_45
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 277
+        width: 110
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7da6af6c3cd104ea28d63a2b252d3b
+      internalID: -759881268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_46
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 277
+        width: 112
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3969bc0ad4a394b8b30ad5faf8e5ae
+      internalID: -165914956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_47
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 301
+        width: 111
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ff225319eff894a9e98af126a35ef8
+      internalID: 387261291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_48
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 305
+        width: 112
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb0201d9d726e34c926c23cff85e064
+      internalID: -179282309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_49
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 301
+        width: 111
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439acd0cb034864468b4718441aaab12
+      internalID: -1919481035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_50
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 283
+        width: 111
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89276e77aa12f5847a5a05d5ee8ded6a
+      internalID: 2094379399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_51
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 283
+        width: 111
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013c4c7071e5d7a40be58f852b5223ee
+      internalID: -2073636835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_52
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 103
+        width: 87
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14f92e31ed72264fb8f120b567b056a
+      internalID: 744880507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_53
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 103
+        width: 89
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc15515f4716c845b0f242424f78a82
+      internalID: -264337455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_54
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 103
+        width: 89
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02aaa7cfab007824a95ddb6cb827c992
+      internalID: -663008605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_55
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 103
+        width: 123
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2af439507194c74e9001307141db734
+      internalID: 1775913982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_57
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 103
+        width: 139
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fde4e9e9726d6644a1aefdbac09fabc
+      internalID: -966278145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_58
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 103
+        width: 130
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e21191ebc8e2fb4a947262656921940
+      internalID: -356293525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_59
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 103
+        width: 113
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0ad816f171d7e4fbbf1e7601e16b2b
+      internalID: -1077809661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_60
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 103
+        width: 100
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ed44b8336f5dd419691ceb903994a3
+      internalID: 1402838230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_62
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 161
+        width: 16
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39480769e8ad2714d962b1c566a46d7f
+      internalID: -1812645186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_63
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 104
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2dccd62f9fdb944d9cc9f7c815913e4
+      internalID: 1680798079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_64
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 104
+        width: 23
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4ba8b46e1df944f886724a22e13b83
+      internalID: 1577911229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_65
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 104
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2999f0c6bf4508246bf1ef05c03b7ca5
+      internalID: -1233969437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_66
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 104
+        width: 18
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690ff3f8a9803d34e95d24eb8fa7fb51
+      internalID: -852896678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_67
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 104
+        width: 10
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6fce9b115c53d247967be91027447b5
+      internalID: -790623719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archerdef_68
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 104
+        width: 17
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b397cc86d60ab468733cc6763e5325
+      internalID: 1676686042
       vertices: []
       indices: 
       edges: []
@@ -1315,7 +1689,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":170.0,"y":194.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       archerdef_0: -5181950267369867534
       archerdef_1: -9051802303745510328
@@ -1355,8 +1729,34 @@ TextureImporter:
       archerdef_40: -8425485176850158567
       archerdef_41: 3882103908396291011
       archerdef_42: 8928764217775464163
+      archerdef_43: 1402731569
+      archerdef_44: -56209469
+      archerdef_45: -759881268
+      archerdef_46: -165914956
+      archerdef_47: 387261291
+      archerdef_48: -179282309
+      archerdef_49: -1919481035
       archerdef_5: 8839461362665251523
+      archerdef_50: 2094379399
+      archerdef_51: -2073636835
+      archerdef_52: 744880507
+      archerdef_53: -264337455
+      archerdef_54: -663008605
+      archerdef_55: 1775913982
+      archerdef_56: -344269956
+      archerdef_57: -966278145
+      archerdef_58: -356293525
+      archerdef_59: -1077809661
       archerdef_6: -9199417531787435083
+      archerdef_60: 1402838230
+      archerdef_61: -1614518739
+      archerdef_62: -1812645186
+      archerdef_63: 1680798079
+      archerdef_64: 1577911229
+      archerdef_65: -1233969437
+      archerdef_66: -852896678
+      archerdef_67: -790623719
+      archerdef_68: 1676686042
       archerdef_7: -2241412083936152896
       archerdef_8: -1568044037020218237
       archerdef_9: 7705455468749350642
