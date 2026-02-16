@@ -26,7 +26,7 @@ public class HealthSystem : MonoBehaviour,IDamageable
     {
         CurrentHealth -= damage;
         OnHealthChanged?.Invoke(CurrentHealth); // Notify listeners about health change
-        Debug.Log($"Took {damage} damage, current health: {CurrentHealth}");
+        //Debug.Log($"Took {damage} damage, current health: {CurrentHealth}");
        
         if (CurrentHealth <= 0)
         {

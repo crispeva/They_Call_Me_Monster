@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Rendering;
 using static UnityEngine.UI.Image;
@@ -15,7 +16,6 @@ public class InputController : MonoBehaviour
     #region Fields
     // Reference to the player's Movoment component
     private Rigidbody2D player;
-
     [SerializeField]
     private float speed = 5f;
 
@@ -25,9 +25,11 @@ public class InputController : MonoBehaviour
 
     [SerializeField]
     private float aimRayDistance = 50f;
-
     [SerializeField]
     private bool debugAim = true;
+    //Eventos para el sistema de input
+   
+    public event Action<float> OnMovement;
     #endregion
     #region Unity Callbacks
     void Start()
@@ -48,7 +50,7 @@ public class InputController : MonoBehaviour
     {
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
-
+        OnMovement?.Invoke(Mathf.Abs(moveX));
         player.linearVelocity = new Vector2(moveX * speed, moveY * speed);
 
     }
@@ -74,6 +76,7 @@ public class InputController : MonoBehaviour
         if (hit.collider != null && hit.collider.gameObject.tag!="Player")
         {
             AimPosition = hit.point;
+            
         }
         else
         {

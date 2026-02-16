@@ -15,13 +15,14 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private WeaponData startingWeapon;
     InputController input;
     WeaponRuntime currentWeapon;
-    #endregion
+    public event Action OnShoot;
+        #endregion
 
-    #region Unity Callbacks
+        #region Unity Callbacks
 
-    // Update is called once per frame
+        // Update is called once per frame
 
-    void Awake()
+        void Awake()
     {
         input = GetComponent<InputController>();
         currentWeapon = new WeaponRuntime(startingWeapon);
@@ -50,8 +51,8 @@ public class WeaponController : MonoBehaviour
         if (!input.FirePressed) return;
 
         currentWeapon.Fire(transform, input.AimPosition);
-
-    }
+            OnShoot?.Invoke();
+        }
 
     public void EquipWeapon(WeaponData newWeapon)
     {
