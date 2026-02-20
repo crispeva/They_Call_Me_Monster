@@ -53,7 +53,6 @@ namespace Enemies
         {
             if (Vector2.Distance(transform.position, _target.position) > _enemyData.attackRange)
                 return;
-            Debug.Log("Ataco");
             
             if (_attackCooldown <= 0)
             {

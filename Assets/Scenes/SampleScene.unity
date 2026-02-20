@@ -4236,6 +4236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnima
   _goblinAnimator: {fileID: 1975127002}
+  _movementThreshold: 0.1
 --- !u!1 &1989162713
 GameObject:
   m_ObjectHideFlags: 0
@@ -4658,7 +4659,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4068792773898240163, guid: 12ed33ef57bef8e469c5d6d0a7e31745,
+      objectReference: {fileID: 533658474878925828, guid: 12ed33ef57bef8e469c5d6d0a7e31745,
         type: 3}
     - target: {fileID: 4213313294503840546, guid: f287dcf4db86fda4f8e7040b7f721783,
         type: 3}
