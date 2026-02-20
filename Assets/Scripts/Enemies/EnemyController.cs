@@ -7,14 +7,14 @@ namespace Enemies
 {
 public class EnemyController : MonoBehaviour
 {
-    #region Properties
-    [SerializeField]private EnemyData _enemyData;
+        #region Properties
+    [SerializeField] protected EnemyData _enemyData;
     protected HealthSystem _playerhealth;
     protected HealthSystem _enemyhealth;
     protected Slider _enemySlyderHealth;
     protected Transform _target;
         Vector2 dir;
-    private float _attackCooldown = 5f;
+        [SerializeField] protected private float _attackCooldown = 5f;
         #endregion
 
         #region Fields
@@ -59,7 +59,7 @@ public class EnemyController : MonoBehaviour
 
         #region Private Methods
 
-        protected void Attack()
+        protected virtual void Attack()
     {
             if (Vector2.Distance(transform.position, _target.position) > _enemyData.attackRange)
                 return;
