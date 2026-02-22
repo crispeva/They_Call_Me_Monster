@@ -168,7 +168,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemies.Archer_Action
   _enemyData: {fileID: 11400000, guid: 5a20352aefe421c44b9a4aea54007c8d, type: 2}
   _attackCooldown: 1
-  _arrow: {fileID: 1683932100201192601, guid: 8811414e46f9e0f46900f031864e5252, type: 3}
+  Arrow_data: {fileID: 11400000, guid: 48eefd2c463caa346a66e965f9a078a8, type: 2}
+  rotationOffset: -90
 --- !u!212 &2156068386616473277
 SpriteRenderer:
   m_ObjectHideFlags: 0

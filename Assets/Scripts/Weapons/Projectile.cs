@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace Weapons
 {
-    public class DaggerProjectile : MonoBehaviour
+    public class Projectile : MonoBehaviour
 {
     #region Properties
     #endregion
@@ -44,8 +44,6 @@ namespace Weapons
     }
     #endregion
 
-    #region Public Methods
-    #endregion
 
     #region Private Methods
     void OnTriggerEnter2D(Collider2D other)
@@ -65,7 +63,6 @@ namespace Weapons
         this.owner = owner;
         direction = dir.normalized;
     }
-    //Refactorizar para usar PoolManager
     public void ReturnSelfToPool()
     {
         pooledObject = GetComponent<PooledObject>();
