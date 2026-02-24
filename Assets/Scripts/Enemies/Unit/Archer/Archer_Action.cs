@@ -10,9 +10,7 @@ namespace Enemies
 {
         #region Properties
        [SerializeField] WeaponData Arrow_data;
-        GameObject Arrow;
-        private float arrowSpeed=5f;
-        [SerializeField] int rotationOffset = -90;
+       int rotationOffset = 90;
         GameObject proj;
         Transform owner;
         Animator _animator;
@@ -74,33 +72,32 @@ namespace Enemies
             {
                 Attack_anim();
                 //Disparo de flecha isntanciada
-
-                //Arrow.GetComponent<Rigidbody2D>().linearVelocity = direction * arrowSpeed;
                 FireArrow();
-                // _playerhealth.TakeDamage(_enemyData.damage);
                 _attackCooldown = _enemyData.attackCooldown;
             }
         }
         void FireArrow()
         {
             Vector2 direction = (_target.position - transform.position).normalized;
-            float baseAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            float angle = baseAngle + rotationOffset;
+          float baseAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+           float angle = baseAngle + rotationOffset;
             
             // Capturar el objeto devuelto
             if (PoolManager.Instance != null)
             {
+                Debug.Log("Spawneo flecha");
                 proj = PoolManager.Instance.SpawnFromPool(Arrow_data.weaponPrefab, owner.position, Quaternion.Euler(0f, 0f, angle));
             }
             else
             {
+                Debug.Log("Instancio otro objeto de flecha");
                 proj = Object.Instantiate(Arrow_data.weaponPrefab, owner.position, Quaternion.Euler(0f, 0f, angle));
             }
 
             if (proj != null)
             {
                 Projectile Arrow = proj.GetComponent<Projectile>();
-                Arrow.GetComponent<Rigidbody2D>().linearVelocity = direction * arrowSpeed;
+                Arrow.GetComponent<Rigidbody2D>().linearVelocity = direction * Arrow_data.projectileSpeed;
                 Arrow.Init(gameObject, direction);
             }
         }

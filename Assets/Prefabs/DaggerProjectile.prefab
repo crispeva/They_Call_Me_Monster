@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5683153625969959288}
   - component: {fileID: -1838271275159082210}
-  - component: {fileID: 1365599450577383207}
+  - component: {fileID: 3244721767817807505}
   - component: {fileID: 2154292905284490837}
   - component: {fileID: 8913782560734872172}
   - component: {fileID: 3483400100276240206}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3367c011482e1244b762dba1ea462fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PooledObject
---- !u!114 &1365599450577383207
+--- !u!114 &3244721767817807505
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,9 +57,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 325900172340433371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a4ef877a0c31314fb8d6b92658e071a, type: 3}
+  m_Script: {fileID: 11500000, guid: 824ae4fa6b6b3c74ca95f8178375f981, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Weapons.Projectile
+  m_EditorClassIdentifier: Assembly-CSharp::Weapons.Dagger
   weaponData: {fileID: 11400000, guid: 11d8ecbc67504934ba5722d81cddca94, type: 2}
 --- !u!212 &2154292905284490837
 SpriteRenderer:
