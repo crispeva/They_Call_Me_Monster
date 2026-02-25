@@ -3,7 +3,8 @@ using UnityEngine;
 public enum WeaponType
 {
     Dagger,
-    Axe
+    Axe,
+    Arrow_enemy
 }
 [CreateAssetMenu(menuName = "Weapons/Weapon Data")]
 public class WeaponData : ScriptableObject
@@ -28,17 +29,6 @@ public class WeaponData : ScriptableObject
     public float meleeRadius = 1.5f;
     [Header("Scaling")]
     public float damageMultiplierPerLevel = 1.2f;
-    #endregion
-    #region Fields
-    #endregion
-
-    #region Unity Callbacks
-    #endregion
-
-    #region Public Methods
-    #endregion
-
-    #region Private Methods
     #endregion
 
 }

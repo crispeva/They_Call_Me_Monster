@@ -4,21 +4,21 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace Weapons
 {
-    public class DaggerProjectile : MonoBehaviour
+    public class Projectile : MonoBehaviour
 {
     #region Properties
     #endregion
 
     #region Fields
     //Propiedades del proyectil
-    [SerializeField] WeaponData weaponData;
+ [SerializeField] protected  WeaponData weaponData;
     // Dirección del proyectil
     Vector2 direction;
-    // Dueño del proyectil para evitar colisiones consigo mismo
-    GameObject owner;
+        // Dueño del proyectil para evitar colisiones consigo mismo
+        protected GameObject owner;
     // Prefab original del proyectil
     GameObject originPrefab;
-    HealthSystem _damageable;
+    protected HealthSystem _damageable;
     PooledObject pooledObject;
     // Distancia recorrida del proyectil
     Vector3 startPos;
@@ -28,7 +28,7 @@ namespace Weapons
     #region Unity Callbacks
     void Awake()
     {
-        startPos = transform.position;
+        
     }
     private void Start()
     {
@@ -48,23 +48,13 @@ namespace Weapons
     #endregion
 
     #region Private Methods
-    void OnTriggerEnter2D(Collider2D other)
-    {
-            if (other.gameObject == owner) return;
-
-        _damageable = other.GetComponent<HealthSystem>();
-        if (_damageable != null)
-        {
-            // Obtener el prefab original desde PooledObject (asignado por PoolManager)
-            _damageable.TakeDamage(weaponData.damage);
-            ReturnSelfToPool();
-        }    
-    }
+ 
     public void Init(GameObject owner, Vector2 dir)
     {
         this.owner = owner;
         direction = dir.normalized;
-    }
+        startPos = transform.position;
+        }
     //Refactorizar para usar PoolManager
     public void ReturnSelfToPool()
     {

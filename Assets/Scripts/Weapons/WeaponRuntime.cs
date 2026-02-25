@@ -60,7 +60,7 @@ namespace Weapons
             : Object.Instantiate(data.weaponPrefab, owner.position, Quaternion.Euler(0f, 0f, angle));
 
         PlayAttackSFX();
-        DaggerProjectile dagger = proj.GetComponent<DaggerProjectile>();
+        Projectile dagger = proj.GetComponent<Projectile>();
         dagger.Init(owner.gameObject, dir);
     }
 

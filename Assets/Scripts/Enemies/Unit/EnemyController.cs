@@ -33,12 +33,13 @@ public class EnemyController : MonoBehaviour
             _enemyhealth = GetComponent<HealthSystem>();
             //UI
             _enemySlyderHealth = GetComponentInChildren<Slider>();
+            _enemyhealth.OnHealthChanged += UpdateEnemyHealth;
+            _enemyhealth.OnDestroy += Die;
         }
     protected void Start()
     {
             //Posible cambio: el enemigo podría registrarse en el GameController durante su Start
-            _enemyhealth.OnHealthChanged += UpdateEnemyHealth;
-            _enemyhealth.OnDestroy += Die;
+            
         }
 
 
@@ -50,15 +51,24 @@ public class EnemyController : MonoBehaviour
      }
         #endregion
 
-        #region Public Methods
+        #region Initialize
         public void Initialize(EnemyData enemyData)
     {
         _enemyData = enemyData;
     }
         #endregion
 
-        #region Private Methods
+        #region Movement
+        protected virtual void EnemyMovement()
+        {
+            // Implement enemy movement logic here
+            dir = (_target.position - transform.position).normalized;
+            transform.position += (Vector3)dir * _enemyData.moveSpeed * Time.deltaTime;
+        }
 
+        #endregion
+
+        #region Attack
         protected virtual void Attack()
     {
             if (Vector2.Distance(transform.position, _target.position) > _enemyData.attackRange)
@@ -81,24 +91,21 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    protected virtual void EnemyMovement()
-    {
-        // Implement enemy movement logic here
-        dir = (_target.position - transform.position).normalized;
-        transform.position += (Vector3)dir * _enemyData.moveSpeed * Time.deltaTime;
-    }
+        #endregion
+
+        #region Life
         //Actualiza el slider de salud del enemigo en la UI (POSIBLE CAMBIO)
         internal void UpdateEnemyHealth(float value)
         {
             _enemySlyderHealth.value = value;
         }
         protected void Die()
-    {
-        //AudioManager.Instance?.PlaySFX(data.deathSFX);
-        Debug.Log("Enemy died"+gameObject.name);
+        {
+            //AudioManager.Instance?.PlaySFX(data.deathSFX);
+            Debug.Log("Enemy died"+gameObject.name);
             Destroy(gameObject);
-    }
-    #endregion
+        }
+#endregion
 
-}
+    }
 }

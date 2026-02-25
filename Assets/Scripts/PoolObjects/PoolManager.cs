@@ -26,6 +26,7 @@ public class PoolManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
+
     #endregion
     #region Public Methods
     //Creamos una pool de objetos vacia
