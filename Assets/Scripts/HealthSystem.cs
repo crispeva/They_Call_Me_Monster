@@ -52,7 +52,7 @@ public class HealthSystem : MonoBehaviour,IDamageable
     {
         Debug.Log("Invoke Died");
         OnDestroy?.Invoke();
-            //return;
+            return;
 
     }
 

@@ -33,12 +33,13 @@ public class EnemyController : MonoBehaviour
             _enemyhealth = GetComponent<HealthSystem>();
             //UI
             _enemySlyderHealth = GetComponentInChildren<Slider>();
+            _enemyhealth.OnHealthChanged += UpdateEnemyHealth;
+            _enemyhealth.OnDestroy += Die;
         }
     protected void Start()
     {
             //Posible cambio: el enemigo podría registrarse en el GameController durante su Start
-            _enemyhealth.OnHealthChanged += UpdateEnemyHealth;
-            _enemyhealth.OnDestroy += Die;
+            
         }
 
 

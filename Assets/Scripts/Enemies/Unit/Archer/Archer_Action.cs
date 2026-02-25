@@ -10,7 +10,7 @@ namespace Enemies
 {
         #region Properties
        [SerializeField] WeaponData Arrow_data;
-       int rotationOffset = 90;
+       int rotationOffset = 0;
         GameObject proj;
         Transform owner;
         Animator _animator;
@@ -32,8 +32,6 @@ namespace Enemies
             {
                 PoolManager.Instance.WarmPool(Arrow_data.weaponPrefab, 5);
             }
-
-
 
         }
         // Update is called once per frame
