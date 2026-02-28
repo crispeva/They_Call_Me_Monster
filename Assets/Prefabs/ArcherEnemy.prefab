@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 7243408492666904342}
   m_Layer: 0
   m_Name: ArcherEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,7 +169,6 @@ MonoBehaviour:
   _enemyData: {fileID: 11400000, guid: 5a20352aefe421c44b9a4aea54007c8d, type: 2}
   _attackCooldown: 1
   Arrow_data: {fileID: 11400000, guid: 48eefd2c463caa346a66e965f9a078a8, type: 2}
-  rotationOffset: -90
 --- !u!212 &2156068386616473277
 SpriteRenderer:
   m_ObjectHideFlags: 0

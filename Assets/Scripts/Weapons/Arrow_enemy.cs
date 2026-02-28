@@ -10,7 +10,7 @@ namespace Weapons
     void OnTriggerEnter2D(Collider2D other)
     {
             if (other.tag!="Player" || other.gameObject==owner) return;
-            Debug.Log("Toco" + other);
+           // Debug.Log("Toco" + other);
         _damageable = other.GetComponent<HealthSystem>();
         if (_damageable != null)
         {

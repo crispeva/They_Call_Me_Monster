@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Controllers;
@@ -15,6 +16,7 @@ public class EnemyController : MonoBehaviour
     protected Transform _target;
         Vector2 dir;
         [SerializeField] protected private float _attackCooldown = 5f;
+       public static Action OnEnemyDeath;
         #endregion
 
         #region Fields
@@ -36,11 +38,6 @@ public class EnemyController : MonoBehaviour
             _enemyhealth.OnHealthChanged += UpdateEnemyHealth;
             _enemyhealth.OnDestroy += Die;
         }
-    protected void Start()
-    {
-            //Posible cambio: el enemigo podría registrarse en el GameController durante su Start
-            
-        }
 
 
     protected void Update()
@@ -55,7 +52,7 @@ public class EnemyController : MonoBehaviour
         public void Initialize(EnemyData enemyData)
     {
         _enemyData = enemyData;
-    }
+        }
         #endregion
 
         #region Movement
@@ -103,6 +100,7 @@ public class EnemyController : MonoBehaviour
         {
             //AudioManager.Instance?.PlaySFX(data.deathSFX);
             Debug.Log("Enemy died"+gameObject.name);
+            OnEnemyDeath?.Invoke();
             Destroy(gameObject);
         }
 #endregion

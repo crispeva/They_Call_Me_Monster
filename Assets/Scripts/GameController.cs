@@ -15,38 +15,65 @@ namespace Controllers
     public UIGameController UIGameController=> _uiGameController;
     public WaveManager WaveManager => _wavemanager;
 
-    #endregion
+     public Action onWaveStarted;
+        #endregion
 
-    #region Fields
+        #region Fields
     [SerializeField] WeaponController _weaponcontroller;
     [SerializeField] protected HealthSystem _healthsystem;
     [SerializeField] protected UIGameController _uiGameController;
-   [SerializeField] protected EnemyController _enemyController;
-   [SerializeField] protected WaveManager _wavemanager;
+    [SerializeField] protected EnemyController _enemyController;
+    [SerializeField] protected WaveManager _wavemanager;
+    public bool waveTransitioning = false;
+        #endregion
 
-    #endregion
-
-    #region Unity Callbacks
-    void Awake()
-    {
-    }
+        #region Unity Callbacks
+        void Awake()
+        {
+        }
         private void Start()
         {
-            //_healthsystem.OnDeath += OnPlayerDeath;
-            //Vida de jugador y enemigo se actualiza en la UI
             _healthsystem.OnHealthChanged += _uiGameController.UpdatePlayerHealth;
+            Enemies.EnemyController.OnEnemyDeath += EnemiesDiabled;
+            _wavemanager.OnWaveState += () => UINextWave(_wavemanager.currentWave);
+            UINextWave(0);
+        }
+        private void Update()
+        {
+            
         }
 
+        #endregion
+
+        #region Player
         private void OnPlayerDeath()
         {
             throw new NotImplementedException();
         }
         #endregion
 
-        #region Public Methods
+        #region Waves Started
+            public void UINextWave(int waveNumber)
+            {
+                _uiGameController.UpdateWaveNumber(waveNumber+1); 
+                
+            }
+
+        public void ResetWaveTransition()
+        {
+            waveTransitioning = false;
+        }
+        public void EnemiesDiabled()
+        {
+            _wavemanager.enemyCount--;
+            Debug.Log("Enemigos restantes: " + _wavemanager.enemyCount);
+            if (_wavemanager.enemyCount == 0)
+            {
+                _wavemanager.OnWaveStarted();
+            }
+        }
         #endregion
 
-        #region Private Methods
-        #endregion
+
     }
 }

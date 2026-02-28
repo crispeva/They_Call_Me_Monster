@@ -3621,6 +3621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Waves.WaveManager
   waves:
   - {fileID: 11400000, guid: f40fc1a57db192a4d8c741586b086c9f, type: 2}
+  - {fileID: 11400000, guid: 8c4077b0f334bed4493200720e9c8938, type: 2}
   spawnPoints:
   - {fileID: 1145625030}
 --- !u!114 &1152126055
@@ -3640,7 +3641,7 @@ MonoBehaviour:
   _uiGameController: {fileID: 1989162715}
   _enemyController: {fileID: -7296900415146671499, guid: c28c7d2f5c95f6f48af9943533cbf8b3,
     type: 3}
-  _wavemanager: {fileID: 0}
+  _wavemanager: {fileID: 1152126054}
 --- !u!4 &1330885572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3095412971174052313, guid: f287dcf4db86fda4f8e7040b7f721783,

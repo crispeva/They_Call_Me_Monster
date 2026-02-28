@@ -16,7 +16,7 @@ namespace Weapons
             {
                 // Obtener el prefab original desde PooledObject (asignado por PoolManager)
                 _damageable.TakeDamage(weaponData.damage);
-                Debug.Log("Dagger hit: " + _damageable.CurrentHealth);
+                //Debug.Log("Dagger hit: " + _damageable.CurrentHealth);
                 ReturnSelfToPool();
             }
         }
