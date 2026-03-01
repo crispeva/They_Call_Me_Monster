@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Controllers;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,8 +10,7 @@ public class UIGameController : MonoBehaviour
     #region Properties
     [Header("Live")]
     [SerializeField] private Slider _playerHealth;
-    private Slider _enemyHealth;
-    float _timeToNextWave=5;
+    [SerializeField] private TextMeshProUGUI _waveNumberText;
     #endregion
 
     #region Fields
@@ -19,7 +19,7 @@ public class UIGameController : MonoBehaviour
     #region Unity Callbacks
     private void Awake()
     {
-        // El slider del enemigo debe estar asignado en el Inspector
+        
        
     }
     void Start()
@@ -51,6 +51,7 @@ public class UIGameController : MonoBehaviour
     public void UpdateWaveCountdown(int secondsRemaining)
     {
         Debug.Log($"La siguiente oleada comienza en {secondsRemaining} segundos...");
+        _waveNumberText.text = $"Siguiente oleada en: {secondsRemaining} segundos";
         // Aquí actualizar texto de UI con el tiempo restante
     }
     #endregion

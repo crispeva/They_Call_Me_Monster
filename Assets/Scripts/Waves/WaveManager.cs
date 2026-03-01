@@ -20,7 +20,6 @@ namespace Waves
         [SerializeField] private Transform[] spawnPoints;
         public int enemyCount = 0;
         public int currentWave = 0;
-        private bool isWaitingForNextWave = false;
         public Action OnWaveState;
         #endregion
 
@@ -65,36 +64,30 @@ namespace Waves
         }
         public void OnWaveStarted()
         {
-            if (isWaitingForNextWave)
-                return;
-  
-           
+           // Debug.Log("Wave " + currentWave);
+            
             if (currentWave < waves.Length)
             {
-                Debug.Log("Wave " + currentWave);
-                isWaitingForNextWave = true;
+                OnWaveState?.Invoke();
                 StartCoroutine(WaitForNextWave(5f));
             }
             else
             {
-                GameController.Instance.ResetWaveTransition();
+                Debug.Log("¡Has completado todas las oleadas!");
             }
-            OnWaveState?.Invoke();
+
         }
 
         IEnumerator WaitForNextWave(float waitTime)
         {
             float timeRemaining = waitTime;
 
-            while (timeRemaining > 0)
+            while (timeRemaining >= 0)
             {
                 GameController.Instance.UIGameController.UpdateWaveCountdown((int)timeRemaining);
                 yield return new WaitForSeconds(1f);
                 timeRemaining--;
             }
-
-            isWaitingForNextWave = false;
-            GameController.Instance.ResetWaveTransition(); // Reset aquí
             StartCoroutine(RunWave());
         }
     }

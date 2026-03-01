@@ -24,7 +24,6 @@ namespace Controllers
     [SerializeField] protected UIGameController _uiGameController;
     [SerializeField] protected EnemyController _enemyController;
     [SerializeField] protected WaveManager _wavemanager;
-    public bool waveTransitioning = false;
         #endregion
 
         #region Unity Callbacks
@@ -34,9 +33,12 @@ namespace Controllers
         private void Start()
         {
             _healthsystem.OnHealthChanged += _uiGameController.UpdatePlayerHealth;
+            // Suscribirse al evento de muerte del jugador
             Enemies.EnemyController.OnEnemyDeath += EnemiesDiabled;
-            _wavemanager.OnWaveState += () => UINextWave(_wavemanager.currentWave);
-            UINextWave(0);
+            // Suscribirse al evento de cambio de oleada
+            _wavemanager.OnWaveState += () => UIActualWave(_wavemanager.currentWave);
+            // Iniciar la primera oleada
+            UIActualWave(0);
         }
         private void Update()
         {
@@ -53,24 +55,21 @@ namespace Controllers
         #endregion
 
         #region Waves Started
-            public void UINextWave(int waveNumber)
+            public void UIActualWave(int waveNumber)
             {
                 _uiGameController.UpdateWaveNumber(waveNumber+1); 
                 
             }
 
-        public void ResetWaveTransition()
-        {
-            waveTransitioning = false;
-        }
         public void EnemiesDiabled()
         {
             _wavemanager.enemyCount--;
             Debug.Log("Enemigos restantes: " + _wavemanager.enemyCount);
-            if (_wavemanager.enemyCount == 0)
+            if (_wavemanager.enemyCount == 0 )
             {
                 _wavemanager.OnWaveStarted();
             }
+
         }
         #endregion
 
