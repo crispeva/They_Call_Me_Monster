@@ -18,35 +18,33 @@ namespace Waves
         #region Fields
         [SerializeField] private Enemies.WaveData[] waves;
         [SerializeField] private Transform[] spawnPoints;
-        public int enemyCount = 0;
-        public int currentWave = 0;
-        public Action OnWaveState;
+        private float  timeBetweenWavesDefault=10f;
+        private  float timeBetweenWaves ;
+        public int EnemyRemaing = 0;
+        private int currentWave = 0;
+        public Action <int>OnWaveState;
+        public Action<float> OnWaveCountdown;
+        public Action<int> OnEnemiesCount;
         #endregion
 
         #region Unity Callbacks
-        private void Awake()
-        {
-      
-        }
         void Start()
         {
            
             StartCoroutine(RunWave());
         }
 
-        void Update()
-        {
-
-        }
         #endregion
 
+        #region Waves
         IEnumerator RunWave()
         {
             if (currentWave >= waves.Length)
                 yield break;
 
             WaveData wave = waves[currentWave];
-            
+            EnemyRemaing = GetTotalEnemiesInWave(wave);
+            OnEnemiesCount?.Invoke(EnemyRemaing);
             foreach (var entry in wave.enemies)
             {
                 for (int i = 0; i < entry.count; i++)
@@ -54,11 +52,9 @@ namespace Waves
                     Transform point = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
                     GameObject enemyInstance = Instantiate(entry.enemyPrefab, point.position, Quaternion.identity);
                     yield return new WaitForSeconds(wave.timeBetweenSpawns);
-                    enemyCount++;
                 }
             }
 
-            Debug.Log("Total enemigos " + enemyCount);
             currentWave++;
            
         }
@@ -68,8 +64,8 @@ namespace Waves
             
             if (currentWave < waves.Length)
             {
-                OnWaveState?.Invoke();
-                StartCoroutine(WaitForNextWave(5f));
+                OnWaveState?.Invoke(currentWave);
+                StartCoroutine(WaitForNextWave(timeBetweenWavesDefault));
             }
             else
             {
@@ -78,17 +74,39 @@ namespace Waves
 
         }
 
-        IEnumerator WaitForNextWave(float waitTime)
+        IEnumerator WaitForNextWave(float timeBetweenWavesDefault)
         {
-            float timeRemaining = waitTime;
+            this.timeBetweenWaves = timeBetweenWavesDefault;
 
-            while (timeRemaining >= 0)
+            while (timeBetweenWaves >= 0)
             {
-                GameController.Instance.UIGameController.UpdateWaveCountdown((int)timeRemaining);
+                OnWaveCountdown?.Invoke(timeBetweenWaves);
                 yield return new WaitForSeconds(1f);
-                timeRemaining--;
+                timeBetweenWaves--;
             }
             StartCoroutine(RunWave());
         }
+#endregion
+
+        #region Enemies
+        public void OnEnemyDisabled()
+        {
+            EnemyRemaing--;
+            if (EnemyRemaing <= 0)
+            {
+                OnWaveStarted();
+            }
+        }
+
+        private int GetTotalEnemiesInWave(WaveData wave)
+        {
+            int total = 0;
+            foreach (var enemyData in wave.enemies)
+            {
+                total += enemyData.count;
+            }
+            return total;
+        }
+        #endregion
     }
 }

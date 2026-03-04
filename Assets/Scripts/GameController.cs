@@ -36,7 +36,9 @@ namespace Controllers
             // Suscribirse al evento de muerte del jugador
             Enemies.EnemyController.OnEnemyDeath += EnemiesDiabled;
             // Suscribirse al evento de cambio de oleada
-            _wavemanager.OnWaveState += () => UIActualWave(_wavemanager.currentWave);
+            _wavemanager.OnWaveState += UIActualWave;
+            _wavemanager.OnWaveCountdown += OnCountDownWave;
+            _wavemanager.OnEnemiesCount+= UICountEnemies;
             // Iniciar la primera oleada
             UIActualWave(0);
         }
@@ -57,15 +59,23 @@ namespace Controllers
         #region Waves Started
             public void UIActualWave(int waveNumber)
             {
-                _uiGameController.UpdateWaveNumber(waveNumber+1); 
-                
-            }
-
+            _uiGameController.UpdateWaveNumber(waveNumber+1);
+            
+        }
+        public void UICountEnemies(int EnemyRemaing)
+        {
+            _uiGameController.UpdateEnemiesNumber(EnemyRemaing);
+        }
+        public void OnCountDownWave(float secondsRemaining)
+        {
+            _uiGameController.UpdateWaveCountdown((int)secondsRemaining);
+        }
         public void EnemiesDiabled()
         {
-            _wavemanager.enemyCount--;
-            Debug.Log("Enemigos restantes: " + _wavemanager.enemyCount);
-            if (_wavemanager.enemyCount == 0 )
+            _wavemanager.OnEnemyDisabled();
+            // Debug.Log("Enemigos restantes: " + _wavemanager.EnemyRemaing);
+            _uiGameController.UpdateEnemiesNumber(_wavemanager.EnemyRemaing);
+            if (_wavemanager.EnemyRemaing == 0 )
             {
                 _wavemanager.OnWaveStarted();
             }
