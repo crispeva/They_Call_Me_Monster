@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Controllers;
+using DG.Tweening;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,14 +20,14 @@ public class UIGameController : MonoBehaviour
     #endregion
 
     #region Unity Callbacks
-    private void Awake()
+     void Awake()
     {
         
        
     }
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
@@ -36,27 +38,36 @@ public class UIGameController : MonoBehaviour
     #endregion
 
     #region UI Waves
-   public void UpdateWaveNumber(int waveNumber)
+    public void UpdateWaveNumber(int waveNumber)
     {
-        // Aquí puedes actualizar el texto o cualquier elemento de la UI que muestre el número de la ola actual
-
-            _waveCountText.text = $"wave: {waveNumber}";
-        
+        DG.Tweening.Sequence sequence = DOTween.Sequence();
+        sequence.Append(_waveCountText.DOFade(0f, 0.7f))
+            .AppendCallback(() => _waveCountText.text = $"wave: {waveNumber}")
+            .Append(_waveCountText.DOFade(1f, 0.7f));
     }
+
     public void UpdateEnemiesNumber(int EnemiesNumber)
     {
-        // Aquí puedes actualizar el texto o cualquier elemento de la UI que muestre el número de la ola actual
-
-
-            _waveText.text = $"enemies remain: {EnemiesNumber}";
+        if (EnemiesNumber <= 0)
+            return;
+        DG.Tweening.Sequence sequence = DOTween.Sequence();
+        sequence.Append(_waveText.DOFade(0f, 0.8f))
+            .AppendCallback(() => _waveText.text = $"enemies remain: {EnemiesNumber}")
+            .Append(_waveText.DOFade(1f, 0.8f));
     }
+
     public void UpdateWaveCountdown(int secondsRemaining)
     {
-        _waveText.text = $"next wave in: {secondsRemaining} seg";
-        // Aquí actualizar texto de UI con el tiempo restante
+        DG.Tweening.Sequence sequence = DOTween.Sequence();
+        sequence.Append(_waveText.DOFade(0f, 0.3f))
+            .AppendCallback(() => _waveText.text = $"next wave in: {secondsRemaining} seg")
+            .Append(_waveText.DOFade(1f, 0.3f));
     }
     #endregion
-
+    private void OnEnable()
+    {
+        // Suscribirse a eventos o inicializar datos aquí si es necesario
+    }
     #region UIPlayer
     internal void UpdatePlayerHealth(float value)
     {

@@ -20,8 +20,8 @@ namespace Waves
         [SerializeField] private Transform[] spawnPoints;
         private float  timeBetweenWavesDefault=10f;
         private  float timeBetweenWaves ;
-        public int EnemyRemaing = 0;
-        private int currentWave = 0;
+        private int EnemyRemaing = 0;
+        public int currentWave = 0;
         public Action <int>OnWaveState;
         public Action<float> OnWaveCountdown;
         public Action<int> OnEnemiesCount;
@@ -43,6 +43,8 @@ namespace Waves
                 yield break;
 
             WaveData wave = waves[currentWave];
+            //Se incrementa el contador de oleadas
+            currentWave++;
             EnemyRemaing = GetTotalEnemiesInWave(wave);
             OnEnemiesCount?.Invoke(EnemyRemaing);
             foreach (var entry in wave.enemies)
@@ -55,12 +57,12 @@ namespace Waves
                 }
             }
 
-            currentWave++;
-           
+
+            Debug.Log("Wave " + currentWave + " started with " + EnemyRemaing + " enemies.");
+
         }
         public void OnWaveStarted()
         {
-           // Debug.Log("Wave " + currentWave);
             
             if (currentWave < waves.Length)
             {
@@ -92,10 +94,12 @@ namespace Waves
         public void OnEnemyDisabled()
         {
             EnemyRemaing--;
+            
             if (EnemyRemaing <= 0)
             {
                 OnWaveStarted();
             }
+            OnEnemiesCount?.Invoke(EnemyRemaing);  // Actualizar UI después de decrementar
         }
 
         private int GetTotalEnemiesInWave(WaveData wave)
