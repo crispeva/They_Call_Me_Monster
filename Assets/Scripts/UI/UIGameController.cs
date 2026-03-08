@@ -14,6 +14,7 @@ public class UIGameController : MonoBehaviour
     [SerializeField] private Slider _playerHealth; 
     [SerializeField] private TextMeshProUGUI _waveText;
     [SerializeField] private TextMeshProUGUI _waveCountText;
+    
     #endregion
 
     #region Fields
@@ -41,9 +42,9 @@ public class UIGameController : MonoBehaviour
     public void UpdateWaveNumber(int waveNumber)
     {
         DG.Tweening.Sequence sequence = DOTween.Sequence();
-        sequence.Append(_waveCountText.DOFade(0f, 0.7f))
+        sequence.Append(_waveCountText.DOFade(0f, 0.5f))
             .AppendCallback(() => _waveCountText.text = $"wave: {waveNumber}")
-            .Append(_waveCountText.DOFade(1f, 0.7f));
+            .Append(_waveCountText.DOFade(1f, 0.5f));
     }
 
     public void UpdateEnemiesNumber(int EnemiesNumber)

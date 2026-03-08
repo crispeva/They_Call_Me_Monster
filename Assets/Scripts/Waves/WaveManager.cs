@@ -25,6 +25,7 @@ namespace Waves
         public Action <int>OnWaveState;
         public Action<float> OnWaveCountdown;
         public Action<int> OnEnemiesCount;
+        public Action OnWavesCompleted;
         #endregion
 
         #region Unity Callbacks
@@ -45,6 +46,7 @@ namespace Waves
             WaveData wave = waves[currentWave];
             //Se incrementa el contador de oleadas
             currentWave++;
+            OnWaveState?.Invoke(currentWave);
             EnemyRemaing = GetTotalEnemiesInWave(wave);
             OnEnemiesCount?.Invoke(EnemyRemaing);
             foreach (var entry in wave.enemies)
@@ -66,7 +68,7 @@ namespace Waves
             
             if (currentWave < waves.Length)
             {
-                OnWaveState?.Invoke(currentWave);
+                
                 StartCoroutine(WaitForNextWave(timeBetweenWavesDefault));
             }
             else
@@ -98,6 +100,7 @@ namespace Waves
             if (EnemyRemaing <= 0)
             {
                 OnWaveStarted();
+                OnWavesCompleted?.Invoke();
             }
             OnEnemiesCount?.Invoke(EnemyRemaing);  // Actualizar UI después de decrementar
         }

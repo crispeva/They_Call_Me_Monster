@@ -9,15 +9,16 @@ public class AudioManager : MonoBehaviour
 {
     #region Properties
     public static AudioManager Instance;
-    const float MAX_VOLUME = 0.2f;
+    const float MAX_VOLUME = 0.1f;
 
     [SerializeField] AudioSource sfxSource;
     [SerializeField] AudioMixer audioMixer;
 
     [Header("FX")]
-    [SerializeField] AudioClip ChangeWave;
+    [SerializeField] AudioSource ChangeWave;
     [Header("Music")]
-    [SerializeField] AudioClip MainGamePlayMusic;
+    [SerializeField] AudioSource MainGameMusic;
+    [SerializeField] AudioSource MainShoopingMusic;
 
     #endregion
 
@@ -32,7 +33,9 @@ public class AudioManager : MonoBehaviour
         Instance = this;
 
         //Events
-        GameController.Instance.WaveManager.OnWaveState +=  PlayNextWave;
+        GameController.Instance.WaveManager.OnWaveState += (_) => PlayNextWave();
+        GameController.Instance.WaveManager.OnWaveState += (_) => PlayMainGameMusic();
+        GameController.Instance.WaveManager.OnWavesCompleted +=  PlayShoopingMusic;
     }
 
     #endregion
@@ -52,18 +55,24 @@ public class AudioManager : MonoBehaviour
     #endregion
 
     #region GamePlay Methods
-    void PlayMainGamePlayMusic()
+    void PlayMainGameMusic()
     {
-        if (MainGamePlayMusic == null) return;
-        sfxSource.clip = MainGamePlayMusic;
-        sfxSource.loop = true;
-        sfxSource.Play();
+        if (MainGameMusic == null) return;
+        MainShoopingMusic.DOFade(0, 1f);
+        MainGameMusic.DOFade(0.1f, 0.1f);
+        MainGameMusic.Play();
     }
-    void PlayNextWave(int a)
+    void PlayShoopingMusic()
+    {
+        if (MainShoopingMusic == null) return;
+        MainGameMusic.DOFade(0, 1f);
+        MainShoopingMusic.DOFade(MAX_VOLUME, 1f);
+        MainShoopingMusic.Play();
+    }
+    void PlayNextWave()
     {
         if (ChangeWave == null) return;
-        sfxSource.clip = ChangeWave;
-        sfxSource.PlayOneShot(ChangeWave,MAX_VOLUME);
+        sfxSource.PlayOneShot(ChangeWave.clip,MAX_VOLUME);
     }
     #endregion
 }
