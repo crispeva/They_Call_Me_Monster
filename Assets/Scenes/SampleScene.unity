@@ -3212,6 +3212,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   sfxSource: {fileID: 141167968}
   audioMixer: {fileID: 0}
+  ChangeWave: {fileID: 8300000, guid: af2c3d8a872028443a404b5a18fb56da, type: 3}
+  MainGamePlayMusic: {fileID: 8300000, guid: f60c6b56e801a304fa38059e77ebaf75, type: 3}
 --- !u!4 &141167967
 Transform:
   m_ObjectHideFlags: 0
@@ -4045,7 +4047,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8c4077b0f334bed4493200720e9c8938, type: 2}
   spawnPoints:
   - {fileID: 1145625030}
-  EnemyRemaing: 0
   currentWave: 0
 --- !u!114 &1152126055
 MonoBehaviour:
