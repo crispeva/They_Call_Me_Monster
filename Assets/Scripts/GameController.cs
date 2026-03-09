@@ -41,7 +41,7 @@ namespace Controllers
             _wavemanager.OnWaveCountdown += OnCountDownWave;
 
             // Iniciar la primera oleada
-            UIActualWave(0);
+           UIActualWave(1);
         }
    
 
@@ -57,7 +57,7 @@ namespace Controllers
         #region Waves Started
             public void UIActualWave(int waveNumber)
             {
-            _uiGameController.UpdateWaveNumber(waveNumber+1);
+            _uiGameController.UpdateWaveNumber(waveNumber);
             
         }
         public void UICountEnemies(int EnemyRemaing)
