@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Paladin_Action
   _enemyData: {fileID: 11400000, guid: 26a70f5c63e5c3c46a2ef19124d5d892, type: 2}
+  _attackCooldown: 5
 --- !u!212 &1509328108449820799
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -111,7 +112,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -7840841193072871017, guid: 3ba5f903e92ecd8409ec8fba667855f9,
+  m_Sprite: {fileID: 6854859533549393244, guid: 0650e38a9bceb0c43be3230ced18eb5d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
