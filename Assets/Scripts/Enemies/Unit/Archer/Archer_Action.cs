@@ -13,7 +13,6 @@ namespace Enemies
        int rotationOffset = 0;
         GameObject proj;
         Transform owner;
-        Animator _animator;
         #endregion
 
         #region Fields
@@ -23,7 +22,6 @@ namespace Enemies
         void Awake()
     {
         base.Awake();
-            _animator = GetComponent<Animator>();
             owner = transform;
     }
         private void Start()
@@ -38,7 +36,7 @@ namespace Enemies
         void Update()
     {
             base.Update();
-            Flip();
+           
      }
         #endregion
 
@@ -101,27 +99,7 @@ namespace Enemies
         }
         #endregion
 
-        #region Animations
-        void Flip()
-        {
-            if (_target.position.x < transform.position.x)
-            {
-                transform.localScale = new Vector3(-1, 1, 1);
-            }
-            else
-            {
-                transform.localScale = new Vector3(1, 1, 1);
-            }
-        }
-        void Walk_anim(bool walk)
-        {
-            _animator.SetBool("Walk", walk);
-        }
-        void Attack_anim()
-        {
-            _animator.SetTrigger("Attack");
-        }
-        #endregion
+     
 
     }
 }
