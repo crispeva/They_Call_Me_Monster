@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7568243085005946373}
   - component: {fileID: -5811542978026173599}
+  - component: {fileID: -2258862043688308251}
   - component: {fileID: -7296900415146671499}
   - component: {fileID: 1509328108449820799}
   - component: {fileID: 3323273458176693642}
@@ -52,6 +53,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
   _maxHealth: 100
   delayDeath: 0
+--- !u!114 &-2258862043688308251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39255810508435946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3367c011482e1244b762dba1ea462fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PooledObject
 --- !u!114 &-7296900415146671499
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,7 +17,10 @@ public class EnemyController : MonoBehaviour
         Animator _animator;
         Vector2 dir;
     [SerializeField] protected private float _attackCooldown ;
-       public static Action OnEnemyDeath;
+        //Referencia al objeto de la pool para devolverlo al morir
+        PooledObject pooledObject;
+        GameObject originPrefab;
+        public static Action OnEnemyDeath;
         #endregion
 
         #region Fields
@@ -41,11 +44,9 @@ public class EnemyController : MonoBehaviour
         }
         protected private void Start()
         {
-            if (PoolManager.Instance != null)
-            {
-              PoolManager.Instance.WarmPool(_enemyData.enemyPrefab, _enemyData.count);
-            }
-            _attackCooldown=_enemyData.attackCooldown;
+           
+            
+                _attackCooldown = _enemyData.attackCooldown;
         }
 
         protected void Update()
@@ -61,7 +62,8 @@ public class EnemyController : MonoBehaviour
         #region Initialize
         public void Initialize(EnemyData enemyData)
     {
-        _enemyData = enemyData;
+            _enemyData = enemyData;
+            _enemyhealth.SetHealth(enemyData.maxHealth);
         }
         #endregion
 
@@ -112,8 +114,19 @@ public class EnemyController : MonoBehaviour
         {
             //AudioManager.Instance?.PlaySFX(data.deathSFX);
             Debug.Log("Enemy died"+gameObject.name);
+            pooledObject = GetComponent<PooledObject>();
+            Debug.Log("PoolObject enviado: " + pooledObject);
+            if (pooledObject != null)
+            {
+                originPrefab = pooledObject.Prefab;
+                Debug.Log("PoolObject prefabs enviado: " + pooledObject.Prefab);
+                Initialize(_enemyData);
+                PoolManager.Instance?.ReturnToPool(originPrefab, gameObject);
+                
+            }
             OnEnemyDeath?.Invoke();
-            Destroy(gameObject);
+
+            //Destroy(gameObject);
         }
         #endregion
         #region Animations

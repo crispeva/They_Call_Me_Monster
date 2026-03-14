@@ -26,10 +26,7 @@ namespace Enemies
     }
         private void Start()
         {
-            if (PoolManager.Instance != null)
-            {
-                PoolManager.Instance.WarmPool(Arrow_data.weaponPrefab, 5);
-            }
+           base.Start();
 
         }
         // Update is called once per frame

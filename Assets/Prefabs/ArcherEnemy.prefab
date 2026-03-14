@@ -117,6 +117,8 @@ GameObject:
   - component: {fileID: 8938615173192277110}
   - component: {fileID: -5330049168748968641}
   - component: {fileID: 7243408492666904342}
+  - component: {fileID: -526435387495845514}
+  - component: {fileID: -2445272776148284331}
   m_Layer: 0
   m_Name: ArcherEnemy
   m_TagString: Enemy
@@ -314,6 +316,30 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &-526435387495845514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7547908307618291807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44142419377a54a888bc02a1d67e01f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.VisualScripting.Core::Unity.VisualScripting.AnimatorMessageListener
+--- !u!114 &-2445272776148284331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7547908307618291807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3367c011482e1244b762dba1ea462fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PooledObject
 --- !u!1001 &8603132387060359105
 PrefabInstance:
   m_ObjectHideFlags: 0

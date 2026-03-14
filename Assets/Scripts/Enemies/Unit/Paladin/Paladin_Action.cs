@@ -27,6 +27,7 @@ namespace Enemies
             base.Start();
         }
         #endregion
+
         #region Movement
         protected override void EnemyMovement()
         {
@@ -44,6 +45,7 @@ namespace Enemies
                 Walk_anim(false);
             }
         }
+
         #endregion
 
 

@@ -29,6 +29,7 @@ public class PoolManager : MonoBehaviour
 
     #endregion
     #region Public Methods
+
     //Creamos una pool de objetos vacia
     public void WarmPool(GameObject prefab, int size)
     {
@@ -87,6 +88,7 @@ public class PoolManager : MonoBehaviour
     // Devolvemos el objeto a la pool y lo desactivamos
     public void ReturnToPool(GameObject prefabKey, GameObject instance)
     {
+        Debug.Log("PrefabKey recibido: " + prefabKey);
         if (pools.ContainsKey(prefabKey))
         {
             instance.SetActive(false); // Simplemente lo apagamos
