@@ -113,13 +113,13 @@ public class EnemyController : MonoBehaviour
         protected void Die()
         {
             //AudioManager.Instance?.PlaySFX(data.deathSFX);
-            Debug.Log("Enemy died"+gameObject.name);
+            //Debug.Log("Enemy died"+gameObject.name);
             pooledObject = GetComponent<PooledObject>();
-            Debug.Log("PoolObject enviado: " + pooledObject);
+            //Debug.Log("PoolObject enviado: " + pooledObject);
             if (pooledObject != null)
             {
                 originPrefab = pooledObject.Prefab;
-                Debug.Log("PoolObject prefabs enviado: " + pooledObject.Prefab);
+                //Debug.Log("PoolObject prefabs enviado: " + pooledObject.Prefab);
                 Initialize(_enemyData);
                 PoolManager.Instance?.ReturnToPool(originPrefab, gameObject);
                 

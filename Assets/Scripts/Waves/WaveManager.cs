@@ -63,7 +63,7 @@ namespace Waves
             }
 
 
-            Debug.Log("Wave " + currentWave + " started with " + EnemyRemaing + " enemies.");
+           // Debug.Log("Wave " + currentWave + " started with " + EnemyRemaing + " enemies.");
 
         }
         public void OnWaveStarted()
