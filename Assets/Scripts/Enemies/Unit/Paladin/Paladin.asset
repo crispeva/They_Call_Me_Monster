@@ -16,7 +16,7 @@ MonoBehaviour:
   count: 2
   enemyPrefab: {fileID: 39255810508435946, guid: c28c7d2f5c95f6f48af9943533cbf8b3,
     type: 3}
-  maxHealth: 10
+  maxHealth: 100
   moveSpeed: 2
   damage: 5
   attackRate: 1

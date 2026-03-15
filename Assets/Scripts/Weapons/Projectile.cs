@@ -44,9 +44,6 @@ namespace Weapons
     }
     #endregion
 
-    #region Public Methods
-    #endregion
-
     #region Private Methods
  
     public void Init(GameObject owner, Vector2 dir)

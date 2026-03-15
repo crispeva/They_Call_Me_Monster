@@ -27,6 +27,7 @@ namespace Enemies
         private void Start()
         {
            base.Start();
+            PoolManager.Instance.WarmPool(Arrow_data.weaponPrefab, Arrow_data.chargerSize);
 
         }
         // Update is called once per frame
@@ -55,6 +56,7 @@ namespace Enemies
             }
         }
         #endregion
+
         #region Attack
         protected override void Attack()
         {

@@ -64,7 +64,7 @@ namespace Weapons
         dagger.Init(owner.gameObject, dir);
     }
 
-    // --- AXE (nueva arma) ---
+    //AXE
     void FireAxe(Transform owner, Vector2 aimPosition)
     {
 

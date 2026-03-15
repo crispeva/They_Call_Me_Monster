@@ -54,8 +54,8 @@ public class PoolManager : MonoBehaviour
             parent = new GameObject("Pool_" + prefab.name);
             parent.transform.SetParent(transform);
         }
-            
 
+        Debug.Log("Ahora mismo hay GameObject hijos" + parent.transform.childCount); 
         //Instanciamos los prefabs y los desactivamos
         for (int i = 0; i < size; i++)
         {
@@ -90,7 +90,9 @@ public class PoolManager : MonoBehaviour
         }
         else
         {
+            //Si la pool está llena y se solicita otro objeto, se instancia uno nuevo
             obj = Object.Instantiate(prefab, position, rotation);
+            obj.transform.SetParent(transform);
             // Asegurar que la instancia conoce su prefab original
             originprefab = obj.GetComponent<PooledObject>() ?? obj.AddComponent<PooledObject>();
             originprefab.SetPrefab(prefab);

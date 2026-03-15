@@ -57,8 +57,8 @@ namespace Controllers
         #endregion
 
         #region Waves Started
-            public void UIActualWave(int waveNumber)
-            {
+        public void UIActualWave(int waveNumber)
+        {
             _uiGameController.UpdateWaveNumber(waveNumber);
             
         }
