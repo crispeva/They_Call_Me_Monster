@@ -41,6 +41,7 @@ public class EnemyController : MonoBehaviour
             _enemySlyderHealth = GetComponentInChildren<Slider>();
             _enemyhealth.OnHealthChanged += UpdateEnemyHealth;
             _enemyhealth.OnDestroy += Die;
+
         }
         protected private void Start()
         {
@@ -73,7 +74,7 @@ public class EnemyController : MonoBehaviour
             // Implement enemy movement logic here
             dir = (_target.position - transform.position).normalized;
             transform.position += (Vector3)dir * _enemyData.moveSpeed * Time.deltaTime;
-           
+            Walk_anim(true);
         }
 
         #endregion

@@ -11,7 +11,7 @@ public class PoolManager : MonoBehaviour
 
     #region Fields
     // Mapa de pools: Prefab -> Cola de instancias
-    Dictionary<GameObject, Queue<GameObject>> pools = new Dictionary<GameObject, Queue<GameObject>>();
+    public Dictionary<GameObject, Queue<GameObject>> pools = new Dictionary<GameObject, Queue<GameObject>>();
     #endregion
 
     #region Unity Callbacks
