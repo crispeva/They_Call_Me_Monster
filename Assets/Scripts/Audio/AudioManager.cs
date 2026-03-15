@@ -16,9 +16,11 @@ public class AudioManager : MonoBehaviour
 
     [Header("FX")]
     [SerializeField] AudioSource ChangeWave;
+    [SerializeField] AudioSource ClerigoHit;
     [Header("Music")]
     [SerializeField] AudioSource MainGameMusic;
     [SerializeField] AudioSource MainShoopingMusic;
+    [SerializeField] AudioSource BossMusic;
 
     #endregion
 
@@ -73,6 +75,21 @@ public class AudioManager : MonoBehaviour
     {
         if (ChangeWave == null) return;
         sfxSource.PlayOneShot(ChangeWave.clip,MAX_VOLUME);
+    }
+    #endregion
+
+    #region GamePlay Methods
+    void PlayBossMusic()
+    {
+        if (MainGameMusic == null) return;
+        MainShoopingMusic.DOFade(0, 1f);
+        MainGameMusic.DOFade(0.1f, 0.1f);
+        MainGameMusic.Play();
+    }
+    void PlayClerigoHit()
+    {
+        if (ClerigoHit == null) return;
+        sfxSource.PlayOneShot(ClerigoHit.clip, MAX_VOLUME);
     }
     #endregion
 }

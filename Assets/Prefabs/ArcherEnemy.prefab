@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 8938615173192277110}
   - component: {fileID: -5330049168748968641}
   - component: {fileID: 7243408492666904342}
+  - component: {fileID: -2445272776148284331}
   m_Layer: 0
   m_Name: ArcherEnemy
   m_TagString: Enemy
@@ -314,6 +315,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &-2445272776148284331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7547908307618291807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3367c011482e1244b762dba1ea462fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PooledObject
 --- !u!1001 &8603132387060359105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -340,7 +353,12 @@ PrefabInstance:
     - target: {fileID: 2404232836550762154, guid: 9fe1028d3a779ab4aa57bfa6b225bf22,
         type: 3}
       propertyPath: m_Value
-      value: 100
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404232836550762154, guid: 9fe1028d3a779ab4aa57bfa6b225bf22,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 2869072286312737575, guid: 9fe1028d3a779ab4aa57bfa6b225bf22,
         type: 3}

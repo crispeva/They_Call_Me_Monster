@@ -14,9 +14,13 @@ public class EnemyController : MonoBehaviour
     protected HealthSystem _enemyhealth;
     protected Slider _enemySlyderHealth;
     protected Transform _target;
+        Animator _animator;
         Vector2 dir;
-        [SerializeField] protected private float _attackCooldown = 5f;
-       public static Action OnEnemyDeath;
+    [SerializeField] protected private float _attackCooldown ;
+        //Referencia al objeto de la pool para devolverlo al morir
+        PooledObject pooledObject;
+        GameObject originPrefab;
+        public static Action OnEnemyDeath;
         #endregion
 
         #region Fields
@@ -27,8 +31,8 @@ public class EnemyController : MonoBehaviour
         protected void Awake()
     {
             //Para evitar problemas de referencia circular, el enemigo se registra a sí mismo en el GameController durante su Awake.
-          
 
+            _animator = GetComponent<Animator>();
             _target = GameController.Instance.WeaponController.transform;
             //Health Systems
             _playerhealth = _target.GetComponent<HealthSystem>();
@@ -37,12 +41,20 @@ public class EnemyController : MonoBehaviour
             _enemySlyderHealth = GetComponentInChildren<Slider>();
             _enemyhealth.OnHealthChanged += UpdateEnemyHealth;
             _enemyhealth.OnDestroy += Die;
+
+        }
+        protected private void Start()
+        {
+           
+            
+                _attackCooldown = _enemyData.attackCooldown;
         }
 
-
-    protected void Update()
+        protected void Update()
     {
         EnemyMovement();
+        Flip();
+
         Attack();
         UpdateAttackCooldown();
      }
@@ -51,7 +63,8 @@ public class EnemyController : MonoBehaviour
         #region Initialize
         public void Initialize(EnemyData enemyData)
     {
-        _enemyData = enemyData;
+            _enemyData = enemyData;
+            _enemyhealth.SetHealth(enemyData.maxHealth);
         }
         #endregion
 
@@ -61,6 +74,7 @@ public class EnemyController : MonoBehaviour
             // Implement enemy movement logic here
             dir = (_target.position - transform.position).normalized;
             transform.position += (Vector3)dir * _enemyData.moveSpeed * Time.deltaTime;
+            Walk_anim(true);
         }
 
         #endregion
@@ -70,11 +84,11 @@ public class EnemyController : MonoBehaviour
     {
             if (Vector2.Distance(transform.position, _target.position) > _enemyData.attackRange)
                 return;
-
             if (_attackCooldown <= 0)
             {
                 _playerhealth.TakeDamage(_enemyData.damage);
                 _attackCooldown = _enemyData.attackCooldown; // Ajusta según tu EnemyData
+                Attack_anim();
             }
     }
 
@@ -85,7 +99,8 @@ public class EnemyController : MonoBehaviour
         {
                // Debug.Log("Attack Cooldown: " + _attackCooldown);
                 _attackCooldown -= Time.deltaTime;
-        }
+               
+            }
     }
 
         #endregion
@@ -99,11 +114,37 @@ public class EnemyController : MonoBehaviour
         protected void Die()
         {
             //AudioManager.Instance?.PlaySFX(data.deathSFX);
-            Debug.Log("Enemy died"+gameObject.name);
+            pooledObject = GetComponent<PooledObject>();
+            if (pooledObject != null)
+            {
+                originPrefab = pooledObject.Prefab;
+                Initialize(_enemyData);
+                PoolManager.Instance?.ReturnToPool(originPrefab, gameObject);
+                
+            }
             OnEnemyDeath?.Invoke();
-            Destroy(gameObject);
         }
-#endregion
-
+        #endregion
+        #region Animations
+        void Flip()
+        {
+            if (_target.position.x < transform.position.x)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+            }
+        }
+        protected void Walk_anim(bool walk)
+        {
+            _animator.SetBool("Walk", walk);
+        }
+       protected void Attack_anim()
+        {
+            _animator.SetTrigger("Attack");
+        }
+        #endregion
     }
 }

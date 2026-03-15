@@ -51,16 +51,19 @@ namespace Waves
             OnEnemiesCount?.Invoke(EnemyRemaing);
             foreach (var entry in wave.enemies)
             {
+                PoolManager.Instance.WarmPool(entry.enemyPrefab, entry.count);
                 for (int i = 0; i < entry.count; i++)
                 {
                     Transform point = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
-                    GameObject enemyInstance = Instantiate(entry.enemyPrefab, point.position, Quaternion.identity);
+                    //GameObject enemyInstance = Instantiate(entry.enemyPrefab, point.position, Quaternion.identity);
+                    PoolManager.Instance.SpawnFromPool(entry.enemyPrefab, point.position, Quaternion.identity); // TODO: Refactorizar
                     yield return new WaitForSeconds(wave.timeBetweenSpawns);
                 }
+
             }
 
 
-            Debug.Log("Wave " + currentWave + " started with " + EnemyRemaing + " enemies.");
+           // Debug.Log("Wave " + currentWave + " started with " + EnemyRemaing + " enemies.");
 
         }
         public void OnWaveStarted()

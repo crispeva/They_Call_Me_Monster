@@ -30,18 +30,17 @@ public class WeaponController : MonoBehaviour
         // precargar pool si el arma usa proyectiles
         if (startingWeapon != null && startingWeapon.usesProjectile)
         {
-            // Tamaño por defecto; ajustar según necesidad
-            int warmSize = 10;
+            
             if (PoolManager.Instance != null)
             {
-                PoolManager.Instance.WarmPool(startingWeapon.weaponPrefab, warmSize);
+                PoolManager.Instance.WarmPool(startingWeapon.weaponPrefab, startingWeapon.chargerSize);
             }
             else
             {
                 // crear instancia del PoolManager en escena si no existe
                 var go = new GameObject("PoolManager");
                 go.AddComponent<PoolManager>();
-                PoolManager.Instance.WarmPool(startingWeapon.weaponPrefab, warmSize);
+                PoolManager.Instance.WarmPool(startingWeapon.weaponPrefab, startingWeapon.chargerSize);
             }
         }
     }

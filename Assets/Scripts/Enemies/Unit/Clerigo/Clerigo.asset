@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c615afd875fdb5c418930891ce1ebe20, type: 3}
-  m_Name: Paladin
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  enemyName: Paladin
+  m_Name: Clerigo
+  m_EditorClassIdentifier: Assembly-CSharp::Enemies.EnemyData
+  enemyName: Clerigo
   count: 1
-  enemyPrefab: {fileID: 39255810508435946, guid: c28c7d2f5c95f6f48af9943533cbf8b3,
+  enemyPrefab: {fileID: 5364622777826786699, guid: 967f8ed4e8f8bda44b1868339b05c9d5,
     type: 3}
-  maxHealth: 100
-  moveSpeed: 1.5
-  damage: 5
-  attackRate: 1
-  attackRange: 1.5
-  attackCooldown: 3
+  maxHealth: 400
+  moveSpeed: 0.8
+  damage: 20
+  attackRate: 0
+  attackRange: 5
+  attackCooldown: 5
   expReward: 0
   goldReward: 0

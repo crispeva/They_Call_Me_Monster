@@ -25,6 +25,7 @@ public class WeaponData : ScriptableObject
     [Header("Projectile (solo si aplica)")]
     public bool usesProjectile;
     public float projectileSpeed;
+    public int chargerSize;
     [Header("Melee (solo si aplica)")]
     public float meleeRadius = 1.5f;
     [Header("Scaling")]

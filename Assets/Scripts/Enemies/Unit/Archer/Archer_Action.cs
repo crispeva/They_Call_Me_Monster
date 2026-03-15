@@ -13,7 +13,6 @@ namespace Enemies
        int rotationOffset = 0;
         GameObject proj;
         Transform owner;
-        Animator _animator;
         #endregion
 
         #region Fields
@@ -23,22 +22,19 @@ namespace Enemies
         void Awake()
     {
         base.Awake();
-            _animator = GetComponent<Animator>();
             owner = transform;
     }
         private void Start()
         {
-            if (PoolManager.Instance != null)
-            {
-                PoolManager.Instance.WarmPool(Arrow_data.weaponPrefab, 5);
-            }
+           base.Start();
+            PoolManager.Instance.WarmPool(Arrow_data.weaponPrefab, Arrow_data.chargerSize);
 
         }
         // Update is called once per frame
         void Update()
     {
             base.Update();
-            Flip();
+           
      }
         #endregion
 
@@ -60,6 +56,7 @@ namespace Enemies
             }
         }
         #endregion
+
         #region Attack
         protected override void Attack()
         {
@@ -101,27 +98,7 @@ namespace Enemies
         }
         #endregion
 
-        #region Animations
-        void Flip()
-        {
-            if (_target.position.x < transform.position.x)
-            {
-                transform.localScale = new Vector3(-1, 1, 1);
-            }
-            else
-            {
-                transform.localScale = new Vector3(1, 1, 1);
-            }
-        }
-        void Walk_anim(bool walk)
-        {
-            _animator.SetBool("Walk", walk);
-        }
-        void Attack_anim()
-        {
-            _animator.SetTrigger("Attack");
-        }
-        #endregion
+     
 
     }
 }

@@ -23,5 +23,6 @@ MonoBehaviour:
   pitchVariation: 0.095
   usesProjectile: 1
   projectileSpeed: 3
+  chargerSize: 3
   meleeRadius: 0
   damageMultiplierPerLevel: 1.2
