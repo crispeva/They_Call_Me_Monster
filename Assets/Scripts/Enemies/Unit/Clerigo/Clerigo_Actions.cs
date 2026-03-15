@@ -12,6 +12,7 @@ public class Clerigo_Actions : EnemyController
     #endregion
 
     #region Fields
+
     #endregion
 
     #region Unity Callbacks
@@ -45,9 +46,7 @@ public class Clerigo_Actions : EnemyController
 
                 if (enemy != null && enemy != this)
                 {
-                    Debug.Log("Clerigo atacou " + enemy.name);
                     enemy.HealthSystem.SetHealth(_enemyData.damage + enemy.HealthSystem.CurrentHealth);
-                    Debug.Log("Clerigo curo " + _enemyData.damage + enemy.HealthSystem.CurrentHealth);
                 }
             }
             _attackCooldown = _enemyData.attackCooldown; // Ajusta según tu EnemyData
