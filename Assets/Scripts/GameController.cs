@@ -14,7 +14,6 @@ namespace Controllers
     public EnemyController EnemyController=> _enemyController;
     public UIGameController UIGameController=> _uiGameController;
     public WaveManager WaveManager => _wavemanager;
-   // public PoolManager PoolManager => _poolmanager;
 
      public Action onWaveStarted;
         #endregion
@@ -25,7 +24,6 @@ namespace Controllers
     [SerializeField] protected UIGameController _uiGameController;
     [SerializeField] protected EnemyController _enemyController;
     [SerializeField] protected WaveManager _wavemanager;
-    //[SerializeField] protected PoolManager _poolmanager;
         #endregion
 
         #region Unity Callbacks

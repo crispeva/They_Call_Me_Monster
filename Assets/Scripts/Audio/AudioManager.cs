@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Controllers;
 using DG.Tweening;
+using Enemies;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -36,8 +37,10 @@ public class AudioManager : MonoBehaviour
 
         //Events
         GameController.Instance.WaveManager.OnWaveState += (_) => PlayNextWave();
-        GameController.Instance.WaveManager.OnWaveState += (_) => PlayMainGameMusic();
+        GameController.Instance.WaveManager.OnMainWave +=  PlayMainGameMusic;
         GameController.Instance.WaveManager.OnWavesCompleted +=  PlayShoopingMusic;
+        GameController.Instance.WaveManager.OnBossWave += PlayBossMusic;
+        EnemyController.OnAttackEnemy += PlayClerigoHit;
     }
 
     #endregion
@@ -61,14 +64,17 @@ public class AudioManager : MonoBehaviour
     {
         if (MainGameMusic == null) return;
         MainShoopingMusic.DOFade(0, 1f);
+        Debug.Log("PlayMainGameMusic llamado");
         MainGameMusic.DOFade(0.1f, 0.1f);
         MainGameMusic.Play();
     }
     void PlayShoopingMusic()
     {
         if (MainShoopingMusic == null) return;
-        MainGameMusic.DOFade(0, 1f);
-        MainShoopingMusic.DOFade(MAX_VOLUME, 1f);
+        // Detener cualquier música que esté sonando antes de iniciar la transición
+        Debug.Log("PlayShoopingMusic llamado");
+      MainGameMusic.DOFade(0, 1f);
+       MainShoopingMusic.DOFade(MAX_VOLUME, 1f);
         MainShoopingMusic.Play();
     }
     void PlayNextWave()
@@ -78,17 +84,19 @@ public class AudioManager : MonoBehaviour
     }
     #endregion
 
-    #region GamePlay Methods
+    #region Enemies Methods
     void PlayBossMusic()
     {
-        if (MainGameMusic == null) return;
+        if (BossMusic == null) return;
         MainShoopingMusic.DOFade(0, 1f);
-        MainGameMusic.DOFade(0.1f, 0.1f);
-        MainGameMusic.Play();
+        Debug.Log("PlayBossMusic llamado");
+        BossMusic.DOFade(MAX_VOLUME, 1f);
+        BossMusic.Play();
     }
     void PlayClerigoHit()
     {
         if (ClerigoHit == null) return;
+        Debug.Log("PlayClerigoHit llamado");
         sfxSource.PlayOneShot(ClerigoHit.clip, MAX_VOLUME);
     }
     #endregion
