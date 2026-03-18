@@ -21,6 +21,7 @@ public class EnemyController : MonoBehaviour
         PooledObject pooledObject;
         GameObject originPrefab;
         public static Action OnEnemyDeath;
+        public static Action OnAttackEnemy;
         #endregion
 
         #region Fields
@@ -82,6 +83,7 @@ public class EnemyController : MonoBehaviour
         #region Attack
         protected virtual void Attack()
     {
+
             if (Vector2.Distance(transform.position, _target.position) > _enemyData.attackRange)
                 return;
             if (_attackCooldown <= 0)

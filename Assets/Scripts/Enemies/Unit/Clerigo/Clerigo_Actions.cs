@@ -8,7 +8,7 @@ using UnityEngine;
 public class Clerigo_Actions : EnemyController
 {
     #region Properties
-    
+
     #endregion
 
     #region Fields
@@ -40,6 +40,8 @@ public class Clerigo_Actions : EnemyController
         if (_attackCooldown <= 0)
         {
             Attack_anim();
+            OnAttackEnemy?.Invoke();
+            Debug.Log("Clerigo ataca");
             foreach (var hit in hits)
             {
                 EnemyController enemy = hit.GetComponent<EnemyController>();
@@ -58,6 +60,7 @@ public class Clerigo_Actions : EnemyController
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, _enemyData.attackRange);
     }
+
     #endregion
 
     #region Private Methods

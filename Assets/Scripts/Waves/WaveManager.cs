@@ -22,10 +22,14 @@ namespace Waves
         private  float timeBetweenWaves ;
         private int EnemyRemaing = 0;
         public int currentWave = 0;
+        private int bossWave = 2;
         public Action <int>OnWaveState;
         public Action<float> OnWaveCountdown;
         public Action<int> OnEnemiesCount;
         public Action OnWavesCompleted;
+        //Music
+        public Action OnBossWave;
+        public Action OnMainWave;
         #endregion
 
         #region Unity Callbacks
@@ -46,6 +50,16 @@ namespace Waves
             WaveData wave = waves[currentWave];
             //Se incrementa el contador de oleadas
             currentWave++;
+            Debug.Log($"¡Oleada {currentWave} iniciada! Enemigos restantes: {EnemyRemaing}");
+            if (currentWave == bossWave)
+            {
+                OnBossWave?.Invoke(); 
+                bossWave += 5; // Incrementar la siguiente oleada de jefe cada 5 oleadas
+            }
+            else
+            {
+                OnMainWave?.Invoke(); 
+            }
             OnWaveState?.Invoke(currentWave);
             EnemyRemaing = GetTotalEnemiesInWave(wave);
             OnEnemiesCount?.Invoke(EnemyRemaing);
@@ -55,15 +69,12 @@ namespace Waves
                 for (int i = 0; i < entry.count; i++)
                 {
                     Transform point = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
-                    //GameObject enemyInstance = Instantiate(entry.enemyPrefab, point.position, Quaternion.identity);
                     PoolManager.Instance.SpawnFromPool(entry.enemyPrefab, point.position, Quaternion.identity); // TODO: Refactorizar
                     yield return new WaitForSeconds(wave.timeBetweenSpawns);
                 }
 
             }
-
-
-           // Debug.Log("Wave " + currentWave + " started with " + EnemyRemaing + " enemies.");
+           
 
         }
         public void OnWaveStarted()
@@ -103,7 +114,7 @@ namespace Waves
             if (EnemyRemaing <= 0)
             {
                 OnWaveStarted();
-                OnWavesCompleted?.Invoke();
+               OnWavesCompleted?.Invoke(); 
             }
             OnEnemiesCount?.Invoke(EnemyRemaing);  // Actualizar UI después de decrementar
         }
