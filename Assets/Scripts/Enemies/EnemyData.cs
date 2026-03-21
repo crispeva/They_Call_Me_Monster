@@ -26,6 +26,7 @@ namespace Enemies
     [Header("Rewards")]
     public int expReward;
     public int goldReward;
+    public GameObject goldRewardPrefab;
 
    // [Header("Audio")]
    // public AudioClip hitSFX;

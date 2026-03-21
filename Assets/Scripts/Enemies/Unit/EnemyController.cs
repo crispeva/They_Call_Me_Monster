@@ -22,6 +22,7 @@ public class EnemyController : MonoBehaviour
         GameObject originPrefab;
         public static Action OnEnemyDeath;
         public static Action OnAttackEnemy;
+
         #endregion
 
         #region Fields
@@ -47,15 +48,13 @@ public class EnemyController : MonoBehaviour
         protected private void Start()
         {
            
-            
-                _attackCooldown = _enemyData.attackCooldown;
+            _attackCooldown = _enemyData.attackCooldown;
         }
 
         protected void Update()
     {
         EnemyMovement();
         Flip();
-
         Attack();
         UpdateAttackCooldown();
      }
@@ -122,11 +121,25 @@ public class EnemyController : MonoBehaviour
                 originPrefab = pooledObject.Prefab;
                 Initialize(_enemyData);
                 PoolManager.Instance?.ReturnToPool(originPrefab, gameObject);
-                
+                DropRewards();
+
+
             }
             OnEnemyDeath?.Invoke();
         }
         #endregion
+        #region Rewards
+        void DropRewards()
+        {
+            // Implement logic to drop rewards (e.g., gold, items) upon enemy death
+            for (int i = 0; i < _enemyData.goldReward; i++)
+            {
+                PoolManager.Instance.SpawnFromPool(_enemyData.goldRewardPrefab, transform.position, Quaternion.identity);
+            }
+                
+        }
+        #endregion
+
         #region Animations
         void Flip()
         {

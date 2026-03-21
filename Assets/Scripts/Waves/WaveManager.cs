@@ -50,7 +50,6 @@ namespace Waves
             WaveData wave = waves[currentWave];
             //Se incrementa el contador de oleadas
             currentWave++;
-            Debug.Log($"¡Oleada {currentWave} iniciada! Enemigos restantes: {EnemyRemaing}");
             if (currentWave == bossWave)
             {
                 OnBossWave?.Invoke(); 
@@ -66,6 +65,10 @@ namespace Waves
             foreach (var entry in wave.enemies)
             {
                 PoolManager.Instance.WarmPool(entry.enemyPrefab, entry.count);
+                // Preparar la pool para las recompensas de oro
+                PoolManager.Instance.WarmPool(entry.goldRewardPrefab, (entry.count+entry.goldReward));
+
+
                 for (int i = 0; i < entry.count; i++)
                 {
                     Transform point = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
