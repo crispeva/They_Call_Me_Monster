@@ -1,11 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Controllers;
 using DG.Tweening;
+using Recolectables;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class UIGameController : MonoBehaviour
 {
@@ -14,7 +17,8 @@ public class UIGameController : MonoBehaviour
     [SerializeField] private Slider _playerHealth; 
     [SerializeField] private TextMeshProUGUI _waveText;
     [SerializeField] private TextMeshProUGUI _waveCountText;
-    
+    [SerializeField] private TextMeshProUGUI _coinText;
+    [SerializeField] private Inventory _playerInventory;
     #endregion
 
     #region Fields
@@ -23,12 +27,17 @@ public class UIGameController : MonoBehaviour
     #region Unity Callbacks
      void Awake()
     {
-        
        
+
     }
     void Start()
     {
-        
+        _playerInventory.OnInventoryUpdated += UpdateCoinUI;
+    }
+
+    private void UpdateCoinUI()
+    {
+        _coinText.text = _playerInventory.GetAmount(RecolectableType.Coin).ToString();
     }
 
     // Update is called once per frame
@@ -74,6 +83,7 @@ public class UIGameController : MonoBehaviour
     {
         _playerHealth.value = value;
     }
+
     #endregion
 
 }

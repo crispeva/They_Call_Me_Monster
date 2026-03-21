@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Waves;
 using Weapons;
+using static UnityEngine.EventSystems.EventTrigger;
 namespace Controllers
 {
     public class GameController : Singleton<GameController>
@@ -24,6 +25,8 @@ namespace Controllers
     [SerializeField] protected UIGameController _uiGameController;
     [SerializeField] protected EnemyController _enemyController;
     [SerializeField] protected WaveManager _wavemanager;
+
+        // GameObject Coinprefab;
         #endregion
 
         #region Unity Callbacks
@@ -31,17 +34,21 @@ namespace Controllers
         {
             _healthsystem.OnHealthChanged += _uiGameController.UpdatePlayerHealth;
             // Suscribirse al evento de muerte del jugador
-            Enemies.EnemyController.OnEnemyDeath += EnemiesDiabled;
+            EnemyController.OnEnemyDeath += EnemiesDiabled;
             // Suscribirse al evento de cambio de oleada
             _wavemanager.OnEnemiesCount += UICountEnemies;
+
         }
+
+     
+
         private void Start()
         {
             _wavemanager.OnWaveState += UIActualWave;
             _wavemanager.OnWaveCountdown += OnCountDownWave;
-
+            
             // Iniciar la primera oleada
-           UIActualWave(1);
+            UIActualWave(1);
         }
    
 
