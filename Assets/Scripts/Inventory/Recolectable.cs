@@ -18,7 +18,11 @@ namespace Recolectables
         [field: SerializeField] public RecolectableType Type { get; set; }
         PooledObject pooledObject;
         GameObject originPrefab;
-        [SerializeField] AudioSource _audio;
+        AudioSource _audio;
+        private void Start()
+        {
+            _audio = GetComponent<AudioSource>();
+        }
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (!collision.CompareTag("Player")) return;
