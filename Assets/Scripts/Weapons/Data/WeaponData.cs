@@ -30,6 +30,7 @@ public class WeaponData : ScriptableObject
     public float meleeRadius = 1.5f;
     [Header("Scaling")]
     public float damageMultiplierPerLevel = 1.2f;
+    public float money = 20;
     #endregion
 
 }

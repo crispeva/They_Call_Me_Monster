@@ -1,15 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Controllers;
 using DG.Tweening;
 using Recolectables;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEngine.Rendering.DebugUI;
-
+using DG.Tweening;
 public class UIGameController : MonoBehaviour
 {
     #region Properties
@@ -19,15 +13,20 @@ public class UIGameController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _waveCountText;
     [SerializeField] private TextMeshProUGUI _coinText;
     [SerializeField] private Inventory _playerInventory;
+
+    [Header("Event_Shop")]
+    [SerializeField] private TextMeshProUGUI _textcaldero;
     #endregion
 
     #region Fields
     #endregion
-
-    #region Unity Callbacks
-     void Awake()
+    void Update()
     {
-       
+        //AnimationTextcaldero();
+    }
+    #region Unity Callbacks
+    void Awake()
+    {
 
     }
     void Start()
@@ -39,12 +38,8 @@ public class UIGameController : MonoBehaviour
     {
         _coinText.text = _playerInventory.GetAmount(RecolectableType.Coin).ToString();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
+    // Update is called once per 
     #endregion
 
     #region UI Waves

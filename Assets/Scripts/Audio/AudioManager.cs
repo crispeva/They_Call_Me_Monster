@@ -64,7 +64,6 @@ public class AudioManager : MonoBehaviour
     {
         if (MainGameMusic == null) return;
         MainShoopingMusic.DOFade(0, 1f);
-        Debug.Log("PlayMainGameMusic llamado");
         MainGameMusic.DOFade(0.1f, 0.1f);
         MainGameMusic.Play();
     }

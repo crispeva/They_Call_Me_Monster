@@ -24,7 +24,6 @@ namespace Weapons
     }
     public bool CanFire()
     {
-        Debug.Log("CanFire check for weapon: " + data.weaponType);
         return Time.time >= lastFireTime + (1f / data.fireRate);
     }
     #endregion
