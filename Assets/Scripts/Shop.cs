@@ -12,19 +12,24 @@ public class Shop : MonoBehaviour
     #endregion
 
     #region Fields
-    [SerializeField] List<WeaponData> weaponList = new List<WeaponData>();
+   // [SerializeField] List<WeaponData> weaponList = new List<WeaponData>();
+   // [SerializeField] List<GameObject> ItemList = new List<GameObject>();
+    [SerializeField] List<Items> allItems;
     [SerializeField] private GameObject _panelshop;
     [SerializeField] private TextMeshProUGUI _textpanelshop;
     HealthSystem playerHealth;
     Inventory playerInventory;
     float healthBuffAmount = 20f;
     bool isPlayerInShopRange = false;
+
+    public Transform contentParent; // donde van los items (Grid / Vertical Layout)
+    public GameObject itemPrefab;   // el prefab del slot
     #endregion
 
     #region Unity Callbacks
     void Start()
     {
-        
+        GenerateShop();
     }
 
     // Update is called once per frame
@@ -34,15 +39,26 @@ public class Shop : MonoBehaviour
         {
             Debug.Log("Player entered the shop!");
             _panelshop.SetActive(true);
+        
         }
-        else if ( !isPlayerInShopRange)
+        else if ( !isPlayerInShopRange || Input.GetKeyDown(KeyCode.E))
         {
             _panelshop.SetActive(false);
         }
     }
     #endregion
 
-    #region Public Methods
+    public void GenerateShop()
+    {
+        foreach (var item in allItems)
+        {
+            GameObject slotitem = Instantiate(itemPrefab, contentParent);
+
+            ShopItemSlot ui = slotitem.GetComponent<ShopItemSlot>();
+            ui.Setup(item);
+        }
+    }
+    #region Trigger Callbacks
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -67,7 +83,7 @@ public class Shop : MonoBehaviour
     }
     #endregion
 
-    #region Shop Methods
+    #region Shop Animations and buttons
     private void AnimationTextcaldero()
     {
 

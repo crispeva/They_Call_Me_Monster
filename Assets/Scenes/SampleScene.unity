@@ -9117,14 +9117,14 @@ GameObject:
   - component: {fileID: 267884992}
   - component: {fileID: 267884995}
   - component: {fileID: 267884994}
-  - component: {fileID: 267884993}
+  - component: {fileID: 267884996}
   m_Layer: 5
   m_Name: Panel_shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &267884992
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9136,38 +9136,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1575358406}
   m_Father: {fileID: 2016630696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -21.585815, y: 27.440613}
-  m_SizeDelta: {x: -214.5326, y: -336.4458}
+  m_AnchorMin: {x: 0.093800455, y: 0.28149858}
+  m_AnchorMax: {x: 0.8515457, y: 0.79324937}
+  m_AnchoredPosition: {x: 2.9141846, y: 0.9406128}
+  m_SizeDelta: {x: 2.4674072, y: 8.554199}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &267884993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 267884991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GridLayoutGroup
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 0
-  m_StartCorner: 0
-  m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 0, y: 0}
-  m_Constraint: 0
-  m_ConstraintCount: 2
 --- !u!114 &267884994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9206,6 +9183,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267884991}
   m_CullTransparentMesh: 1
+--- !u!114 &267884996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267884991}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.VerticalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &334978034
 GameObject:
   m_ObjectHideFlags: 0
@@ -11366,6 +11369,108 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1575358405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1575358406}
+  - component: {fileID: 1575358409}
+  - component: {fileID: 1575358408}
+  - component: {fileID: 1575358407}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1575358406
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575358405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 267884992}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.23370361, y: 0.22290039}
+  m_SizeDelta: {x: 0.46740723, y: -0.44580078}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1575358407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575358405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.HorizontalLayoutGroup
+  m_Padding:
+    m_Left: 30
+    m_Right: 30
+    m_Top: 43
+    m_Bottom: 30
+  m_ChildAlignment: 4
+  m_Spacing: 30
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &1575358408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575358405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.56078434, g: 0.49803925, b: 0.43529415, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1575358409
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575358405}
+  m_CullTransparentMesh: 1
 --- !u!224 &1575413263 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7542921628400636141, guid: 47eb8217a38dd674896ae3fe4bfed8a1,
@@ -24145,9 +24250,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc0e0ea6e8775584980b204f82e2394e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shop
-  weaponList: []
+  allItems:
+  - {fileID: 11400000, guid: 3b597be7b73e5e34e95b1e6249b627bb, type: 2}
+  - {fileID: 11400000, guid: 367429a795c62204791d0e699467daa0, type: 2}
   _panelshop: {fileID: 267884991}
   _textpanelshop: {fileID: 860169745}
+  contentParent: {fileID: 1575358406}
+  itemPrefab: {fileID: 565257797060337433, guid: 4da047e3c6c9adb4c966b1b34195010f,
+    type: 3}
 --- !u!1 &1842888305
 GameObject:
   m_ObjectHideFlags: 0
@@ -24781,7 +24891,7 @@ PrefabInstance:
     - target: {fileID: 6019621373569388503, guid: 47eb8217a38dd674896ae3fe4bfed8a1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.3705902
+      value: -1.370594
       objectReference: {fileID: 0}
     - target: {fileID: 6019621373569388503, guid: 47eb8217a38dd674896ae3fe4bfed8a1,
         type: 3}

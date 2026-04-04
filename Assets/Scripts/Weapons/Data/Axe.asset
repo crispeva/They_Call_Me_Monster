@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d50ae35f6804c4da42c4aa47f9812a, type: 3}
   m_Name: Axe
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
-  weaponName: Axe
+  itemName: AXE
+  icon: {fileID: 1999937526, guid: b96cafd382b4e69449f99c4357080573, type: 3}
+  price: 120
+  description: Area damage
   weaponType: 1
   weaponPrefab: {fileID: 5151109429188353669, guid: 63cb534759ae13a4dabe578c36698f9e,
     type: 3}
@@ -23,5 +26,6 @@ MonoBehaviour:
   pitchVariation: 0.1
   usesProjectile: 0
   projectileSpeed: 1.5
+  chargerSize: 0
   meleeRadius: 1.5
   damageMultiplierPerLevel: 1.2

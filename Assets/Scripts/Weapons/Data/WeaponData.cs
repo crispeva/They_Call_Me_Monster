@@ -6,11 +6,10 @@ public enum WeaponType
     Axe,
     Arrow_enemy
 }
-[CreateAssetMenu(menuName = "Weapons/Weapon Data")]
-public class WeaponData : ScriptableObject
+[CreateAssetMenu(menuName = "Items/Weapon")]
+public class WeaponData : Items
 {
     #region Properties
-    public string weaponName;
     public WeaponType weaponType;
     public GameObject weaponPrefab;
     [Header("Combat")]
@@ -30,7 +29,6 @@ public class WeaponData : ScriptableObject
     public float meleeRadius = 1.5f;
     [Header("Scaling")]
     public float damageMultiplierPerLevel = 1.2f;
-    public float money = 20;
     #endregion
 
 }
