@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Controllers;
 using UnityEngine;
 using UnityEngine.Windows;
 namespace Weapons { 
@@ -15,6 +16,7 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private WeaponData startingWeapon;
     InputController input;
     WeaponRuntime currentWeapon;
+    private bool canShoot = true;
     public event Action OnShoot;
         #endregion
 
@@ -24,11 +26,13 @@ public class WeaponController : MonoBehaviour
 
         void Awake()
     {
+
         input = GetComponent<InputController>();
         currentWeapon = new WeaponRuntime(startingWeapon);
+        GameController.Instance.ShopManager.shopping += UpdateFiringState;
 
-        // precargar pool si el arma usa proyectiles
-        if (startingWeapon != null && startingWeapon.usesProjectile)
+            // precargar pool si el arma usa proyectiles
+            if (startingWeapon != null && startingWeapon.usesProjectile)
         {
             
             if (PoolManager.Instance != null)
@@ -47,7 +51,7 @@ public class WeaponController : MonoBehaviour
 
     void Update()
     {
-        if (!input.FirePressed) return;
+        if (!input.FirePressed || !canShoot) return;
 
         currentWeapon.Fire(transform, input.AimPosition);
             OnShoot?.Invoke();
@@ -61,7 +65,11 @@ public class WeaponController : MonoBehaviour
             PoolManager.Instance?.WarmPool(newWeapon.weaponPrefab, 10);
         }
     }
-    #endregion
+        private void UpdateFiringState(bool isShopping)
+        {
+            canShoot = !isShopping; // Si está comprando, no puede disparar
+        }
+        #endregion
 
-}
+    }
 }

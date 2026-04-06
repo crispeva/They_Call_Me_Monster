@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using System;
 public class UIGameController : MonoBehaviour
 {
     #region Properties
@@ -11,12 +12,14 @@ public class UIGameController : MonoBehaviour
     [SerializeField] private Slider _playerHealth; 
     [SerializeField] private TextMeshProUGUI _waveText;
     [SerializeField] private TextMeshProUGUI _waveCountText;
-    [SerializeField] private TextMeshProUGUI _coinText;
+
 
 
     [Header("Event_Shop")]
+    [SerializeField] private TextMeshProUGUI _coinText;
     [SerializeField] private TextMeshProUGUI _textcaldero;
     [SerializeField] private Inventory _playerInventory;
+    [SerializeField] private GameObject _panelshop;
     #endregion
 
     #region Fields
@@ -39,10 +42,20 @@ public class UIGameController : MonoBehaviour
     {
         _coinText.text = _playerInventory.GetAmount(RecolectableType.Coin).ToString();
     }
-   
+
     // Update is called once per 
     #endregion
+    #region Shop Stete
+    internal void OpenShop()
+    {
+        _panelshop.SetActive(true);
+    }
 
+    internal void CloseShop()
+    {
+        _panelshop.SetActive(false);
+    }
+    #endregion
     #region UI Waves
     public void UpdateWaveNumber(int waveNumber)
     {
@@ -79,6 +92,8 @@ public class UIGameController : MonoBehaviour
     {
         _playerHealth.value = value;
     }
+
+
 
     #endregion
 

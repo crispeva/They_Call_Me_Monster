@@ -26,7 +26,7 @@ namespace Controllers
     [SerializeField] protected UIGameController _uiGameController;
     [SerializeField] protected EnemyController _enemyController;
     [SerializeField] protected WaveManager _wavemanager;
-
+    [SerializeField] protected Shop _shopmanager;
         #endregion
 
         #region Unity Callbacks
@@ -37,6 +37,7 @@ namespace Controllers
             EnemyController.OnEnemyDeath += EnemiesDiabled;
             // Suscribirse al evento de cambio de oleada
             _wavemanager.OnEnemiesCount += UICountEnemies;
+            _shopmanager.shopping += ShopState;
 
         }
 
@@ -60,7 +61,16 @@ namespace Controllers
             throw new NotImplementedException();
         }
         #endregion
-
+        public void ShopState(bool state)
+        {
+            if (state)
+            {
+                _uiGameController.OpenShop();
+            }
+            else {
+                _uiGameController.CloseShop();
+            }
+        }
         #region Waves Started
         public void UIActualWave(int waveNumber)
         {

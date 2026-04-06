@@ -17,10 +17,9 @@ public class Shop : MonoBehaviour
     // [SerializeField] List<GameObject> ItemList = new List<GameObject>();
     [Header("Items")]
     [SerializeField] List<Items> allItems;
-    [SerializeField] private GameObject _panelshop;
     [SerializeField] private TextMeshProUGUI _textpanelshop;
     [Header("Player")]
-    [SerializeField] GameObject player;
+    GameObject player;
     Inventory _playerInventory;
     int goldplayer;
 
@@ -28,33 +27,32 @@ public class Shop : MonoBehaviour
     bool isPlayerInShopRange = false;
     public Transform contentParent; // donde van los items (Grid / Vertical Layout)
     public GameObject itemPrefab;   // el prefab del slot
-    Action <bool>shopping;
+   public Action<bool> shopping;
+    private bool isShopOpen = false;
     #endregion
 
     #region Unity Callbacks
-    private void Awake()
-    {
-        _playerInventory = player.GetComponent<Inventory>();
-
-    }
     void Start()
     {
-
         GenerateShop();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)&& isPlayerInShopRange)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Player entered the shop!");
-            _panelshop.SetActive(true);
-
+            if (isPlayerInShopRange)
+            {
+                isShopOpen = !isShopOpen; // Cambiamos el estado local
+                shopping?.Invoke(isShopOpen); // Avisamos al resto del juego
+            }
         }
-        else if ( !isPlayerInShopRange || Input.GetKeyDown(KeyCode.E))
+        // Si el jugador se va, cerramos la tienda forzosamente
+        if (!isPlayerInShopRange && isShopOpen)
         {
-            _panelshop.SetActive(false);
+            isShopOpen = false;
+            shopping?.Invoke(false);
         }
     }
     #endregion
@@ -67,9 +65,9 @@ public class Shop : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            _playerHealth = other.gameObject.GetComponent<HealthSystem>();
             _playerInventory = other.gameObject.GetComponent<Inventory>();
-            isPlayerInShopRange= true;
+            player= other.gameObject;
+            isPlayerInShopRange = true;
             AnimationTextcaldero();
           
         }
@@ -81,7 +79,7 @@ public class Shop : MonoBehaviour
         {
             isPlayerInShopRange= false;
             AnimationTextcalderoOUT();
-            _panelshop.SetActive(false);
+            shopping?.Invoke(false);
         }
     }
     #endregion

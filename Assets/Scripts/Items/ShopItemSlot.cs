@@ -18,13 +18,6 @@ public class ShopItemSlot : MonoBehaviour
    public  Action<Items> onBuy;
     #endregion
 
-    #region Fields
-    private void Awake()
-    {
-       
-    }
-    #endregion
-
     #region Unity Callbacks
     public void Setup(Items newItem)
     {
