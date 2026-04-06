@@ -12,10 +12,11 @@ public class UIGameController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _waveText;
     [SerializeField] private TextMeshProUGUI _waveCountText;
     [SerializeField] private TextMeshProUGUI _coinText;
-    [SerializeField] private Inventory _playerInventory;
+
 
     [Header("Event_Shop")]
     [SerializeField] private TextMeshProUGUI _textcaldero;
+    [SerializeField] private Inventory _playerInventory;
     #endregion
 
     #region Fields

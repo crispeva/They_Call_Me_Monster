@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Controllers;
 using UnityEngine;
 namespace Weapons
 {
@@ -9,16 +10,16 @@ namespace Weapons
     WeaponData data;
     float lastFireTime;
     [SerializeField] int rotationOffset = -90;
-    #endregion
+        #endregion
 
-    #region Fields
-    #endregion
+        #region Fields
+        #endregion
 
-    #region Unity Callbacks
-    #endregion
+        #region Unity Callbacks
+        #endregion
 
-    #region Public Methods
-    public WeaponRuntime(WeaponData data)
+        #region Public Methods
+        public WeaponRuntime(WeaponData data)
     {
         this.data = data;
     }

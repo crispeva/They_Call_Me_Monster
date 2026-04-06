@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -12,23 +13,33 @@ public class Shop : MonoBehaviour
     #endregion
 
     #region Fields
-   // [SerializeField] List<WeaponData> weaponList = new List<WeaponData>();
-   // [SerializeField] List<GameObject> ItemList = new List<GameObject>();
+    // [SerializeField] List<WeaponData> weaponList = new List<WeaponData>();
+    // [SerializeField] List<GameObject> ItemList = new List<GameObject>();
+    [Header("Items")]
     [SerializeField] List<Items> allItems;
     [SerializeField] private GameObject _panelshop;
     [SerializeField] private TextMeshProUGUI _textpanelshop;
-    HealthSystem playerHealth;
-    Inventory playerInventory;
-    float healthBuffAmount = 20f;
-    bool isPlayerInShopRange = false;
+    [Header("Player")]
+    [SerializeField] GameObject player;
+    Inventory _playerInventory;
+    int goldplayer;
 
+    // Variables para controlar la interacción con el jugador y la UI
+    bool isPlayerInShopRange = false;
     public Transform contentParent; // donde van los items (Grid / Vertical Layout)
     public GameObject itemPrefab;   // el prefab del slot
+    Action <bool>shopping;
     #endregion
 
     #region Unity Callbacks
+    private void Awake()
+    {
+        _playerInventory = player.GetComponent<Inventory>();
+
+    }
     void Start()
     {
+
         GenerateShop();
     }
 
@@ -39,7 +50,7 @@ public class Shop : MonoBehaviour
         {
             Debug.Log("Player entered the shop!");
             _panelshop.SetActive(true);
-        
+
         }
         else if ( !isPlayerInShopRange || Input.GetKeyDown(KeyCode.E))
         {
@@ -48,24 +59,16 @@ public class Shop : MonoBehaviour
     }
     #endregion
 
-    public void GenerateShop()
-    {
-        foreach (var item in allItems)
-        {
-            GameObject slotitem = Instantiate(itemPrefab, contentParent);
 
-            ShopItemSlot ui = slotitem.GetComponent<ShopItemSlot>();
-            ui.Setup(item);
-        }
-    }
+
     #region Trigger Callbacks
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            playerHealth = other.gameObject.GetComponent<HealthSystem>();
-            playerInventory = other.gameObject.GetComponent<Inventory>();
+            _playerHealth = other.gameObject.GetComponent<HealthSystem>();
+            _playerInventory = other.gameObject.GetComponent<Inventory>();
             isPlayerInShopRange= true;
             AnimationTextcaldero();
           
@@ -86,9 +89,6 @@ public class Shop : MonoBehaviour
     #region Shop Animations and buttons
     private void AnimationTextcaldero()
     {
-
-        Debug.Log("Hola!");
-        // Fade suave (opcional)
         Sequence sequence = DOTween.Sequence();
         sequence.Append(_textpanelshop.DOFade(0f, 0.5f))
             .AppendCallback(() => _textpanelshop.text = $"Press 'E' to open")
@@ -97,28 +97,33 @@ public class Shop : MonoBehaviour
     private void AnimationTextcalderoOUT()
     {
 
-        Debug.Log("Hola!");
-        // Fade suave (opcional)
         Sequence sequence = DOTween.Sequence();
         sequence.Append(_textpanelshop.DOFade(0f, 0.5f))
             .AppendCallback(() => _textpanelshop.text = $"")
             .Append(_textpanelshop.DOFade(1f, 0.5f));
     }
-    void WeaponButton()
+    public void GenerateShop()
     {
-
-    }
-    void BuffButton()
-    {
-        playerHealth.SetHealth(healthBuffAmount);
-    }
-    void NoMoney()
-    {
-        if (playerInventory.GetAmount(RecolectableType.Coin)>=2)
+        foreach (var item in allItems)
         {
+            GameObject slotitem = Instantiate(itemPrefab, contentParent);
 
-        } 
-            Debug.Log("Not enough money!");
+            ShopItemSlot ui = slotitem.GetComponent<ShopItemSlot>();
+            ui.Setup(item);
+            ui.onBuy += BuyItem;
+        }
+    }
+    public void BuyItem(Items item)
+    {
+        goldplayer = _playerInventory.GetAmount(RecolectableType.Coin);
+        if (goldplayer < item.price)
+        {
+            Debug.Log("No tienes suficiente oro");
+            return;
+        }
+        _playerInventory.UseResource(RecolectableType.Coin, item.price);
+        Debug.Log(goldplayer);
+        item.Use(player);
     }
     #endregion
 

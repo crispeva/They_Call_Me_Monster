@@ -15,6 +15,7 @@ namespace Controllers
     public EnemyController EnemyController=> _enemyController;
     public UIGameController UIGameController=> _uiGameController;
     public WaveManager WaveManager => _wavemanager;
+    public Shop ShopManager => _shopmanager;
 
      public Action onWaveStarted;
         #endregion
@@ -26,7 +27,6 @@ namespace Controllers
     [SerializeField] protected EnemyController _enemyController;
     [SerializeField] protected WaveManager _wavemanager;
 
-        // GameObject Coinprefab;
         #endregion
 
         #region Unity Callbacks

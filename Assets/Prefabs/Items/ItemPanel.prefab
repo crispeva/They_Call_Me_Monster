@@ -58,6 +58,7 @@ MonoBehaviour:
   _textMeshPro: {fileID: 6586117903875422977}
   _textprice: {fileID: 8834737008002569877}
   _textdescription: {fileID: 2245991595190225740}
+  buyButton: {fileID: 5624281701390694726}
 --- !u!222 &2039589294798758639
 CanvasRenderer:
   m_ObjectHideFlags: 0

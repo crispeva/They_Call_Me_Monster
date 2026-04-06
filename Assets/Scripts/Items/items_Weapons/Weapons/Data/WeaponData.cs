@@ -1,4 +1,5 @@
 using UnityEngine;
+using Weapons;
 
 public enum WeaponType
 {
@@ -29,6 +30,11 @@ public class WeaponData : Items
     public float meleeRadius = 1.5f;
     [Header("Scaling")]
     public float damageMultiplierPerLevel = 1.2f;
+    public override  void Use(GameObject user)
+    {
+        var controller = user.GetComponent<WeaponController>();
+        controller.EquipWeapon(this);
+    }
     #endregion
 
 }
