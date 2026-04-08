@@ -22,7 +22,7 @@ public class ShopItemSlot : MonoBehaviour
     public void Setup(Items newItem)
     {
         _icon.sprite = newItem.icon;
-        _textprice.text = newItem.price.ToString();
+        _textprice.text = newItem.price.ToString()+"$";
        
         _textMeshPro.text = newItem.itemName;
         _textdescription.text = newItem.description;
@@ -30,6 +30,10 @@ public class ShopItemSlot : MonoBehaviour
         // Limpiamos eventos previos para evitar múltiples llamadas al hacer click
         buyButton.onClick.RemoveAllListeners();
         buyButton.onClick.AddListener(()=>onBuy.Invoke(newItem));
+    }
+    public void SetAffordable(bool canBuy)
+    {
+        _textprice.color = canBuy ? Color.white : Color.red;
     }
     #endregion
 }

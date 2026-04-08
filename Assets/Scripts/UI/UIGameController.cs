@@ -3,7 +3,6 @@ using Recolectables;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening;
 using System;
 public class UIGameController : MonoBehaviour
 {
@@ -29,10 +28,6 @@ public class UIGameController : MonoBehaviour
         //AnimationTextcaldero();
     }
     #region Unity Callbacks
-    void Awake()
-    {
-
-    }
     void Start()
     {
         _playerInventory.OnInventoryUpdated += UpdateCoinUI;
@@ -43,9 +38,9 @@ public class UIGameController : MonoBehaviour
         _coinText.text = _playerInventory.GetAmount(RecolectableType.Coin).ToString();
     }
 
-    // Update is called once per 
+    // Update is called once per
     #endregion
-    #region Shop Stete
+    #region Shop State
     internal void OpenShop()
     {
         _panelshop.SetActive(true);

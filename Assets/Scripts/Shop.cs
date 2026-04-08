@@ -13,8 +13,6 @@ public class Shop : MonoBehaviour
     #endregion
 
     #region Fields
-    // [SerializeField] List<WeaponData> weaponList = new List<WeaponData>();
-    // [SerializeField] List<GameObject> ItemList = new List<GameObject>();
     [Header("Items")]
     [SerializeField] List<Items> allItems;
     [SerializeField] private TextMeshProUGUI _textpanelshop;
@@ -22,12 +20,14 @@ public class Shop : MonoBehaviour
     GameObject player;
     Inventory _playerInventory;
     int goldplayer;
-
+    [SerializeField] List<GameObject> allItemsPrefabs;
+    GameObject slotitem;
     // Variables para controlar la interacción con el jugador y la UI
     bool isPlayerInShopRange = false;
     public Transform contentParent; // donde van los items (Grid / Vertical Layout)
     public GameObject itemPrefab;   // el prefab del slot
    public Action<bool> shopping;
+   public Action Onbougth;
     private bool isShopOpen = false;
     #endregion
 
@@ -46,6 +46,7 @@ public class Shop : MonoBehaviour
             {
                 isShopOpen = !isShopOpen; // Cambiamos el estado local
                 shopping?.Invoke(isShopOpen); // Avisamos al resto del juego
+                CantBuyItem();
             }
         }
         // Si el jugador se va, cerramos la tienda forzosamente
@@ -83,8 +84,7 @@ public class Shop : MonoBehaviour
         }
     }
     #endregion
-
-    #region Shop Animations and buttons
+    #region Shop text Animations
     private void AnimationTextcaldero()
     {
         Sequence sequence = DOTween.Sequence();
@@ -100,28 +100,54 @@ public class Shop : MonoBehaviour
             .AppendCallback(() => _textpanelshop.text = $"")
             .Append(_textpanelshop.DOFade(1f, 0.5f));
     }
+    #endregion
+
+    #region Shop Animations and buttons
+    private void CantBuyItem()
+    {
+        goldplayer = _playerInventory.GetAmount(RecolectableType.Coin);
+
+        for (int i = 0; i < allItems.Count; i++)
+        {
+            Items item = allItems[i];
+            GameObject slot = allItemsPrefabs[i];
+
+
+            ShopItemSlot ui = slot.GetComponent<ShopItemSlot>();
+            ui.SetAffordable(goldplayer >= item.price);
+           
+            
+
+        }
+    }
     public void GenerateShop()
     {
         foreach (var item in allItems)
         {
-            GameObject slotitem = Instantiate(itemPrefab, contentParent);
-
+             slotitem = Instantiate(itemPrefab, contentParent);
+            Debug.Log(slotitem);
+            allItemsPrefabs.Add(slotitem);
             ShopItemSlot ui = slotitem.GetComponent<ShopItemSlot>();
+            
             ui.Setup(item);
+            
             ui.onBuy += BuyItem;
         }
     }
+
     public void BuyItem(Items item)
     {
         goldplayer = _playerInventory.GetAmount(RecolectableType.Coin);
-        if (goldplayer < item.price)
-        {
-            Debug.Log("No tienes suficiente oro");
-            return;
-        }
+
         _playerInventory.UseResource(RecolectableType.Coin, item.price);
         Debug.Log(goldplayer);
-        item.Use(player);
+        
+        if (goldplayer >= item.price)
+        {
+            item.Use(player);
+            Onbougth?.Invoke();
+        }
+        CantBuyItem();
     }
     #endregion
 
