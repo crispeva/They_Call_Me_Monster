@@ -140,7 +140,6 @@ public class Shop : MonoBehaviour
         goldplayer = _playerInventory.GetAmount(RecolectableType.Coin);
 
         _playerInventory.UseResource(RecolectableType.Coin, item.price);
-        Debug.Log(goldplayer);
         
         if (goldplayer >= item.price)
         {
@@ -149,6 +148,8 @@ public class Shop : MonoBehaviour
         }
         CantBuyItem();
     }
+
+    
     #endregion
 
 }

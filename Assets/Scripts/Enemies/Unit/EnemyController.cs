@@ -56,7 +56,7 @@ public class EnemyController : MonoBehaviour
         EnemyMovement();
         Flip();
         Attack();
-        UpdateAttackCooldown();
+       
      }
         #endregion
 
@@ -84,7 +84,15 @@ public class EnemyController : MonoBehaviour
     {
 
             if (Vector2.Distance(transform.position, _target.position) > _enemyData.attackRange)
+            {
+                _attackCooldown = _enemyData.attackCooldown;
                 return;
+            }
+            else
+            {
+                UpdateAttackCooldown();
+            }
+               
             if (_attackCooldown <= 0)
             {
                 _playerhealth.TakeDamage(_enemyData.damage);

@@ -61,8 +61,14 @@ namespace Enemies
         protected override void Attack()
         {
             if (Vector2.Distance(transform.position, _target.position) > _enemyData.attackRange)
+            {
+                _attackCooldown = _enemyData.attackCooldown;
                 return;
-            
+            }
+            else
+            {
+                UpdateAttackCooldown();
+            }
             if (_attackCooldown <= 0)
             {
                 Attack_anim();
