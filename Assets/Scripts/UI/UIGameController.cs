@@ -1,15 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Controllers;
 using DG.Tweening;
 using Recolectables;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEngine.Rendering.DebugUI;
-
+using System;
 public class UIGameController : MonoBehaviour
 {
     #region Properties
@@ -17,19 +11,23 @@ public class UIGameController : MonoBehaviour
     [SerializeField] private Slider _playerHealth; 
     [SerializeField] private TextMeshProUGUI _waveText;
     [SerializeField] private TextMeshProUGUI _waveCountText;
+
+
+
+    [Header("Event_Shop")]
     [SerializeField] private TextMeshProUGUI _coinText;
+    [SerializeField] private TextMeshProUGUI _textcaldero;
     [SerializeField] private Inventory _playerInventory;
+    [SerializeField] private GameObject _panelshop;
     #endregion
 
     #region Fields
     #endregion
-
-    #region Unity Callbacks
-     void Awake()
+    void Update()
     {
-       
-
+        //AnimationTextcaldero();
     }
+    #region Unity Callbacks
     void Start()
     {
         _playerInventory.OnInventoryUpdated += UpdateCoinUI;
@@ -40,13 +38,19 @@ public class UIGameController : MonoBehaviour
         _coinText.text = _playerInventory.GetAmount(RecolectableType.Coin).ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    // Update is called once per
+    #endregion
+    #region Shop State
+    internal void OpenShop()
     {
-        
+        _panelshop.SetActive(true);
+    }
+
+    internal void CloseShop()
+    {
+        _panelshop.SetActive(false);
     }
     #endregion
-
     #region UI Waves
     public void UpdateWaveNumber(int waveNumber)
     {
@@ -83,6 +87,8 @@ public class UIGameController : MonoBehaviour
     {
         _playerHealth.value = value;
     }
+
+
 
     #endregion
 

@@ -18,6 +18,7 @@ public class AudioManager : MonoBehaviour
     [Header("FX")]
     [SerializeField] AudioSource ChangeWave;
     [SerializeField] AudioSource ClerigoHit;
+    [SerializeField] AudioSource ItemBougth;
     [Header("Music")]
     [SerializeField] AudioSource MainGameMusic;
     [SerializeField] AudioSource MainShoopingMusic;
@@ -40,6 +41,7 @@ public class AudioManager : MonoBehaviour
         GameController.Instance.WaveManager.OnMainWave +=  PlayMainGameMusic;
         GameController.Instance.WaveManager.OnWavesCompleted +=  PlayShoopingMusic;
         GameController.Instance.WaveManager.OnBossWave += PlayBossMusic;
+        GameController.Instance.ShopManager.Onbougth += PlayBougthItem;
         EnemyController.OnAttackEnemy += PlayClerigoHit;
     }
 
@@ -64,7 +66,6 @@ public class AudioManager : MonoBehaviour
     {
         if (MainGameMusic == null) return;
         MainShoopingMusic.DOFade(0, 1f);
-        Debug.Log("PlayMainGameMusic llamado");
         MainGameMusic.DOFade(0.1f, 0.1f);
         MainGameMusic.Play();
     }
@@ -81,6 +82,11 @@ public class AudioManager : MonoBehaviour
     {
         if (ChangeWave == null) return;
         sfxSource.PlayOneShot(ChangeWave.clip,MAX_VOLUME);
+    }
+    void PlayBougthItem()
+    {
+        if (ChangeWave == null) return;
+        sfxSource.PlayOneShot(ItemBougth.clip,MAX_VOLUME);
     }
     #endregion
 

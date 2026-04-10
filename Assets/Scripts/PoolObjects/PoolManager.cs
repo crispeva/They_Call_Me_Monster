@@ -55,7 +55,6 @@ public class PoolManager : MonoBehaviour
             parent.transform.SetParent(transform);
         }
 
-        Debug.Log("Ahora mismo hay GameObject hijos" + parent.transform.childCount); 
         //Instanciamos los prefabs y los desactivamos
         for (int i = 0; i < size; i++)
         {

@@ -1,0 +1,1443 @@
+fileFormatVersion: 2
+guid: d384840455e13c74698fcee7a1afaadc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6826487690746485706
+    second: campamentogobnlinIMAGEN_0
+  - first:
+      213: 8955170933008066234
+    second: campamentogobnlinIMAGEN_1
+  - first:
+      213: -6978319314964020566
+    second: campamentogobnlinIMAGEN_2
+  - first:
+      213: 829618380089581865
+    second: campamentogobnlinIMAGEN_3
+  - first:
+      213: 4792408020415341624
+    second: campamentogobnlinIMAGEN_4
+  - first:
+      213: -7435234703045669492
+    second: campamentogobnlinIMAGEN_5
+  - first:
+      213: 6763188030350559069
+    second: campamentogobnlinIMAGEN_6
+  - first:
+      213: -7849782741432299227
+    second: campamentogobnlinIMAGEN_7
+  - first:
+      213: 57540178395662109
+    second: campamentogobnlinIMAGEN_8
+  - first:
+      213: 4068460584906057912
+    second: campamentogobnlinIMAGEN_9
+  - first:
+      213: 1105309708272626951
+    second: campamentogobnlinIMAGEN_10
+  - first:
+      213: -8361525587858021346
+    second: campamentogobnlinIMAGEN_11
+  - first:
+      213: 1271628144572408894
+    second: campamentogobnlinIMAGEN_12
+  - first:
+      213: -7596141693798483979
+    second: campamentogobnlinIMAGEN_13
+  - first:
+      213: -26741840542798264
+    second: campamentogobnlinIMAGEN_14
+  - first:
+      213: -8762110022713045430
+    second: campamentogobnlinIMAGEN_15
+  - first:
+      213: -4655178373526108319
+    second: campamentogobnlinIMAGEN_16
+  - first:
+      213: 3773755027389615566
+    second: campamentogobnlinIMAGEN_17
+  - first:
+      213: -8304591943350672234
+    second: campamentogobnlinIMAGEN_18
+  - first:
+      213: -6935614556998336352
+    second: campamentogobnlinIMAGEN_19
+  - first:
+      213: 177857627741335128
+    second: campamentogobnlinIMAGEN_20
+  - first:
+      213: -6567001597211389866
+    second: campamentogobnlinIMAGEN_21
+  - first:
+      213: 2143950996294123979
+    second: campamentogobnlinIMAGEN_22
+  - first:
+      213: 479910694189628839
+    second: campamentogobnlinIMAGEN_23
+  - first:
+      213: 5411194281619569611
+    second: campamentogobnlinIMAGEN_24
+  - first:
+      213: -2927306003336513236
+    second: campamentogobnlinIMAGEN_25
+  - first:
+      213: 3762738544804384003
+    second: campamentogobnlinIMAGEN_26
+  - first:
+      213: -8829869657315985570
+    second: campamentogobnlinIMAGEN_27
+  - first:
+      213: 359230664151737154
+    second: campamentogobnlinIMAGEN_28
+  - first:
+      213: -5122885846449000197
+    second: campamentogobnlinIMAGEN_29
+  - first:
+      213: 6013726374504509027
+    second: campamentogobnlinIMAGEN_30
+  - first:
+      213: -865035024480920306
+    second: campamentogobnlinIMAGEN_31
+  - first:
+      213: 8430322986682979838
+    second: campamentogobnlinIMAGEN_32
+  - first:
+      213: 3527480690019155622
+    second: campamentogobnlinIMAGEN_33
+  - first:
+      213: 2279791250399351378
+    second: campamentogobnlinIMAGEN_34
+  - first:
+      213: 6816054409103282286
+    second: campamentogobnlinIMAGEN_35
+  - first:
+      213: 2248021675245913989
+    second: campamentogobnlinIMAGEN_36
+  - first:
+      213: -7837497240362732608
+    second: campamentogobnlinIMAGEN_37
+  - first:
+      213: 8162878305429497096
+    second: campamentogobnlinIMAGEN_38
+  - first:
+      213: 5850143349120832839
+    second: campamentogobnlinIMAGEN_39
+  - first:
+      213: -8048018166138191835
+    second: campamentogobnlinIMAGEN_40
+  - first:
+      213: 383883920347257377
+    second: campamentogobnlinIMAGEN_41
+  - first:
+      213: -8952797744864704108
+    second: campamentogobnlinIMAGEN_42
+  - first:
+      213: -3759587164907031109
+    second: campamentogobnlinIMAGEN_43
+  - first:
+      213: -7183707430943758161
+    second: campamentogobnlinIMAGEN_44
+  - first:
+      213: 622277182603414247
+    second: campamentogobnlinIMAGEN_45
+  - first:
+      213: 4341632274107450985
+    second: campamentogobnlinIMAGEN_46
+  - first:
+      213: 2081565208134765897
+    second: campamentogobnlinIMAGEN_47
+  - first:
+      213: 5178073963980538433
+    second: campamentogobnlinIMAGEN_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 845
+        width: 192
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acb558ee26e8cbe50800000000000000
+      internalID: 6826487690746485706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_1
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 844
+        width: 189
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab669dc5488274c70800000000000000
+      internalID: 8955170933008066234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_2
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 845
+        width: 192
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa282564e87082f90800000000000000
+      internalID: -6978319314964020566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_3
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 847
+        width: 220
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 921ef5c6585638b00800000000000000
+      internalID: 829618380089581865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_4
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 930
+        width: 84
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 834e69b04bd028240800000000000000
+      internalID: 4792408020415341624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_5
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 923
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8d4e4f5e6db0d890800000000000000
+      internalID: -7435234703045669492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_6
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 845
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5708324eababdd50800000000000000
+      internalID: 6763188030350559069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_7
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 822
+        width: 126
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5219fe4cf28ff0390800000000000000
+      internalID: -7849782741432299227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_8
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 849
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d170695cc7c6cc000800000000000000
+      internalID: 57540178395662109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_9
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 602
+        width: 218
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 63}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8e00aa853167830800000000000000
+      internalID: 4068460584906057912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_10
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 607
+        width: 220
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 55}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70d6160d259d65f00800000000000000
+      internalID: 1105309708272626951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_11
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 607
+        width: 136
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e14226377c4e5fb80800000000000000
+      internalID: -8361525587858021346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_12
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 686
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e34a0a36f0bb5a110800000000000000
+      internalID: 1271628144572408894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_13
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 594
+        width: 149
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f77b952065159690800000000000000
+      internalID: -7596141693798483979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_14
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 635
+        width: 148
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84e6ecd007ef0aff0800000000000000
+      internalID: -26741840542798264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_15
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 661
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e8c45ab5bb66680800000000000000
+      internalID: -8762110022713045430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_16
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 567
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16745e7feeb756fb0800000000000000
+      internalID: -4655178373526108319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_17
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 571
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecd07e404321f5430800000000000000
+      internalID: 3773755027389615566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_18
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 411
+        width: 60
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 694230c80a920cc80800000000000000
+      internalID: -8304591943350672234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_19
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 568
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a0061f8e4fbfbf90800000000000000
+      internalID: -6935614556998336352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_20
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 412
+        width: 89
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ead12f190e77200800000000000000
+      internalID: 177857627741335128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_21
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 410
+        width: 155
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650dace37d25dd4a0800000000000000
+      internalID: -6567001597211389866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_22
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 405
+        width: 135
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc1c4fd6218d0cd10800000000000000
+      internalID: 2143950996294123979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_23
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 462
+        width: 65
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ad7513db3cf8a600800000000000000
+      internalID: 479910694189628839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_24
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 412
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcb3f86878c681b40800000000000000
+      internalID: 5411194281619569611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_25
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 404
+        width: 124
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c29324213be1067d0800000000000000
+      internalID: -2927306003336513236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_26
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 413
+        width: 148
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d4cb945cee73430800000000000000
+      internalID: 3762738544804384003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_27
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 285
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e573eae4450067580800000000000000
+      internalID: -8829869657315985570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_28
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 264
+        width: 59
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2432131c26e3cf400800000000000000
+      internalID: 359230664151737154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_29
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 311
+        width: 50
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf0f781077ad7e8b0800000000000000
+      internalID: -5122885846449000197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_30
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 287
+        width: 66
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36e2db8864c057350800000000000000
+      internalID: 6013726374504509027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_31
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 267
+        width: 66
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0d1b877a37cef3f0800000000000000
+      internalID: -865035024480920306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_32
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 223
+        width: 224
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef59c0337168ef470800000000000000
+      internalID: 8430322986682979838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_33
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 217
+        width: 262
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ae34a88ff024f030800000000000000
+      internalID: 3527480690019155622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_34
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 222
+        width: 147
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 252d81a301273af10800000000000000
+      internalID: 2279791250399351378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_35
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 246
+        width: 113
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6016504f5d779e50800000000000000
+      internalID: 6816054409103282286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_36
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 214
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58749689dc3923f10800000000000000
+      internalID: 2248021675245913989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_37
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 219
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c33314e8cd9b3390800000000000000
+      internalID: -7837497240362732608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_38
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 223
+        width: 73
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8052edbe19e584170800000000000000
+      internalID: 8162878305429497096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_39
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 217
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74516717162ef2150800000000000000
+      internalID: 5850143349120832839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_40
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 248
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 520417d3e12bf4090800000000000000
+      internalID: -8048018166138191835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_41
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 219
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12a58434464d35500800000000000000
+      internalID: 383883920347257377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_42
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 79
+        width: 56
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 499cb6f82e541c380800000000000000
+      internalID: -8952797744864704108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_43
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 24
+        width: 22
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb53995846343dbc0800000000000000
+      internalID: -3759587164907031109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_44
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 25
+        width: 59
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa8634807285e4c90800000000000000
+      internalID: -7183707430943758161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_45
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 8
+        width: 213
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea48e4fcc5c2a800800000000000000
+      internalID: 622277182603414247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_46
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 0
+        width: 153
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 966cb83ec83904c30800000000000000
+      internalID: 4341632274107450985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_47
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 12
+        width: 106
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94d4fa7378433ec10800000000000000
+      internalID: 2081565208134765897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: campamentogobnlinIMAGEN_48
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 31
+        width: 214
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14242cbe5d63cd740800000000000000
+      internalID: 5178073963980538433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5d00f107f2fbce842aa1533446a692b2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      campamentogobnlinIMAGEN_0: 6826487690746485706
+      campamentogobnlinIMAGEN_1: 8955170933008066234
+      campamentogobnlinIMAGEN_10: 1105309708272626951
+      campamentogobnlinIMAGEN_11: -8361525587858021346
+      campamentogobnlinIMAGEN_12: 1271628144572408894
+      campamentogobnlinIMAGEN_13: -7596141693798483979
+      campamentogobnlinIMAGEN_14: -26741840542798264
+      campamentogobnlinIMAGEN_15: -8762110022713045430
+      campamentogobnlinIMAGEN_16: -4655178373526108319
+      campamentogobnlinIMAGEN_17: 3773755027389615566
+      campamentogobnlinIMAGEN_18: -8304591943350672234
+      campamentogobnlinIMAGEN_19: -6935614556998336352
+      campamentogobnlinIMAGEN_2: -6978319314964020566
+      campamentogobnlinIMAGEN_20: 177857627741335128
+      campamentogobnlinIMAGEN_21: -6567001597211389866
+      campamentogobnlinIMAGEN_22: 2143950996294123979
+      campamentogobnlinIMAGEN_23: 479910694189628839
+      campamentogobnlinIMAGEN_24: 5411194281619569611
+      campamentogobnlinIMAGEN_25: -2927306003336513236
+      campamentogobnlinIMAGEN_26: 3762738544804384003
+      campamentogobnlinIMAGEN_27: -8829869657315985570
+      campamentogobnlinIMAGEN_28: 359230664151737154
+      campamentogobnlinIMAGEN_29: -5122885846449000197
+      campamentogobnlinIMAGEN_3: 829618380089581865
+      campamentogobnlinIMAGEN_30: 6013726374504509027
+      campamentogobnlinIMAGEN_31: -865035024480920306
+      campamentogobnlinIMAGEN_32: 8430322986682979838
+      campamentogobnlinIMAGEN_33: 3527480690019155622
+      campamentogobnlinIMAGEN_34: 2279791250399351378
+      campamentogobnlinIMAGEN_35: 6816054409103282286
+      campamentogobnlinIMAGEN_36: 2248021675245913989
+      campamentogobnlinIMAGEN_37: -7837497240362732608
+      campamentogobnlinIMAGEN_38: 8162878305429497096
+      campamentogobnlinIMAGEN_39: 5850143349120832839
+      campamentogobnlinIMAGEN_4: 4792408020415341624
+      campamentogobnlinIMAGEN_40: -8048018166138191835
+      campamentogobnlinIMAGEN_41: 383883920347257377
+      campamentogobnlinIMAGEN_42: -8952797744864704108
+      campamentogobnlinIMAGEN_43: -3759587164907031109
+      campamentogobnlinIMAGEN_44: -7183707430943758161
+      campamentogobnlinIMAGEN_45: 622277182603414247
+      campamentogobnlinIMAGEN_46: 4341632274107450985
+      campamentogobnlinIMAGEN_47: 2081565208134765897
+      campamentogobnlinIMAGEN_48: 5178073963980538433
+      campamentogobnlinIMAGEN_5: -7435234703045669492
+      campamentogobnlinIMAGEN_6: 6763188030350559069
+      campamentogobnlinIMAGEN_7: -7849782741432299227
+      campamentogobnlinIMAGEN_8: 57540178395662109
+      campamentogobnlinIMAGEN_9: 4068460584906057912
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

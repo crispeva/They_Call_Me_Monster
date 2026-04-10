@@ -21,7 +21,7 @@ MonoBehaviour:
   damage: 2
   attackRate: 1
   attackRange: 4
-  attackCooldown: 2
+  attackCooldown: 1
   expReward: 0
   goldReward: 1
   goldRewardPrefab: {fileID: 5207077087969610551, guid: 58bacda347d394141963c9f376ee9d5c,
