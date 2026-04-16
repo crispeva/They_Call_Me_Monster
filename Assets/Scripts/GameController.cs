@@ -47,6 +47,7 @@ namespace Controllers
         {
             _wavemanager.OnWaveState += UIActualWave;
             _wavemanager.OnWaveCountdown += OnCountDownWave;
+            _wavemanager.OnVictory += OnVictory;
             
             // Iniciar la primera oleada
             UIActualWave(1);
@@ -84,6 +85,11 @@ namespace Controllers
         public void OnCountDownWave(float secondsRemaining)
         {
             _uiGameController.UpdateWaveCountdown((int)secondsRemaining);
+        }
+        public void OnVictory()
+        {
+            Debug.Log("HAS GANADO!!");
+            _uiGameController.ShowPanelVictory();
         }
         public void EnemiesDiabled()
         {

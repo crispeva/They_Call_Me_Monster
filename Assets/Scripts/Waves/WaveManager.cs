@@ -27,6 +27,7 @@ namespace Waves
         public Action<float> OnWaveCountdown;
         public Action<int> OnEnemiesCount;
         public Action OnWavesCompleted;
+        public Action OnVictory;
         //Music
         public Action OnBossWave;
         public Action OnMainWave;
@@ -44,9 +45,6 @@ namespace Waves
         #region Waves
         IEnumerator RunWave()
         {
-            if (currentWave >= waves.Length)
-                yield break;
-
             WaveData wave = waves[currentWave];
             //Se incrementa el contador de oleadas
             currentWave++;
@@ -59,9 +57,9 @@ namespace Waves
             {
                 OnMainWave?.Invoke(); 
             }
-            OnWaveState?.Invoke(currentWave);
-            EnemyRemaing = GetTotalEnemiesInWave(wave);
-            OnEnemiesCount?.Invoke(EnemyRemaing);
+                OnWaveState?.Invoke(currentWave);
+                EnemyRemaing = GetTotalEnemiesInWave(wave);
+                OnEnemiesCount?.Invoke(EnemyRemaing);
             foreach (var entry in wave.enemies)
             {
                 PoolManager.Instance.WarmPool(entry.enemyPrefab, entry.count);
@@ -87,10 +85,12 @@ namespace Waves
             {
                 
                 StartCoroutine(WaitForNextWave(timeBetweenWavesDefault));
+                OnWavesCompleted?.Invoke();
             }
             else
             {
                 Debug.Log("¡Has completado todas las oleadas!");
+                OnVictory?.Invoke();
             }
 
         }
@@ -116,8 +116,7 @@ namespace Waves
             
             if (EnemyRemaing <= 0)
             {
-                OnWaveStarted();
-               OnWavesCompleted?.Invoke(); 
+                OnWaveStarted();             
             }
             OnEnemiesCount?.Invoke(EnemyRemaing);  // Actualizar UI después de decrementar
         }

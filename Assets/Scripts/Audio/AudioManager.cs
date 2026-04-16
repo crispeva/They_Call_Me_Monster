@@ -23,6 +23,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource MainGameMusic;
     [SerializeField] AudioSource MainShoopingMusic;
     [SerializeField] AudioSource BossMusic;
+    [SerializeField] AudioSource EndDemoMusic;
 
     #endregion
 
@@ -41,8 +42,19 @@ public class AudioManager : MonoBehaviour
         GameController.Instance.WaveManager.OnMainWave +=  PlayMainGameMusic;
         GameController.Instance.WaveManager.OnWavesCompleted +=  PlayShoopingMusic;
         GameController.Instance.WaveManager.OnBossWave += PlayBossMusic;
+        GameController.Instance.WaveManager.OnVictory += PlayVictoryMusic;
         GameController.Instance.ShopManager.Onbougth += PlayBougthItem;
         EnemyController.OnAttackEnemy += PlayClerigoHit;
+    }
+
+    private void PlayVictoryMusic()
+    {
+        sfxSource.Stop();
+        MainShoopingMusic.DOFade(0, 1f);
+        BossMusic.DOFade(0, 1f);
+        MainGameMusic.DOFade(0, 1f);
+        EndDemoMusic.DOFade(MAX_VOLUME, 1f);
+        EndDemoMusic.Play();
     }
 
     #endregion
@@ -85,7 +97,7 @@ public class AudioManager : MonoBehaviour
     }
     void PlayBougthItem()
     {
-        if (ChangeWave == null) return;
+        if (ItemBougth == null) return;
         sfxSource.PlayOneShot(ItemBougth.clip,MAX_VOLUME);
     }
     #endregion

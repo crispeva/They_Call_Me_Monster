@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.Collections;
 public class UIGameController : MonoBehaviour
 {
     #region Properties
@@ -19,6 +20,10 @@ public class UIGameController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _textcaldero;
     [SerializeField] private Inventory _playerInventory;
     [SerializeField] private GameObject _panelshop;
+    [SerializeField] private GameObject _panelvictory;
+
+    public CanvasGroup canvasGroupEndDemo;
+    float Duration = 1f;
     #endregion
 
     #region Fields
@@ -88,7 +93,40 @@ public class UIGameController : MonoBehaviour
         _playerHealth.value = value;
     }
 
+    internal void ShowPanelVictory()
+    {
+        StartCoroutine(FadeIn(canvasGroupEndDemo, Duration));
+    }
 
+    IEnumerator FadeIn(CanvasGroup group, float duration)
+    {
+        float t = 0f;
+        group.interactable = true;
+        group.blocksRaycasts = true;
+
+        while (t < duration)
+        {
+            group.alpha = Mathf.Lerp(0f, 1f, t / duration);
+            t += Time.deltaTime;
+            yield return null;
+        }
+
+        group.alpha = 1f;
+    }
+    public IEnumerator FadeOut(CanvasGroup group, float duration)
+    {
+        float t = 0f;
+        group.interactable = false;
+        group.blocksRaycasts = false;
+
+        while (t < duration)
+        {
+            group.alpha = Mathf.Lerp(1f, 0f, t / duration);
+            t += Time.deltaTime;
+            yield return null;
+        }
+        group.alpha = 0f;
+    }
 
     #endregion
 
