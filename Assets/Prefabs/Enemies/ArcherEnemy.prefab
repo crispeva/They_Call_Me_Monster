@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
   _maxHealth: 100
-  delayDeath: 1
+  delayDeath: 0
 --- !u!114 &8336505739653315974
 MonoBehaviour:
   m_ObjectHideFlags: 0
