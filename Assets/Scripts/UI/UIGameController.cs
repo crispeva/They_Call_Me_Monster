@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Collections;
+using Controllers;
 public class UIGameController : MonoBehaviour
 {
     #region Properties
@@ -20,22 +21,22 @@ public class UIGameController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _textcaldero;
     [SerializeField] private Inventory _playerInventory;
     [SerializeField] private GameObject _panelshop;
+    [Header("Panels")]
     [SerializeField] private GameObject _panelvictory;
+    [SerializeField] private GameObject _panelDeath;
+    [SerializeField] private GameObject _panelPause;
 
+    [Header("Canvas Groups")]
     public CanvasGroup canvasGroupEndDemo;
-    float Duration = 1f;
+    public CanvasGroup canvasGroupDeath;
+    float Duration = 2f;
     #endregion
 
-    #region Fields
-    #endregion
-    void Update()
-    {
-        //AnimationTextcaldero();
-    }
     #region Unity Callbacks
     void Start()
     {
         _playerInventory.OnInventoryUpdated += UpdateCoinUI;
+        GameController.Instance.InputController.OnActiveMenu += ShowPausePanel;
     }
 
     private void UpdateCoinUI()
@@ -56,6 +57,7 @@ public class UIGameController : MonoBehaviour
         _panelshop.SetActive(false);
     }
     #endregion
+
     #region UI Waves
     public void UpdateWaveNumber(int waveNumber)
     {
@@ -83,21 +85,40 @@ public class UIGameController : MonoBehaviour
             .Append(_waveText.DOFade(1f, 0.3f));
     }
     #endregion
-    private void OnEnable()
-    {
-        // Suscribirse a eventos o inicializar datos aquí si es necesario
-    }
+
     #region UIPlayer
     internal void UpdatePlayerHealth(float value)
     {
         _playerHealth.value = value;
     }
+    #endregion
 
+    #region Panels
     internal void ShowPanelVictory()
     {
         StartCoroutine(FadeIn(canvasGroupEndDemo, Duration));
     }
+    internal void ShowPanelDeath()
+    {
+        Debug.Log("ShowPanelDeath");
+        StartCoroutine(FadeIn(canvasGroupDeath, Duration));
+    }
+    public void ShowPausePanel()
+    {
+        if(Time.timeScale > 0)
+        {
+            _panelPause.SetActive(true);
+            Time.timeScale = 0f; // Pausa el juego
+        }
+        else
+        {
+            _panelPause.SetActive(false);
+            Time.timeScale = 1f; //Continua el juego
+        }
 
+    }
+    #endregion
+    #region Animations
     IEnumerator FadeIn(CanvasGroup group, float duration)
     {
         float t = 0f;
@@ -127,7 +148,5 @@ public class UIGameController : MonoBehaviour
         }
         group.alpha = 0f;
     }
-
     #endregion
-
 }

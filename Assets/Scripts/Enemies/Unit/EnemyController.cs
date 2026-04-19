@@ -42,7 +42,7 @@ public class EnemyController : MonoBehaviour
             //UI
             _enemySlyderHealth = GetComponentInChildren<Slider>();
             _enemyhealth.OnHealthChanged += UpdateEnemyHealth;
-            _enemyhealth.OnDestroy += Die;
+            _enemyhealth.OnDeath += Die;
 
         }
         protected private void Start()

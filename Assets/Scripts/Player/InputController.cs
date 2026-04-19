@@ -1,4 +1,5 @@
 using System;
+using Controllers;
 using UnityEngine;
 using UnityEngine.Rendering;
 using static UnityEngine.UI.Image;
@@ -23,7 +24,7 @@ public class InputController : MonoBehaviour
     private float aimRayDistance = 50f;
     [SerializeField]
     private bool debugAim = true;
-
+    public Action OnActiveMenu;
     public event Action<float> OnMovement;
     #endregion
 
@@ -37,6 +38,7 @@ public class InputController : MonoBehaviour
     {
         PlayerMovement();
         AIMInput();
+        PauseGame();
     }
     #endregion
 
@@ -52,7 +54,14 @@ public class InputController : MonoBehaviour
         player.linearVelocity = new Vector2(moveX * speed, moveY * speed);
         Flip(moveX);
     }
+    private void PauseGame()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            OnActiveMenu?.Invoke();
 
+        }
+    }
     void Flip(float moveX)
     {
         if (moveX < 0)
