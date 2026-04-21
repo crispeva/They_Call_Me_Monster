@@ -119,7 +119,7 @@ public class UIGameController : MonoBehaviour
     }
     #endregion
     #region Animations
-    IEnumerator FadeIn(CanvasGroup group, float duration)
+   public IEnumerator FadeIn(CanvasGroup group, float duration)
     {
         float t = 0f;
         group.interactable = true;

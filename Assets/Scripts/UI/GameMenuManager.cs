@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class GameMenuManager : MonoBehaviour
 {
 
     #region Fields
     //[SerializeField] private Button _exitGameButton;
-    [SerializeField] private UnityEngine.UI.Button _mainmenuButton;
-    [SerializeField] private UnityEngine.UI.Button _mainmenuDeathButton;
+    [SerializeField] private Button _mainmenuButton;
+    [SerializeField] private Button _mainmenuDeathButton;
 
     [Header("Menu Pause")]
-    [SerializeField] private UnityEngine.UI.Button _pauseRetrybutton;
-    [SerializeField] private UnityEngine.UI.Button _pauseMainMenubutton;
-    [SerializeField] private UnityEngine.UI.Button _pauseExitbutton;
+    [SerializeField] private Button _pauseRetrybutton;
+    [SerializeField] private Button _pauseMainMenubutton;
+    [SerializeField] private Button _pauseExitbutton;
     #endregion
 
     #region Unity Callbacks
