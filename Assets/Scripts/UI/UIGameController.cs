@@ -1,11 +1,13 @@
+using System;
+using System.Collections;
+using Controllers;
 using DG.Tweening;
 using Recolectables;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using System;
-using System.Collections;
-using Controllers;
 public class UIGameController : MonoBehaviour
 {
     #region Properties
@@ -30,6 +32,8 @@ public class UIGameController : MonoBehaviour
     public CanvasGroup canvasGroupEndDemo;
     public CanvasGroup canvasGroupDeath;
     float Duration = 2f;
+
+
     #endregion
 
     #region Unity Callbacks
@@ -37,6 +41,8 @@ public class UIGameController : MonoBehaviour
     {
         _playerInventory.OnInventoryUpdated += UpdateCoinUI;
         GameController.Instance.InputController.OnActiveMenu += ShowPausePanel;
+
+
     }
 
     private void UpdateCoinUI()
@@ -117,9 +123,11 @@ public class UIGameController : MonoBehaviour
         }
 
     }
+
     #endregion
+
     #region Animations
-   public IEnumerator FadeIn(CanvasGroup group, float duration)
+    public IEnumerator FadeIn(CanvasGroup group, float duration)
     {
         float t = 0f;
         group.interactable = true;
@@ -149,4 +157,6 @@ public class UIGameController : MonoBehaviour
         group.alpha = 0f;
     }
     #endregion
+
+
 }

@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: b2226fd8d8113fd468fe1e4c3105a280
+guid: 8e6e0f4d0cb29db4cb37224e351647df
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4902005838858218966
-    second: PruebaMainMenu_0
+      213: 8370166014694983850
+    second: NuevosbotonesSettings_0
+  - first:
+      213: -9080712362914048821
+    second: NuevosbotonesSettings_1
+  - first:
+      213: -985742314896274960
+    second: NuevosbotonesSettings_2
+  - first:
+      213: -6787872025571418739
+    second: NuevosbotonesSettings_3
+  - first:
+      213: -8165073037632988186
+    second: NuevosbotonesSettings_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +164,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PruebaMainMenu_0
+      name: NuevosbotonesSettings_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 968
-        height: 674
+        x: 178
+        y: 953
+        width: 494
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +179,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a2217f759a398fbb0800000000000000
-      internalID: -4902005838858218966
+      spriteID: aa801f0b4adc82470800000000000000
+      internalID: 8370166014694983850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NuevosbotonesSettings_1
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 767
+        width: 499
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc49205b734daf180800000000000000
+      internalID: -9080712362914048821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NuevosbotonesSettings_2
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 576
+        width: 515
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f949885690f152f0800000000000000
+      internalID: -985742314896274960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NuevosbotonesSettings_3
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 376
+        width: 502
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8d110f3b52acc1a0800000000000000
+      internalID: -6787872025571418739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NuevosbotonesSettings_4
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 31
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb14ca2555dfae80800000000000000
+      internalID: -8165073037632988186
       vertices: []
       indices: 
       edges: []
@@ -187,7 +287,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PruebaMainMenu_0: -4902005838858218966
+      NuevosbotonesSettings_0: 8370166014694983850
+      NuevosbotonesSettings_1: -9080712362914048821
+      NuevosbotonesSettings_2: -985742314896274960
+      NuevosbotonesSettings_3: -6787872025571418739
+      NuevosbotonesSettings_4: -8165073037632988186
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
