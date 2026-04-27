@@ -31,7 +31,9 @@ public class UIGameController : MonoBehaviour
     [Header("Canvas Groups")]
     public CanvasGroup canvasGroupEndDemo;
     public CanvasGroup canvasGroupDeath;
+    public CanvasGroup canvasGroupHelpPause;
     float Duration = 2f;
+    float DurationHelpPanel = 5f;
 
 
     #endregion
@@ -41,7 +43,7 @@ public class UIGameController : MonoBehaviour
     {
         _playerInventory.OnInventoryUpdated += UpdateCoinUI;
         GameController.Instance.InputController.OnActiveMenu += ShowPausePanel;
-
+        HidePanelHelp();
 
     }
 
@@ -102,12 +104,18 @@ public class UIGameController : MonoBehaviour
     #region Panels
     internal void ShowPanelVictory()
     {
+        Time.timeScale = 0f; // Pausa el juego
         StartCoroutine(FadeIn(canvasGroupEndDemo, Duration));
     }
     internal void ShowPanelDeath()
     {
         Debug.Log("ShowPanelDeath");
         StartCoroutine(FadeIn(canvasGroupDeath, Duration));
+    }
+    internal void HidePanelHelp()
+    {
+        Debug.Log("HidePanelHelp");
+        StartCoroutine(FadeOut(canvasGroupHelpPause, DurationHelpPanel));
     }
     public void ShowPausePanel()
     {

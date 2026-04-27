@@ -47,9 +47,9 @@ public class GameMenuManager : MonoBehaviour
         //Settings events
         _musicSlider.onValueChanged.AddListener(MusicVolumeChange);
         _fxSlider.onValueChanged.AddListener(FXVolumeChange);
-        _lowQuality.onClick.AddListener(() => SetQuality(0));
-        _mediumQuality.onClick.AddListener(() => SetQuality(1));
-        _highQuality.onClick.AddListener(() => SetQuality(2));
+        _lowQuality.onClick.AddListener(() => SetQuality(1));
+        _mediumQuality.onClick.AddListener(() => SetQuality(2));
+        _highQuality.onClick.AddListener(() => SetQuality(3));
         _closeButton.onClick.AddListener(CloseSettings);
 
         GameController.Instance.InputController.OnActiveMenu += CloseSettings;
@@ -91,12 +91,12 @@ public class GameMenuManager : MonoBehaviour
     }
     private void FXVolumeChange(float value)
     {
-        _mixer.SetFloat("FXVolume", Mathf.Lerp(-60f, 0f, value));
+        _mixer.SetFloat("FXVolume", Mathf.Lerp(-80f, 0f, value));
     }
 
     private void MusicVolumeChange(float value)
     {
-        _mixer.SetFloat("MusicVolume", Mathf.Lerp(-60f, 0f, value));
+        _mixer.SetFloat("MusicVolume", Mathf.Lerp(-80f, 0f, value));
 
     }
     public void SetQuality(int index)

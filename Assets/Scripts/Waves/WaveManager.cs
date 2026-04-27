@@ -22,7 +22,7 @@ namespace Waves
         private  float timeBetweenWaves ;
         private int EnemyRemaing = 0;
         public int currentWave = 0;
-        private int bossWave = 2;
+        private int bossWave = 5;
         public Action <int>OnWaveState;
         public Action<float> OnWaveCountdown;
         public Action<int> OnEnemiesCount;
@@ -36,8 +36,8 @@ namespace Waves
         #region Unity Callbacks
         void Start()
         {
-           
-            StartCoroutine(RunWave());
+            Debug.Log("Método Start ejecutado");
+            StartCoroutine(waitStart());
         }
 
         #endregion
@@ -77,6 +77,13 @@ namespace Waves
             }
            
 
+        }
+        IEnumerator waitStart()
+        {
+
+            Debug.Log("Esperando para iniciar la primera oleada...");
+            yield return new WaitForSeconds(5f);
+            StartCoroutine(RunWave());
         }
         public void OnWaveStarted()
         {
