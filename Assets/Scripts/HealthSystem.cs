@@ -10,7 +10,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
 
     [SerializeField]
     private float _maxHealth = 100f;
-    private bool _isdeath;
+    public bool _isdeath;
     public float CurrentHealth { get; set; }
     [SerializeField] private float delayDeath = 1f;
 
@@ -34,6 +34,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
             Die();
             _isdeath= true;
         }
+        
     }
 
     public void Heal(float amount)

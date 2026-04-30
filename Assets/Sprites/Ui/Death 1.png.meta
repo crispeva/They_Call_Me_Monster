@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 027609fbc3cd3c1479f4f8ccedbb4189
+guid: 9d8143d85f63a244994ffaa84d9a3c3f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5307249929210604050
-    second: Gemini_Generated_Image_3vjtvk3vjtvk3vjt_0
+      213: 1951259032769554342
+    second: Death 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,7 +152,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gemini_Generated_Image_3vjtvk3vjtvk3vjt_0
+      name: Death 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee55f23fe4cd856b0800000000000000
-      internalID: -5307249929210604050
+      spriteID: 6a7600980c3441b10800000000000000
+      internalID: 1951259032769554342
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Gemini_Generated_Image_3vjtvk3vjtvk3vjt_0: -5307249929210604050
+      Death 1_0: 1951259032769554342
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

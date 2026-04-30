@@ -37,13 +37,13 @@ public class GameMenuManager : MonoBehaviour
     void Start()
     {
         //Death Menu
-        _mainmenuDeathButton.onClick.AddListener(ExitGame);
+        _mainmenuDeathButton.onClick.AddListener(GOMainmenu);
         //Pause Menu
-        _pauseExitbutton.onClick.AddListener(ExitGame);
+        _pauseExitbutton.onClick.AddListener(GOMainmenu);
         _pauseRetrybutton.onClick.AddListener(RetryGame);
         _pauseOptionbutton.onClick.AddListener(Options);
         //Panel ENDDEMO
-        _mainmenuButton.onClick.AddListener(ExitGame);
+        _mainmenuButton.onClick.AddListener(GOMainmenu);
         //Settings events
         _musicSlider.onValueChanged.AddListener(MusicVolumeChange);
         _fxSlider.onValueChanged.AddListener(FXVolumeChange);
@@ -73,7 +73,7 @@ public class GameMenuManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);// Reinicia el juego cargando la escena actual
     }
 
-    private void ExitGame()
+    private void GOMainmenu()
     {
         SceneManager.LoadScene("MainMenu");
     }

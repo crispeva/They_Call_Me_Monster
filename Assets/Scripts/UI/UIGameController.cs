@@ -104,7 +104,7 @@ public class UIGameController : MonoBehaviour
     #region Panels
     internal void ShowPanelVictory()
     {
-        Time.timeScale = 0f; // Pausa el juego
+       
         StartCoroutine(FadeIn(canvasGroupEndDemo, Duration));
     }
     internal void ShowPanelDeath()

@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 027609fbc3cd3c1479f4f8ccedbb4189
+guid: 78e28e922d3b1df4ebdea5728a677827
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5307249929210604050
-    second: Gemini_Generated_Image_3vjtvk3vjtvk3vjt_0
+      213: 6982111120168218571
+    second: ButtonGoBack_0
+  - first:
+      213: -91951571316605134
+    second: ButtonGoBack_1
+  - first:
+      213: -8253787471091742108
+    second: ButtonGoBack_2
+  - first:
+      213: -4454298920591314052
+    second: ButtonGoBack_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +161,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gemini_Generated_Image_3vjtvk3vjtvk3vjt_0
+      name: ButtonGoBack_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1229
-        height: 864
+        x: 65
+        y: 53
+        width: 378
+        height: 243
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +176,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee55f23fe4cd856b0800000000000000
-      internalID: -5307249929210604050
+      spriteID: bcf6eeb221175e060800000000000000
+      internalID: 6982111120168218571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonGoBack_1
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 237
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23f7227788259bef0800000000000000
+      internalID: -91951571316605134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonGoBack_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 96
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46ac1068608a47d80800000000000000
+      internalID: -8253787471091742108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonGoBack_3
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 65
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c73bfba4bb62f22c0800000000000000
+      internalID: -4454298920591314052
       vertices: []
       indices: 
       edges: []
@@ -187,7 +262,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Gemini_Generated_Image_3vjtvk3vjtvk3vjt_0: -5307249929210604050
+      ButtonGoBack_0: 6982111120168218571
+      ButtonGoBack_1: -91951571316605134
+      ButtonGoBack_2: -8253787471091742108
+      ButtonGoBack_3: -4454298920591314052
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

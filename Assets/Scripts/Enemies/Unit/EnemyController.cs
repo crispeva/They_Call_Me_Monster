@@ -66,6 +66,8 @@ public class EnemyController : MonoBehaviour
             _enemyData = enemyData;
             _enemyhealth.SetHealth(enemyData.maxHealth);
             _enemySlyderHealth.maxValue = enemyData.maxHealth;
+            _enemyhealth._isdeath = false;
+
         }
         #endregion
 

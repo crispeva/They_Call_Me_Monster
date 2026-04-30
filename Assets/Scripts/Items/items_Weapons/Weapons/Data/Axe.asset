@@ -15,7 +15,8 @@ MonoBehaviour:
   itemName: AXE
   icon: {fileID: 1999937526, guid: b96cafd382b4e69449f99c4357080573, type: 3}
   price: 2
-  description: Area damage
+  description: 'A heavy axe that performs a spinning attack, hitting all nearby enemies.\nDamage:
+    35 \nRange: Area \nSpeed: Medium'
   weaponType: 1
   weaponPrefab: {fileID: 5151109429188353669, guid: 63cb534759ae13a4dabe578c36698f9e,
     type: 3}

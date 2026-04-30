@@ -36,6 +36,7 @@ public class InputController : MonoBehaviour
 
     void Update()
     {
+       
         PlayerMovement();
         AIMInput();
         PauseGame();
