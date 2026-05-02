@@ -19,9 +19,9 @@ MonoBehaviour:
   maxHealth: 400
   moveSpeed: 0.8
   damage: 20
-  attackRate: 0
+  attackRate: 1
   attackRange: 5
-  attackCooldown: 5
+  attackCooldown: 2
   expReward: 0
   goldReward: 5
   goldRewardPrefab: {fileID: 5207077087969610551, guid: 58bacda347d394141963c9f376ee9d5c,

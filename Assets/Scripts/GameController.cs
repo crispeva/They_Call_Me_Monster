@@ -41,10 +41,14 @@ namespace Controllers
             _wavemanager.OnEnemiesCount += UICountEnemies;
             _shopmanager.shopping += ShopState;
             _healthsystem.OnDeath += OnPlayerDeath;
+
+            _wavemanager.OnVictory += DisableShooting;
+            //EnemyController.OnEnemyDeath += DisableShooting;
         }
 
         private void Start()
         {
+            _weaponcontroller.UpdateFiringState(false);
             _wavemanager.OnWaveState += UIActualWave;
             _wavemanager.OnWaveCountdown += OnCountDownWave;
             _wavemanager.OnVictory += OnVictory;
@@ -58,6 +62,7 @@ namespace Controllers
         #region Player
         private void OnPlayerDeath()
         {
+            DisableShooting();
             _uiGameController.ShowPanelDeath();
         }
         #endregion
@@ -95,6 +100,10 @@ namespace Controllers
         public void EnemiesDiabled()
         {
             _wavemanager.OnEnemyDisabled();
+        }
+        private void DisableShooting()
+        {
+            _weaponcontroller.UpdateFiringState(true);
         }
         #endregion
     }

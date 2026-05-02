@@ -31,8 +31,9 @@ public class HealthSystem : MonoBehaviour, IDamageable
 
         if (CurrentHealth <= 0 && !_isdeath)
         {
+            _isdeath = true;
             Die();
-            _isdeath= true;
+           
         }
         
     }

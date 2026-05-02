@@ -9,13 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3979430758680481027}
+  - component: {fileID: 8413016799777892976}
   - component: {fileID: 3961226584328720422}
   - component: {fileID: 3478501185992973496}
   - component: {fileID: 6343744823174730475}
   - component: {fileID: 4239145513758247219}
   - component: {fileID: 1643726829185593903}
   - component: {fileID: 4065792828488668902}
-  - component: {fileID: 8413016799777892976}
   m_Layer: 0
   m_Name: ClerigoEnemy
   m_TagString: Untagged
@@ -39,6 +39,20 @@ Transform:
   - {fileID: 4177803889640122815}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8413016799777892976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5364622777826786699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4efa7c1a1980f174db92ccea48661332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Clerigo_Actions
+  _enemyData: {fileID: 11400000, guid: 6247a5ca4af700e46b7a550432e5aee7, type: 2}
+  _attackCooldown: 2
 --- !u!114 &3961226584328720422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,6 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
   _maxHealth: 400
+  _isdeath: 0
   delayDeath: 0
 --- !u!114 &3478501185992973496
 MonoBehaviour:
@@ -210,20 +225,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8413016799777892976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5364622777826786699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4efa7c1a1980f174db92ccea48661332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Clerigo_Actions
-  _enemyData: {fileID: 11400000, guid: 6247a5ca4af700e46b7a550432e5aee7, type: 2}
-  _attackCooldown: 5
 --- !u!1 &6036952384524186600
 GameObject:
   m_ObjectHideFlags: 0

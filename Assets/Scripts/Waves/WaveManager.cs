@@ -71,6 +71,7 @@ namespace Waves
                 {
                     Transform point = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
                     PoolManager.Instance.SpawnFromPool(entry.enemyPrefab, point.position, Quaternion.identity); // TODO: Refactorizar
+
                     yield return new WaitForSeconds(wave.timeBetweenSpawns);
                 }
 
