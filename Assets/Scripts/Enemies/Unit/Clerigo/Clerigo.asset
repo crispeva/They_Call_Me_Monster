@@ -18,9 +18,9 @@ MonoBehaviour:
     type: 3}
   maxHealth: 400
   moveSpeed: 0.8
-  damage: 20
+  damage: 30
   attackRate: 1
-  attackRange: 5
+  attackRange: 10
   attackCooldown: 2
   expReward: 0
   goldReward: 5

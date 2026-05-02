@@ -57,6 +57,7 @@ public class Clerigo_Actions : EnemyController
 
                 if (enemy != null && enemy != this)
                 {
+                    Debug.Log("Clerigo cura a " + enemy.name);
                     enemy.HealthSystem.SetHealth(_enemyData.damage + enemy.HealthSystem.CurrentHealth);
                 }
             }

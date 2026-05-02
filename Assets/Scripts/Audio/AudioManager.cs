@@ -79,6 +79,7 @@ public class AudioManager : MonoBehaviour
     {
         if (MainGameMusic == null) return;
         MainShoopingMusic.DOFade(0, 1f);
+        BossMusic.DOFade(0, 1f);
         MainGameMusic.DOFade(0.1f, 0.1f);
         MainGameMusic.Play();
     }
@@ -87,7 +88,8 @@ public class AudioManager : MonoBehaviour
         if (MainShoopingMusic == null) return;
         // Detener cualquier música que esté sonando antes de iniciar la transición
       MainGameMusic.DOFade(0, 1f);
-       MainShoopingMusic.DOFade(MAX_VOLUME, 1f);
+        BossMusic.DOFade(0, 1f);
+        MainShoopingMusic.DOFade(MAX_VOLUME, 1f);
         MainShoopingMusic.Play();
     }
     void PlayNextWave()

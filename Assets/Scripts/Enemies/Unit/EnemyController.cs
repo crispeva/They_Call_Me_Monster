@@ -50,10 +50,12 @@ public class EnemyController : MonoBehaviour
            
             _attackCooldown = _enemyData.attackCooldown;
         }
-
+        protected void FixedUpdate()
+        {
+            EnemyMovement();
+        }
         protected void Update()
     {
-        EnemyMovement();
         Flip();
         Attack();
        
@@ -65,8 +67,8 @@ public class EnemyController : MonoBehaviour
     {
             Debug.Log("INICIALIZANDO");
             _enemyData = enemyData;
-            _enemyhealth.SetHealth(enemyData.maxHealth);
             _enemySlyderHealth.maxValue = enemyData.maxHealth;
+            _enemyhealth.SetHealth(enemyData.maxHealth);
             _enemyhealth._isdeath = false;
 
         }

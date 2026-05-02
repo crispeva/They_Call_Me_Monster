@@ -10694,7 +10694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &655598147
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12020,11 +12020,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Waves.WaveManager
   waves:
-  - {fileID: 11400000, guid: 44739b9c9f2a8954781159e7b107693d, type: 2}
-  - {fileID: 11400000, guid: 6dc0273ab1e24724d916689afbd1cb4a, type: 2}
+  - {fileID: 11400000, guid: f40fc1a57db192a4d8c741586b086c9f, type: 2}
+  - {fileID: 11400000, guid: 8c4077b0f334bed4493200720e9c8938, type: 2}
   - {fileID: 11400000, guid: 0ca4f6e4e269495478fbdb1d85399a45, type: 2}
   - {fileID: 11400000, guid: bf23420a1680ae84db16ab00527265f7, type: 2}
   - {fileID: 11400000, guid: 6dc0273ab1e24724d916689afbd1cb4a, type: 2}
+  - {fileID: 11400000, guid: 44739b9c9f2a8954781159e7b107693d, type: 2}
+  - {fileID: 11400000, guid: b0cb9d525908831469a652f011d9afd9, type: 2}
   spawnPoints:
   - {fileID: 258884050}
   - {fileID: 103951761}

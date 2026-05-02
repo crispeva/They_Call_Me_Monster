@@ -18,5 +18,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 26a70f5c63e5c3c46a2ef19124d5d892, type: 2}
   - {fileID: 11400000, guid: 5a20352aefe421c44b9a4aea54007c8d, type: 2}
   - {fileID: 11400000, guid: 26a70f5c63e5c3c46a2ef19124d5d892, type: 2}
-  - {fileID: 11400000, guid: 5a20352aefe421c44b9a4aea54007c8d, type: 2}
   timeBetweenSpawns: 1
