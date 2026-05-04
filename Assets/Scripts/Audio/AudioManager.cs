@@ -23,6 +23,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource MainGameMusic;
     [SerializeField] AudioSource MainShoopingMusic;
     [SerializeField] AudioSource BossMusic;
+    [SerializeField] AudioSource EndDemoMusic;
 
     #endregion
 
@@ -41,8 +42,20 @@ public class AudioManager : MonoBehaviour
         GameController.Instance.WaveManager.OnMainWave +=  PlayMainGameMusic;
         GameController.Instance.WaveManager.OnWavesCompleted +=  PlayShoopingMusic;
         GameController.Instance.WaveManager.OnBossWave += PlayBossMusic;
+        GameController.Instance.WaveManager.OnVictory += PlayVictoryMusic;
+        GameController.Instance.HealthSystem.OnDeath += PlayVictoryMusic;
         GameController.Instance.ShopManager.Onbougth += PlayBougthItem;
         EnemyController.OnAttackEnemy += PlayClerigoHit;
+    }
+
+    private void PlayVictoryMusic()
+    {
+        audioMixer.SetFloat("FXVolume", -80f); // Silenciar SFX
+        MainShoopingMusic.DOFade(0, 1f);
+        BossMusic.DOFade(0, 1f);
+        MainGameMusic.DOFade(0, 1f);
+        EndDemoMusic.DOFade(MAX_VOLUME, 1f);
+        EndDemoMusic.Play();
     }
 
     #endregion
@@ -66,6 +79,7 @@ public class AudioManager : MonoBehaviour
     {
         if (MainGameMusic == null) return;
         MainShoopingMusic.DOFade(0, 1f);
+        BossMusic.DOFade(0, 1f);
         MainGameMusic.DOFade(0.1f, 0.1f);
         MainGameMusic.Play();
     }
@@ -73,9 +87,9 @@ public class AudioManager : MonoBehaviour
     {
         if (MainShoopingMusic == null) return;
         // Detener cualquier música que esté sonando antes de iniciar la transición
-        Debug.Log("PlayShoopingMusic llamado");
       MainGameMusic.DOFade(0, 1f);
-       MainShoopingMusic.DOFade(MAX_VOLUME, 1f);
+        BossMusic.DOFade(0, 1f);
+        MainShoopingMusic.DOFade(MAX_VOLUME, 1f);
         MainShoopingMusic.Play();
     }
     void PlayNextWave()
@@ -85,7 +99,7 @@ public class AudioManager : MonoBehaviour
     }
     void PlayBougthItem()
     {
-        if (ChangeWave == null) return;
+        if (ItemBougth == null) return;
         sfxSource.PlayOneShot(ItemBougth.clip,MAX_VOLUME);
     }
     #endregion

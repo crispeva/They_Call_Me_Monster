@@ -15,8 +15,8 @@ public class EnemyController : MonoBehaviour
     protected Slider _enemySlyderHealth;
     protected Transform _target;
         Animator _animator;
-        Vector2 dir;
-    [SerializeField] protected private float _attackCooldown ;
+      protected  Vector2 dir;
+     protected private float _attackCooldown ;
         //Referencia al objeto de la pool para devolverlo al morir
         PooledObject pooledObject;
         GameObject originPrefab;
@@ -42,7 +42,7 @@ public class EnemyController : MonoBehaviour
             //UI
             _enemySlyderHealth = GetComponentInChildren<Slider>();
             _enemyhealth.OnHealthChanged += UpdateEnemyHealth;
-            _enemyhealth.OnDestroy += Die;
+            _enemyhealth.OnDeath += Die;
 
         }
         protected private void Start()
@@ -50,10 +50,12 @@ public class EnemyController : MonoBehaviour
            
             _attackCooldown = _enemyData.attackCooldown;
         }
-
+        protected void FixedUpdate()
+        {
+            EnemyMovement();
+        }
         protected void Update()
     {
-        EnemyMovement();
         Flip();
         Attack();
        
@@ -63,8 +65,12 @@ public class EnemyController : MonoBehaviour
         #region Initialize
         public void Initialize(EnemyData enemyData)
     {
+            Debug.Log("INICIALIZANDO");
             _enemyData = enemyData;
+            _enemySlyderHealth.maxValue = enemyData.maxHealth;
             _enemyhealth.SetHealth(enemyData.maxHealth);
+            _enemyhealth._isdeath = false;
+
         }
         #endregion
 

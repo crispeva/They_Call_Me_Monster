@@ -153,8 +153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745a1c432c2743148a1f9f4ce6c11490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
-  _maxHealth: 100
-  delayDeath: 1
+  _maxHealth: 60
+  _isdeath: 0
+  delayDeath: 0
 --- !u!114 &8336505739653315974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemies.Archer_Action
   _enemyData: {fileID: 11400000, guid: 5a20352aefe421c44b9a4aea54007c8d, type: 2}
-  _attackCooldown: 1
   Arrow_data: {fileID: 11400000, guid: 48eefd2c463caa346a66e965f9a078a8, type: 2}
 --- !u!212 &2156068386616473277
 SpriteRenderer:
@@ -353,12 +353,12 @@ PrefabInstance:
     - target: {fileID: 2404232836550762154, guid: 9fe1028d3a779ab4aa57bfa6b225bf22,
         type: 3}
       propertyPath: m_Value
-      value: 170
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2404232836550762154, guid: 9fe1028d3a779ab4aa57bfa6b225bf22,
         type: 3}
       propertyPath: m_MaxValue
-      value: 170
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2869072286312737575, guid: 9fe1028d3a779ab4aa57bfa6b225bf22,
         type: 3}

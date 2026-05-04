@@ -25,7 +25,7 @@ public class PoolManager : MonoBehaviour
         }
         //Si no existe, asignamos la instancia actual Y la marcamos para que no se destruya al cambiar de escena
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+       // DontDestroyOnLoad(gameObject);
     }
 
     #endregion

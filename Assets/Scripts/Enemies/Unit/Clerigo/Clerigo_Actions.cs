@@ -37,6 +37,15 @@ public class Clerigo_Actions : EnemyController
     protected override void Attack()
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, _enemyData.attackRange);
+        if (Vector2.Distance(transform.position, _target.position) > _enemyData.attackRange)
+        {
+            _attackCooldown = _enemyData.attackCooldown;
+            return;
+        }
+        else
+        {
+            UpdateAttackCooldown();
+        }
         if (_attackCooldown <= 0)
         {
             Attack_anim();
@@ -48,13 +57,29 @@ public class Clerigo_Actions : EnemyController
 
                 if (enemy != null && enemy != this)
                 {
+                    Debug.Log("Clerigo cura a " + enemy.name);
                     enemy.HealthSystem.SetHealth(_enemyData.damage + enemy.HealthSystem.CurrentHealth);
                 }
             }
             _attackCooldown = _enemyData.attackCooldown; // Ajusta según tu EnemyData
-            
         }
     }
+    protected override void EnemyMovement()
+    {
+        if (Vector2.Distance(transform.position, _target.position) <= _enemyData.attackRange)
+        {
+            Walk_anim(false);
+            return;
+        }
+        else
+        {
+            // Implement enemy movement logic here
+            dir = (_target.position - transform.position).normalized;
+            transform.position += (Vector3)dir * _enemyData.moveSpeed * Time.deltaTime;
+            Walk_anim(true);
+        }
+    }
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;

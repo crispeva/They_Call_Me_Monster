@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: Hearth
   icon: {fileID: -2171008516921262370, guid: 178494aeace7fac4690bf0827979f0c7, type: 3}
   price: 2
-  description: Carne en descomposicion
+  description: 'Rotten meat that restores some health when consumed. \nHealing: 25'
   healAmount: 10

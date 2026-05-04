@@ -51,7 +51,7 @@ public class WeaponController : MonoBehaviour
 
     void Update()
     {
-        if (!input.FirePressed || !canShoot) return;
+        if (!input.FirePressed || canShoot) return;
 
         currentWeapon.Fire(transform, input.AimPosition);
             OnShoot?.Invoke();
@@ -65,9 +65,9 @@ public class WeaponController : MonoBehaviour
             PoolManager.Instance?.WarmPool(newWeapon.weaponPrefab, 10);
         }
     }
-        private void UpdateFiringState(bool isShopping)
+        public void UpdateFiringState(bool enabled)
         {
-            canShoot = !isShopping; // Si está comprando, no puede disparar
+            canShoot = enabled; // Si está comprando, no puede disparar
         }
         #endregion
 

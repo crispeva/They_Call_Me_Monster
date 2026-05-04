@@ -1,9 +1,13 @@
+using System;
+using System.Collections;
+using Controllers;
 using DG.Tweening;
 using Recolectables;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using System;
 public class UIGameController : MonoBehaviour
 {
     #region Properties
@@ -19,18 +23,28 @@ public class UIGameController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _textcaldero;
     [SerializeField] private Inventory _playerInventory;
     [SerializeField] private GameObject _panelshop;
+    [Header("Panels")]
+    [SerializeField] private GameObject _panelvictory;
+    [SerializeField] private GameObject _panelDeath;
+    [SerializeField] private GameObject _panelPause;
+
+    [Header("Canvas Groups")]
+    public CanvasGroup canvasGroupEndDemo;
+    public CanvasGroup canvasGroupDeath;
+    public CanvasGroup canvasGroupHelpPause;
+    float Duration = 2f;
+    float DurationHelpPanel = 5f;
+
+
     #endregion
 
-    #region Fields
-    #endregion
-    void Update()
-    {
-        //AnimationTextcaldero();
-    }
     #region Unity Callbacks
     void Start()
     {
         _playerInventory.OnInventoryUpdated += UpdateCoinUI;
+        GameController.Instance.InputController.OnActiveMenu += ShowPausePanel;
+        HidePanelHelp();
+
     }
 
     private void UpdateCoinUI()
@@ -51,6 +65,7 @@ public class UIGameController : MonoBehaviour
         _panelshop.SetActive(false);
     }
     #endregion
+
     #region UI Waves
     public void UpdateWaveNumber(int waveNumber)
     {
@@ -78,18 +93,78 @@ public class UIGameController : MonoBehaviour
             .Append(_waveText.DOFade(1f, 0.3f));
     }
     #endregion
-    private void OnEnable()
-    {
-        // Suscribirse a eventos o inicializar datos aquí si es necesario
-    }
+
     #region UIPlayer
     internal void UpdatePlayerHealth(float value)
     {
         _playerHealth.value = value;
     }
+    #endregion
 
+    #region Panels
+    internal void ShowPanelVictory()
+    {
+       
+        StartCoroutine(FadeIn(canvasGroupEndDemo, Duration));
+    }
+    internal void ShowPanelDeath()
+    {
+        Debug.Log("ShowPanelDeath");
+        StartCoroutine(FadeIn(canvasGroupDeath, Duration));
+    }
+    internal void HidePanelHelp()
+    {
+        Debug.Log("HidePanelHelp");
+        StartCoroutine(FadeOut(canvasGroupHelpPause, DurationHelpPanel));
+    }
+    public void ShowPausePanel()
+    {
+        if(Time.timeScale > 0)
+        {
+            _panelPause.SetActive(true);
+            Time.timeScale = 0f; // Pausa el juego
+        }
+        else
+        {
+            _panelPause.SetActive(false);
+            Time.timeScale = 1f; //Continua el juego
+        }
 
+    }
 
     #endregion
+
+    #region Animations
+    public IEnumerator FadeIn(CanvasGroup group, float duration)
+    {
+        float t = 0f;
+        group.interactable = true;
+        group.blocksRaycasts = true;
+
+        while (t < duration)
+        {
+            group.alpha = Mathf.Lerp(0f, 1f, t / duration);
+            t += Time.deltaTime;
+            yield return null;
+        }
+
+        group.alpha = 1f;
+    }
+    public IEnumerator FadeOut(CanvasGroup group, float duration)
+    {
+        float t = 0f;
+        group.interactable = false;
+        group.blocksRaycasts = false;
+
+        while (t < duration)
+        {
+            group.alpha = Mathf.Lerp(1f, 0f, t / duration);
+            t += Time.deltaTime;
+            yield return null;
+        }
+        group.alpha = 0f;
+    }
+    #endregion
+
 
 }

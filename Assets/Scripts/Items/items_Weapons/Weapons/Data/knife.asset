@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d50ae35f6804c4da42c4aa47f9812a, type: 3}
   m_Name: knife
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
-  weaponName: Knife
+  itemName: 
+  icon: {fileID: 0}
+  price: 0
+  description: 
   weaponType: 0
   weaponPrefab: {fileID: 325900172340433371, guid: b84bb9132c46ea0499f2d44dcb3f63a2,
     type: 3}
-  damage: 50
+  damage: 20
   fireRate: 2
   range: 3
   attackSFX: {fileID: 8300000, guid: c050d76830ec99a458d2bda3bbcee2a9, type: 3}

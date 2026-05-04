@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Waves;
 using Weapons;
-using static UnityEngine.EventSystems.EventTrigger;
+
 namespace Controllers
 {
     public class GameController : Singleton<GameController>
@@ -16,6 +16,7 @@ namespace Controllers
     public UIGameController UIGameController=> _uiGameController;
     public WaveManager WaveManager => _wavemanager;
     public Shop ShopManager => _shopmanager;
+    public InputController InputController => _inputController;
 
      public Action onWaveStarted;
         #endregion
@@ -27,6 +28,7 @@ namespace Controllers
     [SerializeField] protected EnemyController _enemyController;
     [SerializeField] protected WaveManager _wavemanager;
     [SerializeField] protected Shop _shopmanager;
+    [SerializeField] protected InputController _inputController;
         #endregion
 
         #region Unity Callbacks
@@ -38,29 +40,33 @@ namespace Controllers
             // Suscribirse al evento de cambio de oleada
             _wavemanager.OnEnemiesCount += UICountEnemies;
             _shopmanager.shopping += ShopState;
+            _healthsystem.OnDeath += OnPlayerDeath;
 
+            _wavemanager.OnVictory += DisableShooting;
+            //EnemyController.OnEnemyDeath += DisableShooting;
         }
-
-     
 
         private void Start()
         {
+            _weaponcontroller.UpdateFiringState(false);
             _wavemanager.OnWaveState += UIActualWave;
             _wavemanager.OnWaveCountdown += OnCountDownWave;
-            
+            _wavemanager.OnVictory += OnVictory;
+
             // Iniciar la primera oleada
             UIActualWave(1);
         }
-   
 
         #endregion
 
         #region Player
         private void OnPlayerDeath()
         {
-            throw new NotImplementedException();
+            DisableShooting();
+            _uiGameController.ShowPanelDeath();
         }
         #endregion
+        #region Waves Started
         public void ShopState(bool state)
         {
             if (state)
@@ -71,11 +77,12 @@ namespace Controllers
                 _uiGameController.CloseShop();
             }
         }
+        #endregion
         #region Waves Started
         public void UIActualWave(int waveNumber)
         {
             _uiGameController.UpdateWaveNumber(waveNumber);
-            
+
         }
         public void UICountEnemies(int EnemyRemaing)
         {
@@ -85,12 +92,19 @@ namespace Controllers
         {
             _uiGameController.UpdateWaveCountdown((int)secondsRemaining);
         }
+        public void OnVictory()
+        {
+            Debug.Log("HAS GANADO!!");
+            _uiGameController.ShowPanelVictory();
+        }
         public void EnemiesDiabled()
         {
             _wavemanager.OnEnemyDisabled();
         }
+        private void DisableShooting()
+        {
+            _weaponcontroller.UpdateFiringState(true);
+        }
         #endregion
-
-
     }
 }

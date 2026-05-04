@@ -22,11 +22,12 @@ namespace Waves
         private  float timeBetweenWaves ;
         private int EnemyRemaing = 0;
         public int currentWave = 0;
-        private int bossWave = 2;
+        private int bossWave = 5;
         public Action <int>OnWaveState;
         public Action<float> OnWaveCountdown;
         public Action<int> OnEnemiesCount;
         public Action OnWavesCompleted;
+        public Action OnVictory;
         //Music
         public Action OnBossWave;
         public Action OnMainWave;
@@ -35,8 +36,8 @@ namespace Waves
         #region Unity Callbacks
         void Start()
         {
-           
-            StartCoroutine(RunWave());
+            Debug.Log("Método Start ejecutado");
+            StartCoroutine(waitStart());
         }
 
         #endregion
@@ -44,9 +45,6 @@ namespace Waves
         #region Waves
         IEnumerator RunWave()
         {
-            if (currentWave >= waves.Length)
-                yield break;
-
             WaveData wave = waves[currentWave];
             //Se incrementa el contador de oleadas
             currentWave++;
@@ -59,9 +57,9 @@ namespace Waves
             {
                 OnMainWave?.Invoke(); 
             }
-            OnWaveState?.Invoke(currentWave);
-            EnemyRemaing = GetTotalEnemiesInWave(wave);
-            OnEnemiesCount?.Invoke(EnemyRemaing);
+                OnWaveState?.Invoke(currentWave);
+                EnemyRemaing = GetTotalEnemiesInWave(wave);
+                OnEnemiesCount?.Invoke(EnemyRemaing);
             foreach (var entry in wave.enemies)
             {
                 PoolManager.Instance.WarmPool(entry.enemyPrefab, entry.count);
@@ -73,12 +71,20 @@ namespace Waves
                 {
                     Transform point = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
                     PoolManager.Instance.SpawnFromPool(entry.enemyPrefab, point.position, Quaternion.identity); // TODO: Refactorizar
+
                     yield return new WaitForSeconds(wave.timeBetweenSpawns);
                 }
 
             }
            
 
+        }
+        IEnumerator waitStart()
+        {
+
+            Debug.Log("Esperando para iniciar la primera oleada...");
+            yield return new WaitForSeconds(5f);
+            StartCoroutine(RunWave());
         }
         public void OnWaveStarted()
         {
@@ -87,10 +93,12 @@ namespace Waves
             {
                 
                 StartCoroutine(WaitForNextWave(timeBetweenWavesDefault));
+                OnWavesCompleted?.Invoke();
             }
             else
             {
                 Debug.Log("¡Has completado todas las oleadas!");
+                OnVictory?.Invoke();
             }
 
         }
@@ -116,8 +124,7 @@ namespace Waves
             
             if (EnemyRemaing <= 0)
             {
-                OnWaveStarted();
-               OnWavesCompleted?.Invoke(); 
+                OnWaveStarted();             
             }
             OnEnemiesCount?.Invoke(EnemyRemaing);  // Actualizar UI después de decrementar
         }
