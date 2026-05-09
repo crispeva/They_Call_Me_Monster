@@ -73,7 +73,7 @@ public class InputController : MonoBehaviour
 
     void AIMInput()
     {
-        FirePressed = Input.GetButtonDown("Fire1");
+        FirePressed = Input.GetButtonDown("Fire2");
         if (Camera.main == null) return;
 
         Vector3 mouseScreen = Input.mousePosition;

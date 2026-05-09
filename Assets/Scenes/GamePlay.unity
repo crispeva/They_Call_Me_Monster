@@ -206,7 +206,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.4
+  m_fontSize: 25.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10190,7 +10190,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6787872025571418739, guid: 8e6e0f4d0cb29db4cb37224e351647df,
+  m_Sprite: {fileID: -2901167141789634624, guid: 0a47eda5137ea9e47b75b577f3c99b56,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -10365,12 +10365,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577092169}
   m_CullTransparentMesh: 1
---- !u!82 &585461939 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7779625264696155571, guid: 223dae2662138e746bd087219736b2ba,
-    type: 3}
-  m_PrefabInstance: {fileID: 586352891707257765}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &598005934
 GameObject:
   m_ObjectHideFlags: 0
@@ -10694,7 +10688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &655598147
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10777,7 +10771,7 @@ GameObject:
   - component: {fileID: 696949740}
   - component: {fileID: 696949739}
   m_Layer: 5
-  m_Name: RetryButton
+  m_Name: ContinueButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10866,7 +10860,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8370166014694983850, guid: 8e6e0f4d0cb29db4cb37224e351647df,
+  m_Sprite: {fileID: 7648970367219413643, guid: 0a47eda5137ea9e47b75b577f3c99b56,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -10970,7 +10964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.05660379, g: 0.053488802, b: 0.028568894, a: 1}
+  m_Color: {r: 0.16383055, g: 0.3679245, b: 0.11280705, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11247,7 +11241,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70.95
+  m_fontSize: 74.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11831,7 +11825,7 @@ GameObject:
   - component: {fileID: 1114038094}
   - component: {fileID: 1114038093}
   m_Layer: 5
-  m_Name: BackMainMenuButton
+  m_Name: BackMainMenuButtonED
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12027,6 +12021,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6dc0273ab1e24724d916689afbd1cb4a, type: 2}
   - {fileID: 11400000, guid: 44739b9c9f2a8954781159e7b107693d, type: 2}
   - {fileID: 11400000, guid: b0cb9d525908831469a652f011d9afd9, type: 2}
+  - {fileID: 11400000, guid: 113c8c6338f7dfc44b22d2daa5ca791e, type: 2}
+  - {fileID: 11400000, guid: 0d02f60cdc221eb46b81314e67b12f50, type: 2}
+  - {fileID: 11400000, guid: c1132aab7e677a742939ea530ded0953, type: 2}
   spawnPoints:
   - {fileID: 258884050}
   - {fileID: 103951761}
@@ -26951,7 +26948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.05660379, g: 0.053488802, b: 0.028568894, a: 1}
+  m_Color: {r: 0.15686275, g: 0.35686275, b: 0.10588236, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -27078,7 +27075,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -9080712362914048821, guid: 8e6e0f4d0cb29db4cb37224e351647df,
+  m_Sprite: {fileID: -8947884878078749093, guid: 0a47eda5137ea9e47b75b577f3c99b56,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -27604,10 +27601,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce2a298f6e2ee70488f47814497f2e91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameMenuManager
-  _mainmenuButton: {fileID: 554191237}
-  _mainmenuDeathButton: {fileID: 1114038093}
-  _pauseRetrybutton: {fileID: 696949739}
-  _pauseMainMenubutton: {fileID: 1966479362}
+  _mainmenuButtonED: {fileID: 1114038093}
+  _mainmenuDeathButtonD: {fileID: 2042148035}
+  _pauseContinuebutton: {fileID: 696949739}
   _pauseExitbutton: {fileID: 554191237}
   _pauseOptionbutton: {fileID: 1966479362}
   _mixer: {fileID: 24100000, guid: d594899174b0eb245bd58a48a9f5cf2a, type: 2}
@@ -27618,6 +27614,7 @@ MonoBehaviour:
   _highQuality: {fileID: 1514164054}
   _closeButton: {fileID: 1320317300}
   _settingsPanel: {fileID: 569192223}
+  _pausePanel: {fileID: 1777399840}
 --- !u!1 &2042148033
 GameObject:
   m_ObjectHideFlags: 0
@@ -27631,7 +27628,7 @@ GameObject:
   - component: {fileID: 2042148036}
   - component: {fileID: 2042148035}
   m_Layer: 5
-  m_Name: BackMainMenuButton
+  m_Name: BackMainMenuButtonD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27934,7 +27931,7 @@ PrefabInstance:
         type: 3}
       propertyPath: EndDemoMusic
       value: 
-      objectReference: {fileID: 585461939}
+      objectReference: {fileID: 0}
     - target: {fileID: 1966924891120567763, guid: 223dae2662138e746bd087219736b2ba,
         type: 3}
       propertyPath: m_LocalPosition.x

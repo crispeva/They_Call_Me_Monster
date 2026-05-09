@@ -12,12 +12,11 @@ public class GameMenuManager : MonoBehaviour
 
     #region Fields
     //[SerializeField] private Button _exitGameButton;
-    [SerializeField] private Button _mainmenuButton;
-    [SerializeField] private Button _mainmenuDeathButton;
+    [SerializeField] private Button _mainmenuButtonED;
+    [SerializeField] private Button _mainmenuDeathButtonD;
 
     [Header("Menu Pause")]
-    [SerializeField] private Button _pauseRetrybutton;
-    [SerializeField] private Button _pauseMainMenubutton;
+    [SerializeField] private Button _pauseContinuebutton;
     [SerializeField] private Button _pauseExitbutton;
     [SerializeField] private Button _pauseOptionbutton;
     public Action _onActiveSettingsMenu;
@@ -31,19 +30,20 @@ public class GameMenuManager : MonoBehaviour
     [SerializeField] private Button _closeButton;
 
     [SerializeField] private GameObject _settingsPanel;
+    [SerializeField] private GameObject _pausePanel;
     #endregion
 
     #region Unity Callbacks
     void Start()
     {
         //Death Menu
-        _mainmenuDeathButton.onClick.AddListener(GOMainmenu);
+        _mainmenuDeathButtonD.onClick.AddListener(GOMainmenu);
         //Pause Menu
         _pauseExitbutton.onClick.AddListener(GOMainmenu);
-        _pauseRetrybutton.onClick.AddListener(RetryGame);
+        _pauseContinuebutton.onClick.AddListener(ContinueGame);
         _pauseOptionbutton.onClick.AddListener(Options);
         //Panel ENDDEMO
-        _mainmenuButton.onClick.AddListener(GOMainmenu);
+        _mainmenuButtonED.onClick.AddListener(GOMainmenu);
         //Settings events
         _musicSlider.onValueChanged.AddListener(MusicVolumeChange);
         _fxSlider.onValueChanged.AddListener(FXVolumeChange);
@@ -67,10 +67,10 @@ public class GameMenuManager : MonoBehaviour
     #endregion
 
     #region Private Methods
-    private void RetryGame()
+    private void ContinueGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);// Reinicia el juego cargando la escena actual
+        _pausePanel.SetActive(false);
     }
 
     private void GOMainmenu()

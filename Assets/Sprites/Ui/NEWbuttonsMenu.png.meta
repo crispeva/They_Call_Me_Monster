@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 8e6e0f4d0cb29db4cb37224e351647df
+guid: 0a47eda5137ea9e47b75b577f3c99b56
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8370166014694983850
-    second: NuevosbotonesSettings_0
+      213: -590034800343994985
+    second: NEWbuttonsMenu_0
   - first:
-      213: -9080712362914048821
-    second: NuevosbotonesSettings_1
+      213: -8947884878078749093
+    second: NEWbuttonsMenu_1
   - first:
-      213: -985742314896274960
-    second: NuevosbotonesSettings_2
+      213: 7648970367219413643
+    second: NEWbuttonsMenu_2
   - first:
-      213: -6787872025571418739
-    second: NuevosbotonesSettings_3
+      213: -2901167141789634624
+    second: NEWbuttonsMenu_3
   - first:
-      213: -8165073037632988186
-    second: NuevosbotonesSettings_4
+      213: -3505783609891272727
+    second: NEWbuttonsMenu_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -164,12 +164,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NuevosbotonesSettings_0
+      name: NEWbuttonsMenu_0
       rect:
         serializedVersion: 2
-        x: 178
+        x: 179
         y: 953
-        width: 494
+        width: 493
         height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aa801f0b4adc82470800000000000000
-      internalID: 8370166014694983850
+      spriteID: 79da068a976cfc7f0800000000000000
+      internalID: -590034800343994985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NuevosbotonesSettings_1
+      name: NEWbuttonsMenu_1
       rect:
         serializedVersion: 2
         x: 178
@@ -201,14 +201,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc49205b734daf180800000000000000
-      internalID: -9080712362914048821
+      spriteID: b56d60f7c1ab2d380800000000000000
+      internalID: -8947884878078749093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NuevosbotonesSettings_2
+      name: NEWbuttonsMenu_2
       rect:
         serializedVersion: 2
         x: 170
@@ -223,18 +223,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f949885690f152f0800000000000000
-      internalID: -985742314896274960
+      spriteID: b823a93e50a962a60800000000000000
+      internalID: 7648970367219413643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NuevosbotonesSettings_3
+      name: NEWbuttonsMenu_3
       rect:
         serializedVersion: 2
         x: 170
-        y: 376
+        y: 375
         width: 502
         height: 147
       alignment: 0
@@ -245,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8d110f3b52acc1a0800000000000000
-      internalID: -6787872025571418739
+      spriteID: 0cfe7970bdbfcb7d0800000000000000
+      internalID: -2901167141789634624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NuevosbotonesSettings_4
+      name: NEWbuttonsMenu_4
       rect:
         serializedVersion: 2
-        x: 761
+        x: 759
         y: 31
-        width: 50
-        height: 50
+        width: 52
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,8 +267,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6eb14ca2555dfae80800000000000000
-      internalID: -8165073037632988186
+      spriteID: 9e74b099164f85fc0800000000000000
+      internalID: -3505783609891272727
       vertices: []
       indices: 
       edges: []
@@ -287,11 +287,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      NuevosbotonesSettings_0: 8370166014694983850
-      NuevosbotonesSettings_1: -9080712362914048821
-      NuevosbotonesSettings_2: -985742314896274960
-      NuevosbotonesSettings_3: -6787872025571418739
-      NuevosbotonesSettings_4: -8165073037632988186
+      NEWbuttonsMenu_0: -590034800343994985
+      NEWbuttonsMenu_1: -8947884878078749093
+      NEWbuttonsMenu_2: 7648970367219413643
+      NEWbuttonsMenu_3: -2901167141789634624
+      NEWbuttonsMenu_4: -3505783609891272727
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
