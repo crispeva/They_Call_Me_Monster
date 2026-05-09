@@ -12,11 +12,6 @@ namespace Weapons
     [SerializeField] int rotationOffset = -90;
         #endregion
 
-        #region Fields
-        #endregion
-
-        #region Unity Callbacks
-        #endregion
 
         #region Public Methods
         public WeaponRuntime(WeaponData data)
@@ -67,7 +62,6 @@ namespace Weapons
     //AXE
     void FireAxe(Transform owner, Vector2 aimPosition)
     {
-
         GameObject axeObj = Object.Instantiate(
             data.weaponPrefab,
             owner.position,

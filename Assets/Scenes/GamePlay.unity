@@ -206,7 +206,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.3
+  m_fontSize: 19.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10688,7 +10688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &655598147
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11241,7 +11241,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 74.6
+  m_fontSize: 61.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -28341,6 +28341,12 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: e05dc1682d9b2f941ab4756928b09b0a, type: 2}
+    - target: {fileID: 7404319650992986923, guid: f287dcf4db86fda4f8e7040b7f721783,
+        type: 3}
+      propertyPath: startingWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 11d8ecbc67504934ba5722d81cddca94,
+        type: 2}
     - target: {fileID: 8243933665643089033, guid: f287dcf4db86fda4f8e7040b7f721783,
         type: 3}
       propertyPath: m_Size.x

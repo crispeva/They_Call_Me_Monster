@@ -6,7 +6,7 @@ using UnityEngine;
 public class AxeSwing : MonoBehaviour
 {
     #region Properties
-    private float duration = 0.60f;
+    private float duration = 1f;
     private float radius = 1.5f; // distancia del axe al owner durante el swing
     private int damage;
 
