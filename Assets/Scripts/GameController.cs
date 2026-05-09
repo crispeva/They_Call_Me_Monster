@@ -43,7 +43,7 @@ namespace Controllers
             _healthsystem.OnDeath += OnPlayerDeath;
 
             _wavemanager.OnVictory += DisableShooting;
-            //EnemyController.OnEnemyDeath += DisableShooting;
+            Time.timeScale = 1f;
         }
 
         private void Start()
