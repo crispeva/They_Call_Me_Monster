@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Enemies;
-using UnityEditor.EditorTools;
 using UnityEngine;
 
 public class Clerigo_Actions : EnemyController

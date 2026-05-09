@@ -12,7 +12,7 @@ public class GameMenuManager : MonoBehaviour
 
     #region Fields
     //[SerializeField] private Button _exitGameButton;
-    [SerializeField] private Button _mainmenuButton;
+    [SerializeField] private Button _mainmenuEndDemoButton;
     [SerializeField] private Button _mainmenuDeathButton;
 
     [Header("Menu Pause")]
@@ -43,7 +43,7 @@ public class GameMenuManager : MonoBehaviour
         _pauseRetrybutton.onClick.AddListener(RetryGame);
         _pauseOptionbutton.onClick.AddListener(Options);
         //Panel ENDDEMO
-        _mainmenuButton.onClick.AddListener(GOMainmenu);
+        _mainmenuEndDemoButton.onClick.AddListener(GOMainmenu);
         //Settings events
         _musicSlider.onValueChanged.AddListener(MusicVolumeChange);
         _fxSlider.onValueChanged.AddListener(FXVolumeChange);

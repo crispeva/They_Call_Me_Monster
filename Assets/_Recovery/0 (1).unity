@@ -206,7 +206,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.3
+  m_fontSize: 22.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10694,7 +10694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &655598147
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10954,7 +10954,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.4999237, y: 0}
+  m_AnchoredPosition: {x: -2.499939, y: 0}
   m_SizeDelta: {x: 5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &713217689
@@ -11247,7 +11247,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 67.8
+  m_fontSize: 72.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11831,7 +11831,7 @@ GameObject:
   - component: {fileID: 1114038094}
   - component: {fileID: 1114038093}
   m_Layer: 5
-  m_Name: BackMainMenuButtonD
+  m_Name: BackMainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12027,9 +12027,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6dc0273ab1e24724d916689afbd1cb4a, type: 2}
   - {fileID: 11400000, guid: 44739b9c9f2a8954781159e7b107693d, type: 2}
   - {fileID: 11400000, guid: b0cb9d525908831469a652f011d9afd9, type: 2}
-  - {fileID: 11400000, guid: 113c8c6338f7dfc44b22d2daa5ca791e, type: 2}
-  - {fileID: 11400000, guid: 0d02f60cdc221eb46b81314e67b12f50, type: 2}
-  - {fileID: 11400000, guid: c1132aab7e677a742939ea530ded0953, type: 2}
   spawnPoints:
   - {fileID: 258884050}
   - {fileID: 103951761}
@@ -27238,9 +27235,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2042148034}
   - {fileID: 826810420}
   - {fileID: 10233066}
+  - {fileID: 2042148034}
   m_Father: {fileID: 2016630696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -27607,7 +27604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce2a298f6e2ee70488f47814497f2e91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameMenuManager
-  _mainmenuEndDemoButton: {fileID: 2042148035}
+  _mainmenuButton: {fileID: 554191237}
   _mainmenuDeathButton: {fileID: 1114038093}
   _pauseRetrybutton: {fileID: 696949739}
   _pauseMainMenubutton: {fileID: 1966479362}
@@ -27634,7 +27631,7 @@ GameObject:
   - component: {fileID: 2042148036}
   - component: {fileID: 2042148035}
   m_Layer: 5
-  m_Name: BackMainMenuButtonED
+  m_Name: BackMainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
