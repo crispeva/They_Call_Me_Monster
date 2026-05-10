@@ -41,10 +41,19 @@ public class EnemyController : MonoBehaviour
             _enemyhealth = GetComponent<HealthSystem>();
             //UI
             _enemySlyderHealth = GetComponentInChildren<Slider>();
+        }
+        #region Events
+        protected void OnEnable()
+        {
             _enemyhealth.OnHealthChanged += UpdateEnemyHealth;
             _enemyhealth.OnDeath += Die;
-
         }
+        protected void OnDisable()
+        {
+            _enemyhealth.OnHealthChanged -= UpdateEnemyHealth;
+            _enemyhealth.OnDeath -= Die;
+        }
+        #endregion
         protected private void Start()
         {
            

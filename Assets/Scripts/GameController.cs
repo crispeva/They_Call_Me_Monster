@@ -56,7 +56,18 @@ namespace Controllers
             // Iniciar la primera oleada
             UIActualWave(1);
         }
-
+        private void OnDestroy()
+        {
+            _healthsystem.OnHealthChanged -= _uiGameController.UpdatePlayerHealth;
+            EnemyController.OnEnemyDeath -= EnemiesDiabled;
+            _wavemanager.OnEnemiesCount -= UICountEnemies;
+            _shopmanager.shopping -= ShopState;
+            _healthsystem.OnDeath -= OnPlayerDeath;
+            _wavemanager.OnWaveState -= UIActualWave;
+            _wavemanager.OnWaveCountdown -= OnCountDownWave;
+            _wavemanager.OnVictory -= OnVictory;
+        }
+        
         #endregion
 
         #region Player
